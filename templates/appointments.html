@@ -1,0 +1,259 @@
+{% extends 'base.html' %}
+
+{% block title %}Appointments{% endblock %}
+
+{% block content %}
+<div class="container-fluid mt-4">
+    <div class="row">
+        <!-- Sidebar with filters and stats -->
+        <div class="col-md-3">
+            <div class="card shadow mb-4">
+                <div class="card-header bg-primary text-white">
+                    <h5 class="mb-0">Appointment Stats</h5>
+                </div>
+                <div class="card-body">
+                    <div class="list-group">
+                        <a href="{{ url_for('appointments') }}" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+                            All Appointments
+                            <span class="badge bg-primary rounded-pill">{{ appointments|length }}</span>
+                        </a>
+                        <a href="{{ url_for('appointments', status='Scheduled') }}" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+                            Scheduled
+                            <span class="badge bg-info rounded-pill">{{ status_counts.get('Scheduled', 0) }}</span>
+                        </a>
+                        <a href="{{ url_for('appointments', status='Completed') }}" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+                            Completed
+                            <span class="badge bg-success rounded-pill">{{ status_counts.get('Completed', 0) }}</span>
+                        </a>
+                        <a href="{{ url_for('appointments', status='Cancelled') }}" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+                            Cancelled
+                            <span class="badge bg-danger rounded-pill">{{ status_counts.get('Cancelled', 0) }}</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card shadow">
+                <div class="card-header bg-primary text-white">
+                    <h5 class="mb-0">Filter Appointments</h5>
+                </div>
+                <div class="card-body">
+                    <form action="{{ url_for('appointments') }}" method="get">
+                        <div class="mb-3">
+                            <label for="status" class="form-label">Status</label>
+                            <select class="form-select" id="status" name="status">
+                                <option value="">All Statuses</option>
+                                <option value="Scheduled" {% if status == 'Scheduled' %}selected{% endif %}>Scheduled</option>
+                                <option value="In Progress" {% if status == 'In Progress' %}selected{% endif %}>In Progress</option>
+                                <option value="Completed" {% if status == 'Completed' %}selected{% endif %}>Completed</option>
+                                <option value="Cancelled" {% if status == 'Cancelled' %}selected{% endif %}>Cancelled</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="date_from" class="form-label">From Date</label>
+                            <input type="date" class="form-control" id="date_from" name="date_from" value="{{ date_from }}">
+                        </div>
+                        <div class="mb-3">
+                            <label for="date_to" class="form-label">To Date</label>
+                            <input type="date" class="form-control" id="date_to" name="date_to" value="{{ date_to }}">
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Apply Filters</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main content area -->
+        <div class="col-md-9">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+                <h2>Appointments</h2>
+                <a href="{{ url_for('create_appointment') }}" class="btn btn-success">
+                    <i class="fas fa-plus"></i> New Appointment
+                </a>
+            </div>
+
+            <!-- Today's appointments -->
+            <div class="card shadow mb-4">
+                <div class="card-header bg-primary text-white">
+                    <h5 class="mb-0">Today's Appointments</h5>
+                </div>
+                <div class="card-body">
+                    {% if todays_appointments %}
+                    <div class="table-responsive">
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th>Time</th>
+                                    <th>Vehicle</th>
+                                    <th>Customer</th>
+                                    <th>Type</th>
+                                    <th>Status</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for appointment in todays_appointments %}
+                                <tr>
+                                    <td>{{ appointment.appointment_time }}</td>
+                                    <td>
+                                        <a href="{{ url_for('vehicle_detail', vehicle_id=appointment.vehicle_id) }}">
+                                            {{ appointment.registration }}
+                                        </a>
+                                    </td>
+                                    <td>{{ appointment.customer_name or 'No Owner' }}</td>
+                                    <td>{{ appointment.appointment_type }}</td>
+                                    <td>
+                                        <span class="badge {% if appointment.status == 'Scheduled' %}bg-info{% elif appointment.status == 'In Progress' %}bg-warning{% elif appointment.status == 'Completed' %}bg-success{% elif appointment.status == 'Cancelled' %}bg-danger{% endif %}">
+                                            {{ appointment.status }}
+                                        </span>
+                                    </td>
+                                    <td>
+                                        <div class="btn-group">
+                                            <button type="button" class="btn btn-sm btn-outline-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                                                Actions
+                                            </button>
+                                            <ul class="dropdown-menu">
+                                                <li><a class="dropdown-item" href="#">View Details</a></li>
+                                                <li><a class="dropdown-item" href="#">Update Status</a></li>
+                                                <li><hr class="dropdown-divider"></li>
+                                                <li><a class="dropdown-item text-danger" href="#">Cancel</a></li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                    {% else %}
+                    <div class="alert alert-info">
+                        No appointments scheduled for today.
+                    </div>
+                    {% endif %}
+                </div>
+            </div>
+
+            <!-- Upcoming appointments -->
+            <div class="card shadow mb-4">
+                <div class="card-header bg-primary text-white">
+                    <h5 class="mb-0">Upcoming Appointments (Next 7 Days)</h5>
+                </div>
+                <div class="card-body">
+                    {% if upcoming_appointments %}
+                    <div class="table-responsive">
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th>Date</th>
+                                    <th>Time</th>
+                                    <th>Vehicle</th>
+                                    <th>Customer</th>
+                                    <th>Type</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for appointment in upcoming_appointments %}
+                                <tr>
+                                    <td>{{ appointment.appointment_date }}</td>
+                                    <td>{{ appointment.appointment_time }}</td>
+                                    <td>
+                                        <a href="{{ url_for('vehicle_detail', vehicle_id=appointment.vehicle_id) }}">
+                                            {{ appointment.registration }}
+                                        </a>
+                                    </td>
+                                    <td>{{ appointment.customer_name or 'No Owner' }}</td>
+                                    <td>{{ appointment.appointment_type }}</td>
+                                    <td>
+                                        <div class="btn-group">
+                                            <button type="button" class="btn btn-sm btn-outline-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                                                Actions
+                                            </button>
+                                            <ul class="dropdown-menu">
+                                                <li><a class="dropdown-item" href="#">View Details</a></li>
+                                                <li><a class="dropdown-item" href="#">Reschedule</a></li>
+                                                <li><hr class="dropdown-divider"></li>
+                                                <li><a class="dropdown-item text-danger" href="#">Cancel</a></li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                    {% else %}
+                    <div class="alert alert-info">
+                        No upcoming appointments in the next 7 days.
+                    </div>
+                    {% endif %}
+                </div>
+            </div>
+
+            <!-- All appointments with filters applied -->
+            <div class="card shadow">
+                <div class="card-header bg-primary text-white">
+                    <h5 class="mb-0">All Appointments</h5>
+                </div>
+                <div class="card-body">
+                    {% if appointments %}
+                    <div class="table-responsive">
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th>Date</th>
+                                    <th>Time</th>
+                                    <th>Vehicle</th>
+                                    <th>Customer</th>
+                                    <th>Type</th>
+                                    <th>Status</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for appointment in appointments %}
+                                <tr>
+                                    <td>{{ appointment.appointment_date }}</td>
+                                    <td>{{ appointment.appointment_time }}</td>
+                                    <td>
+                                        <a href="{{ url_for('vehicle_detail', vehicle_id=appointment.vehicle_id) }}">
+                                            {{ appointment.registration }}
+                                        </a>
+                                    </td>
+                                    <td>{{ appointment.customer_name or 'No Owner' }}</td>
+                                    <td>{{ appointment.appointment_type }}</td>
+                                    <td>
+                                        <span class="badge {% if appointment.status == 'Scheduled' %}bg-info{% elif appointment.status == 'In Progress' %}bg-warning{% elif appointment.status == 'Completed' %}bg-success{% elif appointment.status == 'Cancelled' %}bg-danger{% endif %}">
+                                            {{ appointment.status }}
+                                        </span>
+                                    </td>
+                                    <td>
+                                        <div class="btn-group">
+                                            <button type="button" class="btn btn-sm btn-outline-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                                                Actions
+                                            </button>
+                                            <ul class="dropdown-menu">
+                                                <li><a class="dropdown-item" href="#">View Details</a></li>
+                                                <li><a class="dropdown-item" href="#">Update Status</a></li>
+                                                <li><a class="dropdown-item" href="#">Reschedule</a></li>
+                                                <li><hr class="dropdown-divider"></li>
+                                                <li><a class="dropdown-item text-danger" href="#">Cancel</a></li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                    {% else %}
+                    <div class="alert alert-info">
+                        No appointments found matching your criteria.
+                    </div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

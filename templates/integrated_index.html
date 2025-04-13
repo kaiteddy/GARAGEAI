@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Integrated Garage Management System</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <style>
+        body {
+            padding-top: 56px;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        .feature-icon {
+            font-size: 3rem;
+            color: #0d6efd;
+            margin-bottom: 1rem;
+        }
+        .feature-card {
+            height: 100%;
+            transition: transform 0.3s ease;
+        }
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        .footer {
+            margin-top: auto;
+            background-color: #f5f5f5;
+            padding: 1rem 0;
+        }
+        .system-status {
+            background-color: #f8f9fa;
+            border-radius: 0.25rem;
+            padding: 1rem;
+            margin-bottom: 1rem;
+        }
+        .status-indicator {
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            margin-right: 5px;
+        }
+        .status-online {
+            background-color: #28a745;
+        }
+        .status-offline {
+            background-color: #dc3545;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/">Garage Management System</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/"><i class="bi bi-speedometer2"></i> Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/ga4"><i class="bi bi-database"></i> GA4 Data Access</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/reminders"><i class="bi bi-bell"></i> MOT Reminders</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/customers"><i class="bi bi-people"></i> Customers</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/vehicles"><i class="bi bi-car-front"></i> Vehicles</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/invoices"><i class="bi bi-receipt"></i> Invoices</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/appointments"><i class="bi bi-calendar-check"></i> Appointments</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/documents"><i class="bi bi-file-earmark-text"></i> Documents</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/reports"><i class="bi bi-bar-chart"></i> Reports</a>
+                    </li>
+                </ul>
+                <div class="d-flex">
+                    <span class="navbar-text me-3">
+                        <i class="bi bi-clock"></i> <span id="current-time"></span>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="flex-shrink-0">
+        <div class="container mt-4">
+            <div class="row mb-4">
+                <div class="col-md-12">
+                    <div class="system-status">
+                        <h5><i class="bi bi-info-circle"></i> System Status</h5>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <p><span class="status-indicator" id="ga4-status-indicator"></span> 
+                                   GA4 Connection: <span id="ga4-status">Checking...</span></p>
+                            </div>
+                            <div class="col-md-3">
+                                <p><i class="bi bi-car-front"></i> Vehicles: <span id="vehicle-count">Loading...</span></p>
+                            </div>
+                            <div class="col-md-3">
+                                <p><i class="bi bi-bell"></i> Reminders: <span id="reminder-count">Loading...</span></p>
+                            </div>
+                            <div class="col-md-3">
+                                <p><i class="bi bi-clock-history"></i> Last Update: <span id="last-update">Loading...</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mb-4">
+                <div class="col-md-12">
+                    <div class="jumbotron p-4 bg-light rounded-3">
+                        <h1 class="display-5">Welcome to Your Garage Management System</h1>
+                        <p class="lead">A complete solution for managing your garage business with real-time GA4 data integration.</p>
+                        <hr class="my-4">
+                        <p>Access all your garage management tools from one integrated interface. Monitor MOTs, manage customers, create invoices, and more.</p>
+                        <a class="btn btn-primary btn-lg" href="/reminders" role="button">View MOT Reminders</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mb-4">
+                <div class="col-md-3 mb-4">
+                    <div class="card feature-card">
+                        <div class="card-body text-center">
+                            <div class="feature-icon">
+                                <i class="bi bi-database"></i>
+                            </div>
+                            <h5 class="card-title">GA4 Data Access</h5>
+                            <p class="card-text">Access and search your Garage Assistant 4 data in real-time.</p>
+                            <a href="/ga4" class="btn btn-primary">Access Data</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="card feature-card">
+                        <div class="card-body text-center">
+                            <div class="feature-icon">
+                                <i class="bi bi-bell"></i>
+                            </div>
+                            <h5 class="card-title">MOT Reminders</h5>
+                            <p class="card-text">Automatically track MOT due dates and send reminders.</p>
+                            <a href="/reminders" class="btn btn-primary">Manage Reminders</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="card feature-card">
+                        <div class="card-body text-center">
+                            <div class="feature-icon">
+                                <i class="bi bi-people"></i>
+                            </div>
+                            <h5 class="card-title">Customer Management</h5>
+                            <p class="card-text">Manage customer profiles, vehicles, and communication.</p>
+                            <a href="/customers" class="btn btn-primary">View Customers</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="card feature-card">
+                        <div class="card-body text-center">
+                            <div class="feature-icon">
+                                <i class="bi bi-receipt"></i>
+                            </div>
+                            <h5 class="card-title">Invoice Management</h5>
+                            <p class="card-text">Create, track, and manage invoices and payments.</p>
+                            <a href="/invoices" class="btn btn-primary">Manage Invoices</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mb-4">
+                <div class="col-md-3 mb-4">
+                    <div class="card feature-card">
+                        <div class="card-body text-center">
+                            <div class="feature-icon">
+                                <i class="bi bi-car-front"></i>
+                            </div>
+                            <h5 class="card-title">Vehicle Management</h5>
+                            <p class="card-text">Track vehicle details, service history, and MOT status.</p>
+                            <a href="/vehicles" class="btn btn-primary">View Vehicles</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="card feature-card">
+                        <div class="card-body text-center">
+                            <div class="feature-icon">
+                                <i class="bi bi-calendar-check"></i>
+                            </div>
+                            <h5 class="card-title">Appointments</h5>
+                            <p class="card-text">Schedule and manage service appointments.</p>
+                            <a href="/appointments" class="btn btn-primary">Manage Appointments</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="card feature-card">
+                        <div class="card-body text-center">
+                            <div class="feature-icon">
+                                <i class="bi bi-file-earmark-text"></i>
+                            </div>
+                            <h5 class="card-title">Documents</h5>
+                            <p class="card-text">Store and manage important vehicle and customer documents.</p>
+                            <a href="/documents" class="btn btn-primary">View Documents</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="card feature-card">
+                        <div class="card-body text-center">
+                            <div class="feature-icon">
+                                <i class="bi bi-bar-chart"></i>
+                            </div>
+                            <h5 class="card-title">Reports</h5>
+                            <p class="card-text">Generate business reports and analytics.</p>
+                            <a href="/reports" class="btn btn-primary">View Reports</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mb-4">
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-header">
+                            <h5 class="card-title mb-0">Upcoming MOTs</h5>
+                        </div>
+                        <div class="card-body">
+                            <div id="upcoming-mots">
+                                <p class="text-center">Loading MOT data...</p>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <a href="/reminders" class="text-decoration-none">View all MOT reminders &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-header">
+                            <h5 class="card-title mb-0">Recent Activity</h5>
+                        </div>
+                        <div class="card-body">
+                            <div id="recent-activity">
+                                <p class="text-center">Loading recent activity...</p>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <a href="#" class="text-decoration-none">View all activity &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer mt-auto py-3 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <span class="text-muted">Garage Management System &copy; 2025</span>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <span class="text-muted">Connected to GA4 Database</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Update current time
+        function updateTime() {
+            const now = new Date();
+            document.getElementById('current-time').textContent = now.toLocaleTimeString();
+        }
+        
+        setInterval(updateTime, 1000);
+        updateTime();
+
+        // Load system status
+        function loadSystemStatus() {
+            fetch('/api/system_status')
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        // Update GA4 status
+                        const statusIndicator = document.getElementById('ga4-status-indicator');
+                        const statusText = document.getElementById('ga4-status');
+                        
+                        if (data.ga4_status === 'Running') {
+                            statusIndicator.className = 'status-indicator status-online';
+                            statusText.textContent = 'Connected';
+                        } else {
+                            statusIndicator.className = 'status-indicator status-offline';
+                            statusText.textContent = 'Disconnected';
+                        }
+                        
+                        // Update counts
+                        document.getElementById('vehicle-count').textContent = data.vehicle_count;
+                        document.getElementById('reminder-count').textContent = data.reminder_count;
+                        document.getElementById('last-update').textContent = data.system_time;
+                        
+                        // Load upcoming MOTs
+                        loadUpcomingMOTs();
+                        
+                        // Load recent activity
+                        loadRecentActivity();
+                    } else {
+                        console.error('Error loading system status:', data.message);
+                    }
+                })
+                .catch(error => {
+                    console.error('Error loading system status:', error);
+                });
+        }
+        
+        // Load upcoming MOTs
+        function loadUpcomingMOTs() {
+            fetch('/api/vehicles?days=7,3,1')
+                .then(response => response.json())
+                .then(data => {
+                    const upcomingMotsDiv = document.getElementById('upcoming-mots');
+                    
+                    if (data.success && data.vehicles && data.vehicles.length > 0) {
+                        upcomingMotsDiv.innerHTML = '';
+                        
+                        // Sort by days to expiry (ascending)
+                        data.vehicles.sort((a, b) => a.days_to_expiry - b.days_to_expiry);
+                        
+                        // Take first 5
+                        const upcomingVehicles = data.vehicles.slice(0, 5);
+                        
+                        for (const vehicle of upcomingVehicles) {
+                            let alertClass = '';
+                            if (vehicle.days_to_expiry <= 1) {
+                                alertClass = 'alert-danger';
+                            } else if (vehicle.days_to_expiry <= 3) {
+                                alertClass = 'alert-warning';
+                            } else {
+                                alertClass = 'alert-info';
+                            }
+                            
+                            const vehicleDiv = document.createElement('div');
+                            vehicleDiv.className = `alert ${alertClass} mb-2`;
+                            vehicleDiv.innerHTML = `
+                                <h5 class="alert-heading">${vehicle.registration}</h5>
+                                <p class="mb-0">
+                                    ${vehicle.make || ''} ${vehicle.model || ''}<br>
+                                    <strong>MOT Due:</strong> ${vehicle.mot_expiry}<br>
+                                    <strong>Days Left:</strong> ${vehicle.days_to_expiry}
+                                </p>
+                            `;
+                            upcomingMotsDiv.appendChild(vehicleDiv);
+                        }
+                    } else {
+                        upcomingMotsDiv.innerHTML = '<p class="text-center">No upcoming MOTs found</p>';
+                    }
+                })
+                .catch(error => {
+                    console.error('Error loading upcoming MOTs:', error);
+                    document.getElementById('upcoming-mots').innerHTML = '<p class="text-center">Error loading MOT data</p>';
+                });
+        }
+        
+        // Load recent activity
+        function loadRecentActivity() {
+            fetch('/api/reminders')
+                .then(response => response.json())
+                .then(data => {
+                    const recentActivityDiv = document.getElementById('recent-activity');
+                    
+                    if (data.success && data.reminders && data.reminders.length > 0) {
+                        recentActivityDiv.innerHTML = '';
+                        
+                        // Sort by ID (descending) to get most recent first
+                        data.reminders.sort((a, b) => b.id - a.id);
+                        
+                        // Take first 5
+                        const recentReminders = data.reminders.slice(0, 5);
+                        
+                        const activityList = document.createElement('ul');
+                        activityList.className = 'list-group';
+                        
+                        for (const reminder of recentReminders) {
+                            const item = document.createElement('li');
+                            item.className = 'list-group-item';
+                            
+                            // Determine icon and text based on status
+                            let icon = '';
+                            let statusText = '';
+                            
+                            if (reminder.reminder_status === 'created') {
+                                icon = '<i class="bi bi-plus-circle text-primary"></i>';
+                                statusText = 'Reminder created';
+                            } else if (reminder.reminder_status === 'sent') {
+                                icon = '<i class="bi bi-envelope text-success"></i>';
+                                statusText = 'Reminder sent';
+                            } else if (reminder.reminder_status === 'responded') {
+                                icon = '<i class="bi bi-reply text-info"></i>';
+                                statusText = 'Customer responded';
+                            } else if (reminder.reminder_status === 'completed') {
+                                icon = '<i class="bi bi-check-circle text-success"></i>';
+                                statusText = 'MOT completed';
+                            } else {
+                                icon = '<i class="bi bi-exclamation-circle text-warning"></i>';
+                                statusText = reminder.reminder_status;
+                            }
+                            
+                            item.innerHTML = `
+                                <div class="d-flex w-100 justify-content-between">
+                                    <h6 class="mb-1">${icon} ${statusText}</h6>
+                                    <small>${reminder.reminder_date}</small>
+                                </div>
+                                <p class="mb-1">${reminder.registration} - ${reminder.customer_name || 'Unknown'}</p>
+                                <small>MOT due: ${reminder.mot_expiry}</small>
+                            `;
+                            
+                            activityList.appendChild(item);
+                        }
+                        
+                        recentActivityDiv.appendChild(activityList);
+                    } else {
+                        recentActivityDiv.innerHTML = '<p class="text-center">No recent activity found</p>';
+                    }
+                })
+                .catch(error => {
+                    console.error('Error loading recent activity:', error);
+                    document.getElementById('recent-activity').innerHTML = '<p class="text-center">Error loading activity data</p>';
+                });
+        }
+        
+        // Load data on page load
+        document.addEventListener('DOMContentLoaded', loadSystemStatus);
+        
+        // Refresh data every 60 seconds
+        setInterval(loadSystemStatus, 60000);
+    </script>
+</body>
+</html>

@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Print {{ document.document_type }} #{{ document.document_number }} - Garage Management System</title>
+    <style>
+        @page {
+            size: A4;
+            margin: 1cm;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            font-size: 12pt;
+            line-height: 1.5;
+            color: #333;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #ccc;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 24pt;
+            color: #333;
+        }
+        .header p {
+            margin: 5px 0;
+            font-size: 10pt;
+            color: #666;
+        }
+        .document-header {
+            margin-bottom: 20px;
+        }
+        .document-header h2 {
+            margin: 0;
+            font-size: 18pt;
+            color: #333;
+        }
+        .document-header .document-number {
+            font-weight: bold;
+        }
+        .document-header .document-date {
+            font-style: italic;
+            color: #666;
+        }
+        .info-section {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        .info-box {
+            width: 48%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .info-box h3 {
+            margin: 0 0 10px 0;
+            font-size: 14pt;
+            color: #333;
+        }
+        .items-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        .items-table th {
+            background-color: #f5f5f5;
+            padding: 8px;
+            text-align: left;
+            border-bottom: 2px solid #ccc;
+        }
+        .items-table td {
+            padding: 8px;
+            border-bottom: 1px solid #eee;
+        }
+        .items-table .text-right {
+            text-align: right;
+        }
+        .items-table .text-center {
+            text-align: center;
+        }
+        .totals {
+            width: 100%;
+            margin-top: 20px;
+        }
+        .totals table {
+            width: 300px;
+            margin-left: auto;
+            border-collapse: collapse;
+        }
+        .totals td {
+            padding: 5px;
+        }
+        .totals .label {
+            text-align: right;
+            font-weight: bold;
+        }
+        .totals .value {
+            text-align: right;
+        }
+        .totals .total-row {
+            font-weight: bold;
+            font-size: 14pt;
+            border-top: 2px solid #333;
+        }
+        .notes {
+            margin-top: 30px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+        .notes h3 {
+            margin: 0 0 10px 0;
+            font-size: 14pt;
+            color: #333;
+        }
+        .footer {
+            margin-top: 30px;
+            padding-top: 10px;
+            border-top: 1px solid #ccc;
+            font-size: 10pt;
+            color: #666;
+            text-align: center;
+        }
+        .part-number {
+            font-size: 9pt;
+            color: #666;
+        }
+    </style>
+</head>
+<body onload="window.print()">
+    <div class="header">
+        <h1>Your Garage</h1>
+        <p>123 Main Street, Anytown, UK | Phone: 01234 567890 | Email: info@yourgarage.com</p>
+        <p>VAT Reg: GB123456789 | Company Reg: 12345678</p>
+    </div>
+
+    <div class="document-header">
+        <h2>{{ document.document_type }}</h2>
+        <p class="document-number">Document #: {{ document.document_number }}</p>
+        <p class="document-date">Date: {{ document.document_date }}</p>
+        {% if document.status %}
+            <p>Status: {{ document.status }}</p>
+        {% endif %}
+    </div>
+
+    <div class="info-section">
+        <div class="info-box">
+            <h3>Customer Information</h3>
+            {% if document.customer_name %}
+                <p>
+                    <strong>{{ document.customer_name }}</strong><br>
+                    {% for extra in document.extras %}
+                        {% if 'customer' in extra.field_name|lower and 'address' in extra.field_name|lower %}
+                            {{ extra.field_value }}<br>
+                        {% endif %}
+                    {% endfor %}
+                    {% for extra in document.extras %}
+                        {% if 'customer' in extra.field_name|lower and 'phone' in extra.field_name|lower %}
+                            Phone: {{ extra.field_value }}<br>
+                        {% endif %}
+                    {% endfor %}
+                    {% for extra in document.extras %}
+                        {% if 'customer' in extra.field_name|lower and 'email' in extra.field_name|lower %}
+                            Email: {{ extra.field_value }}
+                        {% endif %}
+                    {% endfor %}
+                </p>
+            {% else %}
+                <p>No customer information available</p>
+            {% endif %}
+        </div>
+        <div class="info-box">
+            <h3>Vehicle Information</h3>
+            {% if document.vehicle_registration %}
+                <p>
+                    <strong>{{ document.vehicle_make }} {{ document.vehicle_model }}</strong><br>
+                    Registration: {{ document.vehicle_registration }}<br>
+                    {% for extra in document.extras %}
+                        {% if 'vehicle' in extra.field_name|lower and 'vin' in extra.field_name|lower %}
+                            VIN: {{ extra.field_value }}<br>
+                        {% endif %}
+                    {% endfor %}
+                    {% for extra in document.extras %}
+                        {% if 'vehicle' in extra.field_name|lower and 'mileage' in extra.field_name|lower %}
+                            Mileage: {{ extra.field_value }}
+                        {% endif %}
+                    {% endfor %}
+                </p>
+            {% else %}
+                <p>No vehicle information available</p>
+            {% endif %}
+        </div>
+    </div>
+
+    <table class="items-table">
+        <thead>
+            <tr>
+                <th>Description</th>
+                <th class="text-center">Quantity</th>
+                <th class="text-right">Unit Price</th>
+                <th class="text-right">Total</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% if document.line_items %}
+                {% for item in document.line_items %}
+                    <tr>
+                        <td>
+                            {{ item.description }}
+                            {% if item.part_number %}
+                                <br><span class="part-number">Part #: {{ item.part_number }}</span>
+                            {% endif %}
+                        </td>
+                        <td class="text-center">{{ item.quantity }}</td>
+                        <td class="text-right">£{{ "%.2f"|format(item.unit_price|float) }}</td>
+                        <td class="text-right">£{{ "%.2f"|format(item.total_price|float) }}</td>
+                    </tr>
+                {% endfor %}
+            {% else %}
+                <tr>
+                    <td colspan="4" style="text-align: center;">No line items found</td>
+                </tr>
+            {% endif %}
+        </tbody>
+    </table>
+
+    <div class="totals">
+        <table>
+            <tr>
+                <td class="label">Subtotal:</td>
+                <td class="value">£{{ "%.2f"|format((document.total_amount|float) - (document.tax_amount|float)) }}</td>
+            </tr>
+            <tr>
+                <td class="label">VAT:</td>
+                <td class="value">£{{ "%.2f"|format(document.tax_amount|float) }}</td>
+            </tr>
+            <tr class="total-row">
+                <td class="label">Total:</td>
+                <td class="value">£{{ "%.2f"|format(document.total_amount|float) }}</td>
+            </tr>
+        </table>
+    </div>
+
+    {% if document.notes %}
+        <div class="notes">
+            <h3>Notes</h3>
+            <p>{{ document.notes }}</p>
+        </div>
+    {% endif %}
+
+    <div class="footer">
+        <p>Thank you for your business!</p>
+        <p>This document was generated by the Garage Management System on {{ document.created_at }}</p>
+    </div>
+</body>
+</html>

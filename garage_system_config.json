@@ -1,0 +1,116 @@
+{
+    "ga4_path": "C:\\Program Files (x86)\\Garage Assistant GA4",
+    "sqlite_db_path": "/Users/adamrutstein/Library/CloudStorage/GoogleDrive-adam@elimotors.co.uk/My Drive/GA4_Direct_Access_Tool_Package/garage_system.db",
+    "system": {
+        "name": "Garage Management System",
+        "version": "1.0.0",
+        "port": 5000,
+        "host": "0.0.0.0",
+        "debug": false,
+        "auto_import_csv": true,
+        "auto_create_reminders": true
+    },
+    "garage_details": {
+        "name": "Your Garage",
+        "address": "123 Main Street, Anytown, AN1 1AA",
+        "phone": "01234 567890",
+        "email": "info@yourgarage.com",
+        "website": "www.yourgarage.com"
+    },
+    "mot_reminder": {
+        "reminder_days": [
+            30,
+            14,
+            7,
+            3,
+            1
+        ],
+        "templates": {
+            "email": {
+                "subject": "MOT Reminder for {registration}",
+                "body": "Dear {customer_name},\n\nThis is a reminder that the MOT for your {make} {model} ({registration}) is due on {mot_expiry}.\n\nPlease contact us to schedule an appointment.\n\nRegards,\n{garage_name}"
+            },
+            "sms": {
+                "body": "MOT Reminder: Your {make} {model} ({registration}) is due for MOT on {mot_expiry}. Please contact us to schedule an appointment."
+            },
+            "letter": {
+                "body": "Dear {customer_name},\n\nThis is a reminder that the MOT for your {make} {model} ({registration}) is due on {mot_expiry}.\n\nPlease contact us to schedule an appointment.\n\nRegards,\n{garage_name}"
+            }
+        }
+    },
+    "email": {
+        "enabled": false,
+        "smtp_server": "smtp.gmail.com",
+        "smtp_port": 587,
+        "smtp_username": "",
+        "smtp_password": "",
+        "from_email": "",
+        "from_name": "Your Garage"
+    },
+    "sms": {
+        "enabled": false,
+        "provider": "twilio",
+        "account_sid": "",
+        "auth_token": "",
+        "from_number": ""
+    },
+    "dvla_api": {
+        "enabled": false,
+        "api_key": ""
+    },
+    "modules": {
+        "ga4_direct_access": {
+            "enabled": true,
+            "monitor_interval": 60
+        },
+        "mot_reminder": {
+            "enabled": true,
+            "check_interval": 86400
+        },
+        "customer_management": {
+            "enabled": true
+        },
+        "vehicle_management": {
+            "enabled": true
+        },
+        "invoicing": {
+            "enabled": true,
+            "invoice_prefix": "INV",
+            "next_invoice_number": 1001
+        },
+        "scheduling": {
+            "enabled": true,
+            "working_hours": {
+                "monday": [
+                    "08:00",
+                    "17:00"
+                ],
+                "tuesday": [
+                    "08:00",
+                    "17:00"
+                ],
+                "wednesday": [
+                    "08:00",
+                    "17:00"
+                ],
+                "thursday": [
+                    "08:00",
+                    "17:00"
+                ],
+                "friday": [
+                    "08:00",
+                    "17:00"
+                ],
+                "saturday": [
+                    "08:00",
+                    "12:00"
+                ],
+                "sunday": []
+            },
+            "appointment_duration": 60
+        },
+        "reporting": {
+            "enabled": true
+        }
+    }
+}

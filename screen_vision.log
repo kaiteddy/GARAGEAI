@@ -1,0 +1,56 @@
+2025-04-11 09:09:09,867 - ScreenVision - INFO - Initialized ScreenVision with google API
+2025-04-11 09:09:10,268 - ScreenVision - INFO - Screenshot captured successfully
+2025-04-11 09:09:10,317 - ScreenVision - INFO - Image resized from 3024x1964 to 1200x779
+2025-04-11 09:09:10,317 - ScreenVision - ERROR - Error compressing image: cannot write mode RGBA as JPEG
+2025-04-11 09:09:10,317 - ScreenVision - ERROR - Error: cannot write mode RGBA as JPEG
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/PIL/JpegImagePlugin.py", line 665, in _save
+    rawmode = RAWMODE[im.mode]
+              ~~~~~~~^^^^^^^^^
+KeyError: 'RGBA'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/adamrutstein/Library/CloudStorage/GoogleDrive-adam@elimotors.co.uk/My Drive/GA4_Direct_Access_Tool_Package/screen_vision.py", line 405, in main
+    screen_vision.run(args.num_captures)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "/Users/adamrutstein/Library/CloudStorage/GoogleDrive-adam@elimotors.co.uk/My Drive/GA4_Direct_Access_Tool_Package/screen_vision.py", line 344, in run
+    image_data = self.compress_image(screenshot)
+  File "/Users/adamrutstein/Library/CloudStorage/GoogleDrive-adam@elimotors.co.uk/My Drive/GA4_Direct_Access_Tool_Package/screen_vision.py", line 111, in compress_image
+    image.save(buffer, format="JPEG", quality=quality)
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/PIL/Image.py", line 2596, in save
+    save_handler(self, fp, filename)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/PIL/JpegImagePlugin.py", line 668, in _save
+    raise OSError(msg) from e
+OSError: cannot write mode RGBA as JPEG
+2025-04-11 09:10:07,750 - ScreenVision - INFO - Initialized ScreenVision with google API
+2025-04-11 09:10:07,919 - ScreenVision - INFO - Screenshot captured successfully
+2025-04-11 09:10:07,951 - ScreenVision - INFO - Image resized from 3024x1964 to 1200x779
+2025-04-11 09:10:07,952 - ScreenVision - ERROR - Error compressing image: cannot write mode RGBA as JPEG
+2025-04-11 09:10:07,952 - ScreenVision - ERROR - Error: cannot write mode RGBA as JPEG
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/PIL/JpegImagePlugin.py", line 665, in _save
+    rawmode = RAWMODE[im.mode]
+              ~~~~~~~^^^^^^^^^
+KeyError: 'RGBA'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/adamrutstein/Library/CloudStorage/GoogleDrive-adam@elimotors.co.uk/My Drive/GA4_Direct_Access_Tool_Package/screen_vision.py", line 405, in main
+    screen_vision.run(args.num_captures)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "/Users/adamrutstein/Library/CloudStorage/GoogleDrive-adam@elimotors.co.uk/My Drive/GA4_Direct_Access_Tool_Package/screen_vision.py", line 344, in run
+    image_data = self.compress_image(screenshot)
+  File "/Users/adamrutstein/Library/CloudStorage/GoogleDrive-adam@elimotors.co.uk/My Drive/GA4_Direct_Access_Tool_Package/screen_vision.py", line 111, in compress_image
+    image.save(buffer, format="JPEG", quality=quality)
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/PIL/Image.py", line 2596, in save
+    save_handler(self, fp, filename)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/PIL/JpegImagePlugin.py", line 668, in _save
+    raise OSError(msg) from e
+OSError: cannot write mode RGBA as JPEG

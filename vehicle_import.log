@@ -1,0 +1,1602 @@
+2025-04-11 10:03:59,455 - ImportGA4Vehicles - INFO - Starting Import GA4 Vehicles
+2025-04-11 10:03:59,455 - ImportGA4Vehicles - INFO - Importing vehicles to /Users/adamrutstein/Library/CloudStorage/GoogleDrive-adam@elimotors.co.uk/My Drive/GA4_Direct_Access_Tool_Package/data/garage_system.db
+2025-04-11 10:03:59,455 - ImportGA4Vehicles - INFO - Importing vehicles from /Users/adamrutstein/Library/CloudStorage/GoogleDrive-adam@elimotors.co.uk/My Drive/Data Exports/Vehicles.csv to /Users/adamrutstein/Library/CloudStorage/GoogleDrive-adam@elimotors.co.uk/My Drive/GA4_Direct_Access_Tool_Package/data/garage_system.db
+2025-04-11 10:03:59,456 - ImportGA4Vehicles - INFO - Found 10274 existing vehicles in database
+2025-04-11 10:04:11,740 - ImportGA4Vehicles - INFO - Clearing existing vehicle data
+2025-04-11 10:04:11,741 - ImportGA4Vehicles - INFO - Creating customer ID mapping
+2025-04-11 10:04:11,744 - ImportGA4Vehicles - INFO - Created mapping for 6984 customers
+2025-04-11 10:04:11,744 - ImportGA4Vehicles - INFO - Found 98 columns in CSV file
+2025-04-11 10:04:11,748 - ImportGA4Vehicles - INFO - Imported 100 vehicles so far
+2025-04-11 10:04:11,750 - ImportGA4Vehicles - INFO - Imported 200 vehicles so far
+2025-04-11 10:04:11,753 - ImportGA4Vehicles - INFO - Imported 300 vehicles so far
+2025-04-11 10:04:11,755 - ImportGA4Vehicles - INFO - Imported 400 vehicles so far
+2025-04-11 10:04:11,758 - ImportGA4Vehicles - WARNING - Skipping row 495: Missing make or model
+2025-04-11 10:04:11,758 - ImportGA4Vehicles - INFO - Imported 500 vehicles so far
+2025-04-11 10:04:11,760 - ImportGA4Vehicles - INFO - Imported 600 vehicles so far
+2025-04-11 10:04:11,763 - ImportGA4Vehicles - INFO - Imported 700 vehicles so far
+2025-04-11 10:04:11,765 - ImportGA4Vehicles - WARNING - Skipping row 792: Missing make or model
+2025-04-11 10:04:11,765 - ImportGA4Vehicles - WARNING - Skipping row 795: Missing make or model
+2025-04-11 10:04:11,765 - ImportGA4Vehicles - INFO - Imported 800 vehicles so far
+2025-04-11 10:04:11,766 - ImportGA4Vehicles - WARNING - Skipping row 807: Missing make or model
+2025-04-11 10:04:11,766 - ImportGA4Vehicles - WARNING - Skipping row 816: Missing make or model
+2025-04-11 10:04:11,767 - ImportGA4Vehicles - INFO - Imported 900 vehicles so far
+2025-04-11 10:04:11,769 - ImportGA4Vehicles - WARNING - Skipping row 939: Missing make or model
+2025-04-11 10:04:11,770 - ImportGA4Vehicles - INFO - Imported 1000 vehicles so far
+2025-04-11 10:04:11,772 - ImportGA4Vehicles - INFO - Imported 1100 vehicles so far
+2025-04-11 10:04:11,774 - ImportGA4Vehicles - INFO - Imported 1200 vehicles so far
+2025-04-11 10:04:11,776 - ImportGA4Vehicles - INFO - Imported 1300 vehicles so far
+2025-04-11 10:04:11,778 - ImportGA4Vehicles - WARNING - Skipping row 1389: Missing make or model
+2025-04-11 10:04:11,779 - ImportGA4Vehicles - INFO - Imported 1400 vehicles so far
+2025-04-11 10:04:11,780 - ImportGA4Vehicles - WARNING - Skipping row 1435: Missing make or model
+2025-04-11 10:04:11,780 - ImportGA4Vehicles - WARNING - Skipping row 1475: Missing make or model
+2025-04-11 10:04:11,781 - ImportGA4Vehicles - INFO - Imported 1500 vehicles so far
+2025-04-11 10:04:11,783 - ImportGA4Vehicles - INFO - Imported 1600 vehicles so far
+2025-04-11 10:04:11,784 - ImportGA4Vehicles - WARNING - Skipping row 1623: Missing make or model
+2025-04-11 10:04:11,784 - ImportGA4Vehicles - WARNING - Skipping row 1645: Missing make or model
+2025-04-11 10:04:11,785 - ImportGA4Vehicles - INFO - Imported 1700 vehicles so far
+2025-04-11 10:04:11,786 - ImportGA4Vehicles - WARNING - Skipping row 1734: Missing make or model
+2025-04-11 10:04:11,787 - ImportGA4Vehicles - INFO - Imported 1800 vehicles so far
+2025-04-11 10:04:11,790 - ImportGA4Vehicles - INFO - Imported 1900 vehicles so far
+2025-04-11 10:04:11,792 - ImportGA4Vehicles - INFO - Imported 2000 vehicles so far
+2025-04-11 10:04:11,793 - ImportGA4Vehicles - WARNING - Skipping row 2076: Missing make or model
+2025-04-11 10:04:11,794 - ImportGA4Vehicles - INFO - Imported 2100 vehicles so far
+2025-04-11 10:04:11,795 - ImportGA4Vehicles - WARNING - Skipping row 2152: Missing make or model
+2025-04-11 10:04:11,795 - ImportGA4Vehicles - WARNING - Skipping row 2157: Missing make or model
+2025-04-11 10:04:11,796 - ImportGA4Vehicles - WARNING - Skipping row 2208: Missing make or model
+2025-04-11 10:04:11,796 - ImportGA4Vehicles - WARNING - Skipping row 2213: Missing make or model
+2025-04-11 10:04:11,796 - ImportGA4Vehicles - WARNING - Skipping row 2215: Missing make or model
+2025-04-11 10:04:11,796 - ImportGA4Vehicles - INFO - Imported 2200 vehicles so far
+2025-04-11 10:04:11,798 - ImportGA4Vehicles - INFO - Imported 2300 vehicles so far
+2025-04-11 10:04:11,801 - ImportGA4Vehicles - INFO - Imported 2400 vehicles so far
+2025-04-11 10:04:11,802 - ImportGA4Vehicles - WARNING - Skipping row 2480: Missing make or model
+2025-04-11 10:04:11,803 - ImportGA4Vehicles - INFO - Imported 2500 vehicles so far
+2025-04-11 10:04:11,804 - ImportGA4Vehicles - WARNING - Skipping row 2552: Missing make or model
+2025-04-11 10:04:11,805 - ImportGA4Vehicles - WARNING - Skipping row 2602: Missing make or model
+2025-04-11 10:04:11,805 - ImportGA4Vehicles - INFO - Imported 2600 vehicles so far
+2025-04-11 10:04:11,806 - ImportGA4Vehicles - WARNING - Skipping row 2636: Missing make or model
+2025-04-11 10:04:11,806 - ImportGA4Vehicles - WARNING - Skipping row 2645: Missing make or model
+2025-04-11 10:04:11,806 - ImportGA4Vehicles - WARNING - Skipping row 2646: Missing make or model
+2025-04-11 10:04:11,806 - ImportGA4Vehicles - WARNING - Skipping row 2659: Missing make or model
+2025-04-11 10:04:11,807 - ImportGA4Vehicles - INFO - Imported 2700 vehicles so far
+2025-04-11 10:04:11,809 - ImportGA4Vehicles - INFO - Imported 2800 vehicles so far
+2025-04-11 10:04:11,810 - ImportGA4Vehicles - WARNING - Skipping row 2842: Missing make or model
+2025-04-11 10:04:11,812 - ImportGA4Vehicles - WARNING - Skipping row 2914: Missing make or model
+2025-04-11 10:04:11,812 - ImportGA4Vehicles - INFO - Imported 2900 vehicles so far
+2025-04-11 10:04:11,814 - ImportGA4Vehicles - WARNING - Skipping row 3024: Missing make or model
+2025-04-11 10:04:11,814 - ImportGA4Vehicles - INFO - Imported 3000 vehicles so far
+2025-04-11 10:04:11,816 - ImportGA4Vehicles - INFO - Imported 3100 vehicles so far
+2025-04-11 10:04:11,817 - ImportGA4Vehicles - WARNING - Skipping row 3180: Missing make or model
+2025-04-11 10:04:11,818 - ImportGA4Vehicles - INFO - Imported 3200 vehicles so far
+2025-04-11 10:04:11,820 - ImportGA4Vehicles - WARNING - Skipping row 3288: Missing make or model
+2025-04-11 10:04:11,821 - ImportGA4Vehicles - INFO - Imported 3300 vehicles so far
+2025-04-11 10:04:11,823 - ImportGA4Vehicles - INFO - Imported 3400 vehicles so far
+2025-04-11 10:04:11,825 - ImportGA4Vehicles - WARNING - Skipping row 3517: Missing make or model
+2025-04-11 10:04:11,825 - ImportGA4Vehicles - INFO - Imported 3500 vehicles so far
+2025-04-11 10:04:11,826 - ImportGA4Vehicles - WARNING - Skipping row 3581: Missing make or model
+2025-04-11 10:04:11,827 - ImportGA4Vehicles - WARNING - Skipping row 3582: Missing make or model
+2025-04-11 10:04:11,827 - ImportGA4Vehicles - INFO - Imported 3600 vehicles so far
+2025-04-11 10:04:11,830 - ImportGA4Vehicles - INFO - Imported 3700 vehicles so far
+2025-04-11 10:04:11,831 - ImportGA4Vehicles - WARNING - Skipping row 3798: Missing make or model
+2025-04-11 10:04:11,832 - ImportGA4Vehicles - INFO - Imported 3800 vehicles so far
+2025-04-11 10:04:11,834 - ImportGA4Vehicles - WARNING - Skipping row 3924: Missing make or model
+2025-04-11 10:04:11,834 - ImportGA4Vehicles - INFO - Imported 3900 vehicles so far
+2025-04-11 10:04:11,837 - ImportGA4Vehicles - WARNING - Skipping row 4030: Missing make or model
+2025-04-11 10:04:11,837 - ImportGA4Vehicles - INFO - Imported 4000 vehicles so far
+2025-04-11 10:04:11,838 - ImportGA4Vehicles - WARNING - Skipping row 4061: Missing make or model
+2025-04-11 10:04:11,839 - ImportGA4Vehicles - INFO - Imported 4100 vehicles so far
+2025-04-11 10:04:11,841 - ImportGA4Vehicles - WARNING - Skipping row 4189: Missing make or model
+2025-04-11 10:04:11,841 - ImportGA4Vehicles - WARNING - Skipping row 4198: Missing make or model
+2025-04-11 10:04:11,842 - ImportGA4Vehicles - INFO - Imported 4200 vehicles so far
+2025-04-11 10:04:11,844 - ImportGA4Vehicles - WARNING - Skipping row 4313: Missing make or model
+2025-04-11 10:04:11,844 - ImportGA4Vehicles - INFO - Imported 4300 vehicles so far
+2025-04-11 10:04:11,846 - ImportGA4Vehicles - WARNING - Skipping row 4380: Missing make or model
+2025-04-11 10:04:11,847 - ImportGA4Vehicles - WARNING - Skipping row 4421: Missing make or model
+2025-04-11 10:04:11,847 - ImportGA4Vehicles - INFO - Imported 4400 vehicles so far
+2025-04-11 10:04:11,848 - ImportGA4Vehicles - WARNING - Skipping row 4462: Missing make or model
+2025-04-11 10:04:11,849 - ImportGA4Vehicles - INFO - Imported 4500 vehicles so far
+2025-04-11 10:04:11,851 - ImportGA4Vehicles - WARNING - Skipping row 4609: Missing make or model
+2025-04-11 10:04:11,851 - ImportGA4Vehicles - WARNING - Skipping row 4611: Missing make or model
+2025-04-11 10:04:11,852 - ImportGA4Vehicles - WARNING - Skipping row 4640: Missing make or model
+2025-04-11 10:04:11,852 - ImportGA4Vehicles - INFO - Imported 4600 vehicles so far
+2025-04-11 10:04:11,854 - ImportGA4Vehicles - INFO - Imported 4700 vehicles so far
+2025-04-11 10:04:11,855 - ImportGA4Vehicles - WARNING - Skipping row 4764: Missing make or model
+2025-04-11 10:04:11,856 - ImportGA4Vehicles - WARNING - Skipping row 4814: Missing make or model
+2025-04-11 10:04:11,857 - ImportGA4Vehicles - INFO - Imported 4800 vehicles so far
+2025-04-11 10:04:11,857 - ImportGA4Vehicles - WARNING - Skipping row 4851: Missing make or model
+2025-04-11 10:04:11,859 - ImportGA4Vehicles - INFO - Imported 4900 vehicles so far
+2025-04-11 10:04:11,861 - ImportGA4Vehicles - WARNING - Skipping row 4986: Missing make or model
+2025-04-11 10:04:11,862 - ImportGA4Vehicles - WARNING - Skipping row 5042: Missing make or model
+2025-04-11 10:04:11,862 - ImportGA4Vehicles - INFO - Imported 5000 vehicles so far
+2025-04-11 10:04:11,863 - ImportGA4Vehicles - WARNING - Skipping row 5103: Missing make or model
+2025-04-11 10:04:11,864 - ImportGA4Vehicles - INFO - Imported 5100 vehicles so far
+2025-04-11 10:04:11,864 - ImportGA4Vehicles - WARNING - Skipping row 5153: Missing make or model
+2025-04-11 10:04:11,866 - ImportGA4Vehicles - WARNING - Skipping row 5218: Missing make or model
+2025-04-11 10:04:11,866 - ImportGA4Vehicles - INFO - Imported 5200 vehicles so far
+2025-04-11 10:04:11,868 - ImportGA4Vehicles - WARNING - Skipping row 5285: Missing make or model
+2025-04-11 10:04:11,869 - ImportGA4Vehicles - WARNING - Skipping row 5337: Missing make or model
+2025-04-11 10:04:11,869 - ImportGA4Vehicles - INFO - Imported 5300 vehicles so far
+2025-04-11 10:04:11,871 - ImportGA4Vehicles - INFO - Imported 5400 vehicles so far
+2025-04-11 10:04:11,874 - ImportGA4Vehicles - INFO - Imported 5500 vehicles so far
+2025-04-11 10:04:11,876 - ImportGA4Vehicles - INFO - Imported 5600 vehicles so far
+2025-04-11 10:04:11,877 - ImportGA4Vehicles - WARNING - Skipping row 5728: Missing make or model
+2025-04-11 10:04:11,878 - ImportGA4Vehicles - INFO - Imported 5700 vehicles so far
+2025-04-11 10:04:11,879 - ImportGA4Vehicles - WARNING - Skipping row 5782: Missing make or model
+2025-04-11 10:04:11,880 - ImportGA4Vehicles - INFO - Imported 5800 vehicles so far
+2025-04-11 10:04:11,881 - ImportGA4Vehicles - WARNING - Skipping row 5883: Missing make or model
+2025-04-11 10:04:11,882 - ImportGA4Vehicles - INFO - Imported 5900 vehicles so far
+2025-04-11 10:04:11,884 - ImportGA4Vehicles - INFO - Imported 6000 vehicles so far
+2025-04-11 10:04:11,887 - ImportGA4Vehicles - INFO - Imported 6100 vehicles so far
+2025-04-11 10:04:11,887 - ImportGA4Vehicles - WARNING - Skipping row 6162: Missing make or model
+2025-04-11 10:04:11,887 - ImportGA4Vehicles - WARNING - Skipping row 6165: Missing make or model
+2025-04-11 10:04:11,888 - ImportGA4Vehicles - WARNING - Skipping row 6235: Missing make or model
+2025-04-11 10:04:11,889 - ImportGA4Vehicles - INFO - Imported 6200 vehicles so far
+2025-04-11 10:04:11,891 - ImportGA4Vehicles - INFO - Imported 6300 vehicles so far
+2025-04-11 10:04:11,893 - ImportGA4Vehicles - INFO - Imported 6400 vehicles so far
+2025-04-11 10:04:11,894 - ImportGA4Vehicles - WARNING - Skipping row 6482: Missing make or model
+2025-04-11 10:04:11,894 - ImportGA4Vehicles - WARNING - Skipping row 6505: Missing make or model
+2025-04-11 10:04:11,895 - ImportGA4Vehicles - WARNING - Skipping row 6548: Missing make or model
+2025-04-11 10:04:11,895 - ImportGA4Vehicles - WARNING - Skipping row 6555: Missing make or model
+2025-04-11 10:04:11,895 - ImportGA4Vehicles - WARNING - Skipping row 6559: Missing make or model
+2025-04-11 10:04:11,895 - ImportGA4Vehicles - WARNING - Skipping row 6563: Missing make or model
+2025-04-11 10:04:11,895 - ImportGA4Vehicles - INFO - Imported 6500 vehicles so far
+2025-04-11 10:04:11,896 - ImportGA4Vehicles - WARNING - Skipping row 6570: Missing make or model
+2025-04-11 10:04:11,896 - ImportGA4Vehicles - WARNING - Skipping row 6577: Missing make or model
+2025-04-11 10:04:11,896 - ImportGA4Vehicles - WARNING - Skipping row 6579: Missing make or model
+2025-04-11 10:04:11,896 - ImportGA4Vehicles - WARNING - Skipping row 6582: Missing make or model
+2025-04-11 10:04:11,896 - ImportGA4Vehicles - WARNING - Skipping row 6583: Missing make or model
+2025-04-11 10:04:11,896 - ImportGA4Vehicles - WARNING - Skipping row 6587: Missing make or model
+2025-04-11 10:04:11,896 - ImportGA4Vehicles - WARNING - Skipping row 6589: Missing make or model
+2025-04-11 10:04:11,896 - ImportGA4Vehicles - WARNING - Skipping row 6591: Missing make or model
+2025-04-11 10:04:11,896 - ImportGA4Vehicles - WARNING - Skipping row 6594: Missing make or model
+2025-04-11 10:04:11,896 - ImportGA4Vehicles - WARNING - Skipping row 6598: Missing make or model
+2025-04-11 10:04:11,896 - ImportGA4Vehicles - WARNING - Skipping row 6600: Missing make or model
+2025-04-11 10:04:11,897 - ImportGA4Vehicles - WARNING - Skipping row 6607: Missing make or model
+2025-04-11 10:04:11,897 - ImportGA4Vehicles - WARNING - Skipping row 6609: Missing make or model
+2025-04-11 10:04:11,897 - ImportGA4Vehicles - WARNING - Skipping row 6623: Missing make or model
+2025-04-11 10:04:11,897 - ImportGA4Vehicles - WARNING - Skipping row 6625: Missing make or model
+2025-04-11 10:04:11,897 - ImportGA4Vehicles - WARNING - Skipping row 6626: Missing make or model
+2025-04-11 10:04:11,897 - ImportGA4Vehicles - WARNING - Skipping row 6629: Missing make or model
+2025-04-11 10:04:11,897 - ImportGA4Vehicles - WARNING - Skipping row 6630: Missing make or model
+2025-04-11 10:04:11,897 - ImportGA4Vehicles - WARNING - Skipping row 6632: Missing make or model
+2025-04-11 10:04:11,897 - ImportGA4Vehicles - WARNING - Skipping row 6644: Missing make or model
+2025-04-11 10:04:11,897 - ImportGA4Vehicles - WARNING - Skipping row 6647: Missing make or model
+2025-04-11 10:04:11,897 - ImportGA4Vehicles - WARNING - Skipping row 6652: Missing make or model
+2025-04-11 10:04:11,898 - ImportGA4Vehicles - WARNING - Skipping row 6654: Missing make or model
+2025-04-11 10:04:11,898 - ImportGA4Vehicles - WARNING - Skipping row 6656: Missing make or model
+2025-04-11 10:04:11,898 - ImportGA4Vehicles - WARNING - Skipping row 6658: Missing make or model
+2025-04-11 10:04:11,898 - ImportGA4Vehicles - WARNING - Skipping row 6660: Missing make or model
+2025-04-11 10:04:11,898 - ImportGA4Vehicles - WARNING - Skipping row 6662: Missing make or model
+2025-04-11 10:04:11,898 - ImportGA4Vehicles - WARNING - Skipping row 6663: Missing make or model
+2025-04-11 10:04:11,898 - ImportGA4Vehicles - WARNING - Skipping row 6672: Missing make or model
+2025-04-11 10:04:11,898 - ImportGA4Vehicles - WARNING - Skipping row 6674: Missing make or model
+2025-04-11 10:04:11,898 - ImportGA4Vehicles - WARNING - Skipping row 6675: Missing make or model
+2025-04-11 10:04:11,898 - ImportGA4Vehicles - WARNING - Skipping row 6676: Missing make or model
+2025-04-11 10:04:11,898 - ImportGA4Vehicles - WARNING - Skipping row 6677: Missing make or model
+2025-04-11 10:04:11,898 - ImportGA4Vehicles - WARNING - Skipping row 6680: Missing make or model
+2025-04-11 10:04:11,898 - ImportGA4Vehicles - WARNING - Skipping row 6683: Missing make or model
+2025-04-11 10:04:11,898 - ImportGA4Vehicles - WARNING - Skipping row 6687: Missing make or model
+2025-04-11 10:04:11,898 - ImportGA4Vehicles - WARNING - Skipping row 6691: Missing make or model
+2025-04-11 10:04:11,898 - ImportGA4Vehicles - WARNING - Skipping row 6695: Missing make or model
+2025-04-11 10:04:11,898 - ImportGA4Vehicles - WARNING - Skipping row 6699: Missing make or model
+2025-04-11 10:04:11,899 - ImportGA4Vehicles - INFO - Imported 6600 vehicles so far
+2025-04-11 10:04:11,899 - ImportGA4Vehicles - WARNING - Skipping row 6721: Missing make or model
+2025-04-11 10:04:11,899 - ImportGA4Vehicles - WARNING - Skipping row 6723: Missing make or model
+2025-04-11 10:04:11,899 - ImportGA4Vehicles - WARNING - Skipping row 6726: Missing make or model
+2025-04-11 10:04:11,899 - ImportGA4Vehicles - WARNING - Skipping row 6731: Missing make or model
+2025-04-11 10:04:11,900 - ImportGA4Vehicles - WARNING - Skipping row 6734: Missing make or model
+2025-04-11 10:04:11,900 - ImportGA4Vehicles - WARNING - Skipping row 6742: Missing make or model
+2025-04-11 10:04:11,900 - ImportGA4Vehicles - WARNING - Skipping row 6743: Missing make or model
+2025-04-11 10:04:11,900 - ImportGA4Vehicles - WARNING - Skipping row 6746: Missing make or model
+2025-04-11 10:04:11,900 - ImportGA4Vehicles - WARNING - Skipping row 6747: Missing make or model
+2025-04-11 10:04:11,900 - ImportGA4Vehicles - WARNING - Skipping row 6753: Missing make or model
+2025-04-11 10:04:11,900 - ImportGA4Vehicles - WARNING - Skipping row 6755: Missing make or model
+2025-04-11 10:04:11,900 - ImportGA4Vehicles - WARNING - Skipping row 6762: Missing make or model
+2025-04-11 10:04:11,900 - ImportGA4Vehicles - WARNING - Skipping row 6778: Missing make or model
+2025-04-11 10:04:11,900 - ImportGA4Vehicles - WARNING - Skipping row 6785: Missing make or model
+2025-04-11 10:04:11,900 - ImportGA4Vehicles - WARNING - Skipping row 6786: Missing make or model
+2025-04-11 10:04:11,901 - ImportGA4Vehicles - WARNING - Skipping row 6789: Missing make or model
+2025-04-11 10:04:11,901 - ImportGA4Vehicles - WARNING - Skipping row 6790: Missing make or model
+2025-04-11 10:04:11,901 - ImportGA4Vehicles - WARNING - Skipping row 6791: Missing make or model
+2025-04-11 10:04:11,901 - ImportGA4Vehicles - WARNING - Skipping row 6793: Missing make or model
+2025-04-11 10:04:11,901 - ImportGA4Vehicles - WARNING - Skipping row 6795: Missing make or model
+2025-04-11 10:04:11,901 - ImportGA4Vehicles - WARNING - Skipping row 6798: Missing make or model
+2025-04-11 10:04:11,901 - ImportGA4Vehicles - WARNING - Skipping row 6800: Missing make or model
+2025-04-11 10:04:11,901 - ImportGA4Vehicles - WARNING - Skipping row 6803: Missing make or model
+2025-04-11 10:04:11,901 - ImportGA4Vehicles - WARNING - Skipping row 6804: Missing make or model
+2025-04-11 10:04:11,901 - ImportGA4Vehicles - WARNING - Skipping row 6811: Missing make or model
+2025-04-11 10:04:11,901 - ImportGA4Vehicles - WARNING - Skipping row 6814: Missing make or model
+2025-04-11 10:04:11,901 - ImportGA4Vehicles - WARNING - Skipping row 6816: Missing make or model
+2025-04-11 10:04:11,901 - ImportGA4Vehicles - WARNING - Skipping row 6817: Missing make or model
+2025-04-11 10:04:11,901 - ImportGA4Vehicles - WARNING - Skipping row 6822: Missing make or model
+2025-04-11 10:04:11,901 - ImportGA4Vehicles - WARNING - Skipping row 6828: Missing make or model
+2025-04-11 10:04:11,901 - ImportGA4Vehicles - WARNING - Skipping row 6834: Missing make or model
+2025-04-11 10:04:11,901 - ImportGA4Vehicles - WARNING - Skipping row 6838: Missing make or model
+2025-04-11 10:04:11,901 - ImportGA4Vehicles - INFO - Imported 6700 vehicles so far
+2025-04-11 10:04:11,902 - ImportGA4Vehicles - WARNING - Skipping row 6840: Missing make or model
+2025-04-11 10:04:11,902 - ImportGA4Vehicles - WARNING - Skipping row 6844: Missing make or model
+2025-04-11 10:04:11,902 - ImportGA4Vehicles - WARNING - Skipping row 6849: Missing make or model
+2025-04-11 10:04:11,902 - ImportGA4Vehicles - WARNING - Skipping row 6852: Missing make or model
+2025-04-11 10:04:11,902 - ImportGA4Vehicles - WARNING - Skipping row 6853: Missing make or model
+2025-04-11 10:04:11,902 - ImportGA4Vehicles - WARNING - Skipping row 6856: Missing make or model
+2025-04-11 10:04:11,902 - ImportGA4Vehicles - WARNING - Skipping row 6858: Missing make or model
+2025-04-11 10:04:11,902 - ImportGA4Vehicles - WARNING - Skipping row 6861: Missing make or model
+2025-04-11 10:04:11,902 - ImportGA4Vehicles - WARNING - Skipping row 6865: Missing make or model
+2025-04-11 10:04:11,903 - ImportGA4Vehicles - WARNING - Skipping row 6869: Missing make or model
+2025-04-11 10:04:11,903 - ImportGA4Vehicles - WARNING - Skipping row 6870: Missing make or model
+2025-04-11 10:04:11,903 - ImportGA4Vehicles - WARNING - Skipping row 6871: Missing make or model
+2025-04-11 10:04:11,903 - ImportGA4Vehicles - WARNING - Skipping row 6873: Missing make or model
+2025-04-11 10:04:11,903 - ImportGA4Vehicles - WARNING - Skipping row 6878: Missing make or model
+2025-04-11 10:04:11,903 - ImportGA4Vehicles - WARNING - Skipping row 6882: Missing make or model
+2025-04-11 10:04:11,903 - ImportGA4Vehicles - WARNING - Skipping row 6899: Missing make or model
+2025-04-11 10:04:11,903 - ImportGA4Vehicles - WARNING - Skipping row 6903: Missing make or model
+2025-04-11 10:04:11,903 - ImportGA4Vehicles - WARNING - Skipping row 6904: Missing make or model
+2025-04-11 10:04:11,903 - ImportGA4Vehicles - WARNING - Skipping row 6911: Missing make or model
+2025-04-11 10:04:11,903 - ImportGA4Vehicles - WARNING - Skipping row 6913: Missing make or model
+2025-04-11 10:04:11,903 - ImportGA4Vehicles - WARNING - Skipping row 6916: Missing make or model
+2025-04-11 10:04:11,904 - ImportGA4Vehicles - WARNING - Skipping row 6919: Missing make or model
+2025-04-11 10:04:11,904 - ImportGA4Vehicles - WARNING - Skipping row 6922: Missing make or model
+2025-04-11 10:04:11,904 - ImportGA4Vehicles - WARNING - Skipping row 6925: Missing make or model
+2025-04-11 10:04:11,904 - ImportGA4Vehicles - WARNING - Skipping row 6927: Missing make or model
+2025-04-11 10:04:11,904 - ImportGA4Vehicles - WARNING - Skipping row 6937: Missing make or model
+2025-04-11 10:04:11,904 - ImportGA4Vehicles - WARNING - Skipping row 6941: Missing make or model
+2025-04-11 10:04:11,904 - ImportGA4Vehicles - WARNING - Skipping row 6944: Missing make or model
+2025-04-11 10:04:11,904 - ImportGA4Vehicles - WARNING - Skipping row 6945: Missing make or model
+2025-04-11 10:04:11,904 - ImportGA4Vehicles - WARNING - Skipping row 6947: Missing make or model
+2025-04-11 10:04:11,904 - ImportGA4Vehicles - WARNING - Skipping row 6948: Missing make or model
+2025-04-11 10:04:11,904 - ImportGA4Vehicles - WARNING - Skipping row 6953: Missing make or model
+2025-04-11 10:04:11,904 - ImportGA4Vehicles - WARNING - Skipping row 6954: Missing make or model
+2025-04-11 10:04:11,904 - ImportGA4Vehicles - WARNING - Skipping row 6955: Missing make or model
+2025-04-11 10:04:11,904 - ImportGA4Vehicles - WARNING - Skipping row 6958: Missing make or model
+2025-04-11 10:04:11,904 - ImportGA4Vehicles - WARNING - Skipping row 6962: Missing make or model
+2025-04-11 10:04:11,904 - ImportGA4Vehicles - WARNING - Skipping row 6963: Missing make or model
+2025-04-11 10:04:11,905 - ImportGA4Vehicles - WARNING - Skipping row 6967: Missing make or model
+2025-04-11 10:04:11,905 - ImportGA4Vehicles - WARNING - Skipping row 6970: Missing make or model
+2025-04-11 10:04:11,905 - ImportGA4Vehicles - WARNING - Skipping row 6972: Missing make or model
+2025-04-11 10:04:11,905 - ImportGA4Vehicles - WARNING - Skipping row 6977: Missing make or model
+2025-04-11 10:04:11,905 - ImportGA4Vehicles - INFO - Imported 6800 vehicles so far
+2025-04-11 10:04:11,905 - ImportGA4Vehicles - WARNING - Skipping row 6981: Missing make or model
+2025-04-11 10:04:11,905 - ImportGA4Vehicles - WARNING - Skipping row 6985: Missing make or model
+2025-04-11 10:04:11,905 - ImportGA4Vehicles - WARNING - Skipping row 6998: Missing make or model
+2025-04-11 10:04:11,906 - ImportGA4Vehicles - WARNING - Skipping row 7008: Missing make or model
+2025-04-11 10:04:11,906 - ImportGA4Vehicles - WARNING - Skipping row 7010: Missing make or model
+2025-04-11 10:04:11,906 - ImportGA4Vehicles - WARNING - Skipping row 7022: Missing make or model
+2025-04-11 10:04:11,906 - ImportGA4Vehicles - WARNING - Skipping row 7027: Missing make or model
+2025-04-11 10:04:11,906 - ImportGA4Vehicles - WARNING - Skipping row 7028: Missing make or model
+2025-04-11 10:04:11,906 - ImportGA4Vehicles - WARNING - Skipping row 7032: Missing make or model
+2025-04-11 10:04:11,906 - ImportGA4Vehicles - WARNING - Skipping row 7041: Missing make or model
+2025-04-11 10:04:11,906 - ImportGA4Vehicles - WARNING - Skipping row 7042: Missing make or model
+2025-04-11 10:04:11,906 - ImportGA4Vehicles - WARNING - Skipping row 7052: Missing make or model
+2025-04-11 10:04:11,907 - ImportGA4Vehicles - WARNING - Skipping row 7061: Missing make or model
+2025-04-11 10:04:11,907 - ImportGA4Vehicles - WARNING - Skipping row 7062: Missing make or model
+2025-04-11 10:04:11,907 - ImportGA4Vehicles - WARNING - Skipping row 7063: Missing make or model
+2025-04-11 10:04:11,907 - ImportGA4Vehicles - WARNING - Skipping row 7067: Missing make or model
+2025-04-11 10:04:11,907 - ImportGA4Vehicles - WARNING - Skipping row 7071: Missing make or model
+2025-04-11 10:04:11,907 - ImportGA4Vehicles - WARNING - Skipping row 7073: Missing make or model
+2025-04-11 10:04:11,907 - ImportGA4Vehicles - WARNING - Skipping row 7075: Missing make or model
+2025-04-11 10:04:11,907 - ImportGA4Vehicles - WARNING - Skipping row 7076: Missing make or model
+2025-04-11 10:04:11,907 - ImportGA4Vehicles - WARNING - Skipping row 7078: Missing make or model
+2025-04-11 10:04:11,907 - ImportGA4Vehicles - WARNING - Skipping row 7080: Missing make or model
+2025-04-11 10:04:11,907 - ImportGA4Vehicles - WARNING - Skipping row 7082: Missing make or model
+2025-04-11 10:04:11,907 - ImportGA4Vehicles - WARNING - Skipping row 7085: Missing make or model
+2025-04-11 10:04:11,907 - ImportGA4Vehicles - WARNING - Skipping row 7086: Missing make or model
+2025-04-11 10:04:11,907 - ImportGA4Vehicles - WARNING - Skipping row 7087: Missing make or model
+2025-04-11 10:04:11,907 - ImportGA4Vehicles - WARNING - Skipping row 7088: Missing make or model
+2025-04-11 10:04:11,907 - ImportGA4Vehicles - WARNING - Skipping row 7089: Missing make or model
+2025-04-11 10:04:11,907 - ImportGA4Vehicles - WARNING - Skipping row 7098: Missing make or model
+2025-04-11 10:04:11,907 - ImportGA4Vehicles - WARNING - Skipping row 7100: Missing make or model
+2025-04-11 10:04:11,908 - ImportGA4Vehicles - INFO - Imported 6900 vehicles so far
+2025-04-11 10:04:11,908 - ImportGA4Vehicles - WARNING - Skipping row 7112: Missing make or model
+2025-04-11 10:04:11,908 - ImportGA4Vehicles - WARNING - Skipping row 7117: Missing make or model
+2025-04-11 10:04:11,908 - ImportGA4Vehicles - WARNING - Skipping row 7119: Missing make or model
+2025-04-11 10:04:11,908 - ImportGA4Vehicles - WARNING - Skipping row 7124: Missing make or model
+2025-04-11 10:04:11,908 - ImportGA4Vehicles - WARNING - Skipping row 7125: Missing make or model
+2025-04-11 10:04:11,908 - ImportGA4Vehicles - WARNING - Skipping row 7128: Missing make or model
+2025-04-11 10:04:11,908 - ImportGA4Vehicles - WARNING - Skipping row 7132: Missing make or model
+2025-04-11 10:04:11,908 - ImportGA4Vehicles - WARNING - Skipping row 7133: Missing make or model
+2025-04-11 10:04:11,908 - ImportGA4Vehicles - WARNING - Skipping row 7139: Missing make or model
+2025-04-11 10:04:11,908 - ImportGA4Vehicles - WARNING - Skipping row 7140: Missing make or model
+2025-04-11 10:04:11,909 - ImportGA4Vehicles - WARNING - Skipping row 7141: Missing make or model
+2025-04-11 10:04:11,909 - ImportGA4Vehicles - WARNING - Skipping row 7149: Missing make or model
+2025-04-11 10:04:11,909 - ImportGA4Vehicles - WARNING - Skipping row 7156: Missing make or model
+2025-04-11 10:04:11,909 - ImportGA4Vehicles - WARNING - Skipping row 7168: Missing make or model
+2025-04-11 10:04:11,909 - ImportGA4Vehicles - WARNING - Skipping row 7169: Missing make or model
+2025-04-11 10:04:11,909 - ImportGA4Vehicles - WARNING - Skipping row 7170: Missing make or model
+2025-04-11 10:04:11,909 - ImportGA4Vehicles - WARNING - Skipping row 7173: Missing make or model
+2025-04-11 10:04:11,909 - ImportGA4Vehicles - WARNING - Skipping row 7175: Missing make or model
+2025-04-11 10:04:11,909 - ImportGA4Vehicles - WARNING - Skipping row 7176: Missing make or model
+2025-04-11 10:04:11,909 - ImportGA4Vehicles - WARNING - Skipping row 7178: Missing make or model
+2025-04-11 10:04:11,909 - ImportGA4Vehicles - WARNING - Skipping row 7186: Missing make or model
+2025-04-11 10:04:11,909 - ImportGA4Vehicles - WARNING - Skipping row 7189: Missing make or model
+2025-04-11 10:04:11,909 - ImportGA4Vehicles - WARNING - Skipping row 7196: Missing make or model
+2025-04-11 10:04:11,910 - ImportGA4Vehicles - WARNING - Skipping row 7198: Missing make or model
+2025-04-11 10:04:11,910 - ImportGA4Vehicles - WARNING - Skipping row 7199: Missing make or model
+2025-04-11 10:04:11,910 - ImportGA4Vehicles - WARNING - Skipping row 7201: Missing make or model
+2025-04-11 10:04:11,910 - ImportGA4Vehicles - WARNING - Skipping row 7203: Missing make or model
+2025-04-11 10:04:11,910 - ImportGA4Vehicles - WARNING - Skipping row 7208: Missing make or model
+2025-04-11 10:04:11,910 - ImportGA4Vehicles - WARNING - Skipping row 7219: Missing make or model
+2025-04-11 10:04:11,910 - ImportGA4Vehicles - WARNING - Skipping row 7223: Missing make or model
+2025-04-11 10:04:11,910 - ImportGA4Vehicles - WARNING - Skipping row 7227: Missing make or model
+2025-04-11 10:04:11,910 - ImportGA4Vehicles - WARNING - Skipping row 7228: Missing make or model
+2025-04-11 10:04:11,910 - ImportGA4Vehicles - WARNING - Skipping row 7229: Missing make or model
+2025-04-11 10:04:11,910 - ImportGA4Vehicles - WARNING - Skipping row 7230: Missing make or model
+2025-04-11 10:04:11,910 - ImportGA4Vehicles - WARNING - Skipping row 7235: Missing make or model
+2025-04-11 10:04:11,910 - ImportGA4Vehicles - WARNING - Skipping row 7240: Missing make or model
+2025-04-11 10:04:11,910 - ImportGA4Vehicles - WARNING - Skipping row 7244: Missing make or model
+2025-04-11 10:04:11,910 - ImportGA4Vehicles - WARNING - Skipping row 7245: Missing make or model
+2025-04-11 10:04:11,910 - ImportGA4Vehicles - WARNING - Skipping row 7248: Missing make or model
+2025-04-11 10:04:11,910 - ImportGA4Vehicles - INFO - Imported 7000 vehicles so far
+2025-04-11 10:04:11,911 - ImportGA4Vehicles - WARNING - Skipping row 7254: Missing make or model
+2025-04-11 10:04:11,911 - ImportGA4Vehicles - WARNING - Skipping row 7258: Missing make or model
+2025-04-11 10:04:11,911 - ImportGA4Vehicles - WARNING - Skipping row 7260: Missing make or model
+2025-04-11 10:04:11,911 - ImportGA4Vehicles - WARNING - Skipping row 7261: Missing make or model
+2025-04-11 10:04:11,911 - ImportGA4Vehicles - WARNING - Skipping row 7265: Missing make or model
+2025-04-11 10:04:11,911 - ImportGA4Vehicles - WARNING - Skipping row 7266: Missing make or model
+2025-04-11 10:04:11,911 - ImportGA4Vehicles - WARNING - Skipping row 7270: Missing make or model
+2025-04-11 10:04:11,911 - ImportGA4Vehicles - WARNING - Skipping row 7274: Missing make or model
+2025-04-11 10:04:11,911 - ImportGA4Vehicles - WARNING - Skipping row 7275: Missing make or model
+2025-04-11 10:04:11,911 - ImportGA4Vehicles - WARNING - Skipping row 7276: Missing make or model
+2025-04-11 10:04:11,911 - ImportGA4Vehicles - WARNING - Skipping row 7280: Missing make or model
+2025-04-11 10:04:11,911 - ImportGA4Vehicles - WARNING - Skipping row 7281: Missing make or model
+2025-04-11 10:04:11,911 - ImportGA4Vehicles - WARNING - Skipping row 7287: Missing make or model
+2025-04-11 10:04:11,912 - ImportGA4Vehicles - WARNING - Skipping row 7293: Missing make or model
+2025-04-11 10:04:11,912 - ImportGA4Vehicles - WARNING - Skipping row 7294: Missing make or model
+2025-04-11 10:04:11,912 - ImportGA4Vehicles - WARNING - Skipping row 7301: Missing make or model
+2025-04-11 10:04:11,912 - ImportGA4Vehicles - WARNING - Skipping row 7305: Missing make or model
+2025-04-11 10:04:11,912 - ImportGA4Vehicles - WARNING - Skipping row 7307: Missing make or model
+2025-04-11 10:04:11,912 - ImportGA4Vehicles - WARNING - Skipping row 7311: Missing make or model
+2025-04-11 10:04:11,912 - ImportGA4Vehicles - WARNING - Skipping row 7313: Missing make or model
+2025-04-11 10:04:11,912 - ImportGA4Vehicles - WARNING - Skipping row 7314: Missing make or model
+2025-04-11 10:04:11,912 - ImportGA4Vehicles - WARNING - Skipping row 7315: Missing make or model
+2025-04-11 10:04:11,912 - ImportGA4Vehicles - WARNING - Skipping row 7319: Missing make or model
+2025-04-11 10:04:11,912 - ImportGA4Vehicles - WARNING - Skipping row 7320: Missing make or model
+2025-04-11 10:04:11,912 - ImportGA4Vehicles - WARNING - Skipping row 7321: Missing make or model
+2025-04-11 10:04:11,912 - ImportGA4Vehicles - WARNING - Skipping row 7322: Missing make or model
+2025-04-11 10:04:11,912 - ImportGA4Vehicles - WARNING - Skipping row 7323: Missing make or model
+2025-04-11 10:04:11,912 - ImportGA4Vehicles - WARNING - Skipping row 7324: Missing make or model
+2025-04-11 10:04:11,912 - ImportGA4Vehicles - WARNING - Skipping row 7329: Missing make or model
+2025-04-11 10:04:11,912 - ImportGA4Vehicles - WARNING - Skipping row 7336: Missing make or model
+2025-04-11 10:04:11,912 - ImportGA4Vehicles - WARNING - Skipping row 7342: Missing make or model
+2025-04-11 10:04:11,912 - ImportGA4Vehicles - WARNING - Skipping row 7343: Missing make or model
+2025-04-11 10:04:11,912 - ImportGA4Vehicles - WARNING - Skipping row 7344: Missing make or model
+2025-04-11 10:04:11,913 - ImportGA4Vehicles - WARNING - Skipping row 7349: Missing make or model
+2025-04-11 10:04:11,913 - ImportGA4Vehicles - WARNING - Skipping row 7351: Missing make or model
+2025-04-11 10:04:11,913 - ImportGA4Vehicles - WARNING - Skipping row 7352: Missing make or model
+2025-04-11 10:04:11,913 - ImportGA4Vehicles - WARNING - Skipping row 7353: Missing make or model
+2025-04-11 10:04:11,913 - ImportGA4Vehicles - WARNING - Skipping row 7356: Missing make or model
+2025-04-11 10:04:11,913 - ImportGA4Vehicles - WARNING - Skipping row 7357: Missing make or model
+2025-04-11 10:04:11,913 - ImportGA4Vehicles - WARNING - Skipping row 7358: Missing make or model
+2025-04-11 10:04:11,913 - ImportGA4Vehicles - WARNING - Skipping row 7361: Missing make or model
+2025-04-11 10:04:11,913 - ImportGA4Vehicles - WARNING - Skipping row 7365: Missing make or model
+2025-04-11 10:04:11,913 - ImportGA4Vehicles - WARNING - Skipping row 7367: Missing make or model
+2025-04-11 10:04:11,913 - ImportGA4Vehicles - WARNING - Skipping row 7368: Missing make or model
+2025-04-11 10:04:11,913 - ImportGA4Vehicles - WARNING - Skipping row 7370: Missing make or model
+2025-04-11 10:04:11,913 - ImportGA4Vehicles - WARNING - Skipping row 7372: Missing make or model
+2025-04-11 10:04:11,913 - ImportGA4Vehicles - WARNING - Skipping row 7374: Missing make or model
+2025-04-11 10:04:11,913 - ImportGA4Vehicles - WARNING - Skipping row 7377: Missing make or model
+2025-04-11 10:04:11,913 - ImportGA4Vehicles - WARNING - Skipping row 7380: Missing make or model
+2025-04-11 10:04:11,913 - ImportGA4Vehicles - WARNING - Skipping row 7388: Missing make or model
+2025-04-11 10:04:11,913 - ImportGA4Vehicles - WARNING - Skipping row 7393: Missing make or model
+2025-04-11 10:04:11,913 - ImportGA4Vehicles - WARNING - Skipping row 7397: Missing make or model
+2025-04-11 10:04:11,913 - ImportGA4Vehicles - WARNING - Skipping row 7400: Missing make or model
+2025-04-11 10:04:11,914 - ImportGA4Vehicles - WARNING - Skipping row 7401: Missing make or model
+2025-04-11 10:04:11,914 - ImportGA4Vehicles - WARNING - Skipping row 7402: Missing make or model
+2025-04-11 10:04:11,914 - ImportGA4Vehicles - INFO - Imported 7100 vehicles so far
+2025-04-11 10:04:11,914 - ImportGA4Vehicles - WARNING - Skipping row 7405: Missing make or model
+2025-04-11 10:04:11,914 - ImportGA4Vehicles - WARNING - Skipping row 7407: Missing make or model
+2025-04-11 10:04:11,914 - ImportGA4Vehicles - WARNING - Skipping row 7408: Missing make or model
+2025-04-11 10:04:11,914 - ImportGA4Vehicles - WARNING - Skipping row 7414: Missing make or model
+2025-04-11 10:04:11,914 - ImportGA4Vehicles - WARNING - Skipping row 7416: Missing make or model
+2025-04-11 10:04:11,914 - ImportGA4Vehicles - WARNING - Skipping row 7418: Missing make or model
+2025-04-11 10:04:11,914 - ImportGA4Vehicles - WARNING - Skipping row 7419: Missing make or model
+2025-04-11 10:04:11,914 - ImportGA4Vehicles - WARNING - Skipping row 7420: Missing make or model
+2025-04-11 10:04:11,914 - ImportGA4Vehicles - WARNING - Skipping row 7424: Missing make or model
+2025-04-11 10:04:11,914 - ImportGA4Vehicles - WARNING - Skipping row 7426: Missing make or model
+2025-04-11 10:04:11,914 - ImportGA4Vehicles - WARNING - Skipping row 7428: Missing make or model
+2025-04-11 10:04:11,914 - ImportGA4Vehicles - WARNING - Skipping row 7430: Missing make or model
+2025-04-11 10:04:11,914 - ImportGA4Vehicles - WARNING - Skipping row 7436: Missing make or model
+2025-04-11 10:04:11,914 - ImportGA4Vehicles - WARNING - Skipping row 7437: Missing make or model
+2025-04-11 10:04:11,915 - ImportGA4Vehicles - WARNING - Skipping row 7441: Missing make or model
+2025-04-11 10:04:11,915 - ImportGA4Vehicles - WARNING - Skipping row 7443: Missing make or model
+2025-04-11 10:04:11,915 - ImportGA4Vehicles - WARNING - Skipping row 7446: Missing make or model
+2025-04-11 10:04:11,915 - ImportGA4Vehicles - WARNING - Skipping row 7447: Missing make or model
+2025-04-11 10:04:11,915 - ImportGA4Vehicles - WARNING - Skipping row 7451: Missing make or model
+2025-04-11 10:04:11,915 - ImportGA4Vehicles - WARNING - Skipping row 7461: Missing make or model
+2025-04-11 10:04:11,915 - ImportGA4Vehicles - WARNING - Skipping row 7462: Missing make or model
+2025-04-11 10:04:11,915 - ImportGA4Vehicles - WARNING - Skipping row 7466: Missing make or model
+2025-04-11 10:04:11,915 - ImportGA4Vehicles - WARNING - Skipping row 7467: Missing make or model
+2025-04-11 10:04:11,915 - ImportGA4Vehicles - WARNING - Skipping row 7468: Missing make or model
+2025-04-11 10:04:11,915 - ImportGA4Vehicles - WARNING - Skipping row 7471: Missing make or model
+2025-04-11 10:04:11,915 - ImportGA4Vehicles - WARNING - Skipping row 7473: Missing make or model
+2025-04-11 10:04:11,915 - ImportGA4Vehicles - WARNING - Skipping row 7475: Missing make or model
+2025-04-11 10:04:11,915 - ImportGA4Vehicles - WARNING - Skipping row 7477: Missing make or model
+2025-04-11 10:04:11,915 - ImportGA4Vehicles - WARNING - Skipping row 7478: Missing make or model
+2025-04-11 10:04:11,915 - ImportGA4Vehicles - WARNING - Skipping row 7481: Missing make or model
+2025-04-11 10:04:11,916 - ImportGA4Vehicles - WARNING - Skipping row 7496: Missing make or model
+2025-04-11 10:04:11,916 - ImportGA4Vehicles - WARNING - Skipping row 7497: Missing make or model
+2025-04-11 10:04:11,916 - ImportGA4Vehicles - WARNING - Skipping row 7500: Missing make or model
+2025-04-11 10:04:11,916 - ImportGA4Vehicles - WARNING - Skipping row 7510: Missing make or model
+2025-04-11 10:04:11,916 - ImportGA4Vehicles - WARNING - Skipping row 7511: Missing make or model
+2025-04-11 10:04:11,916 - ImportGA4Vehicles - WARNING - Skipping row 7512: Missing make or model
+2025-04-11 10:04:11,916 - ImportGA4Vehicles - WARNING - Skipping row 7513: Missing make or model
+2025-04-11 10:04:11,916 - ImportGA4Vehicles - WARNING - Skipping row 7517: Missing make or model
+2025-04-11 10:04:11,916 - ImportGA4Vehicles - WARNING - Skipping row 7526: Missing make or model
+2025-04-11 10:04:11,916 - ImportGA4Vehicles - WARNING - Skipping row 7535: Missing make or model
+2025-04-11 10:04:11,916 - ImportGA4Vehicles - WARNING - Skipping row 7538: Missing make or model
+2025-04-11 10:04:11,916 - ImportGA4Vehicles - WARNING - Skipping row 7539: Missing make or model
+2025-04-11 10:04:11,917 - ImportGA4Vehicles - WARNING - Skipping row 7544: Missing make or model
+2025-04-11 10:04:11,917 - ImportGA4Vehicles - WARNING - Skipping row 7546: Missing make or model
+2025-04-11 10:04:11,917 - ImportGA4Vehicles - WARNING - Skipping row 7547: Missing make or model
+2025-04-11 10:04:11,917 - ImportGA4Vehicles - WARNING - Skipping row 7549: Missing make or model
+2025-04-11 10:04:11,917 - ImportGA4Vehicles - INFO - Imported 7200 vehicles so far
+2025-04-11 10:04:11,917 - ImportGA4Vehicles - WARNING - Skipping row 7557: Missing make or model
+2025-04-11 10:04:11,917 - ImportGA4Vehicles - WARNING - Skipping row 7558: Missing make or model
+2025-04-11 10:04:11,917 - ImportGA4Vehicles - WARNING - Skipping row 7560: Missing make or model
+2025-04-11 10:04:11,917 - ImportGA4Vehicles - WARNING - Skipping row 7561: Missing make or model
+2025-04-11 10:04:11,917 - ImportGA4Vehicles - WARNING - Skipping row 7562: Missing make or model
+2025-04-11 10:04:11,917 - ImportGA4Vehicles - WARNING - Skipping row 7563: Missing make or model
+2025-04-11 10:04:11,918 - ImportGA4Vehicles - WARNING - Skipping row 7568: Missing make or model
+2025-04-11 10:04:11,918 - ImportGA4Vehicles - WARNING - Skipping row 7578: Missing make or model
+2025-04-11 10:04:11,918 - ImportGA4Vehicles - WARNING - Skipping row 7594: Missing make or model
+2025-04-11 10:04:11,918 - ImportGA4Vehicles - WARNING - Skipping row 7595: Missing make or model
+2025-04-11 10:04:11,918 - ImportGA4Vehicles - WARNING - Skipping row 7604: Missing make or model
+2025-04-11 10:04:11,918 - ImportGA4Vehicles - WARNING - Skipping row 7605: Missing make or model
+2025-04-11 10:04:11,918 - ImportGA4Vehicles - WARNING - Skipping row 7612: Missing make or model
+2025-04-11 10:04:11,919 - ImportGA4Vehicles - WARNING - Skipping row 7616: Missing make or model
+2025-04-11 10:04:11,919 - ImportGA4Vehicles - WARNING - Skipping row 7617: Missing make or model
+2025-04-11 10:04:11,919 - ImportGA4Vehicles - WARNING - Skipping row 7631: Missing make or model
+2025-04-11 10:04:11,919 - ImportGA4Vehicles - WARNING - Skipping row 7632: Missing make or model
+2025-04-11 10:04:11,919 - ImportGA4Vehicles - WARNING - Skipping row 7664: Missing make or model
+2025-04-11 10:04:11,919 - ImportGA4Vehicles - WARNING - Skipping row 7665: Missing make or model
+2025-04-11 10:04:11,920 - ImportGA4Vehicles - INFO - Imported 7300 vehicles so far
+2025-04-11 10:04:11,920 - ImportGA4Vehicles - WARNING - Skipping row 7670: Missing make or model
+2025-04-11 10:04:11,920 - ImportGA4Vehicles - WARNING - Skipping row 7674: Missing make or model
+2025-04-11 10:04:11,920 - ImportGA4Vehicles - WARNING - Skipping row 7675: Missing make or model
+2025-04-11 10:04:11,920 - ImportGA4Vehicles - WARNING - Skipping row 7680: Missing make or model
+2025-04-11 10:04:11,920 - ImportGA4Vehicles - WARNING - Skipping row 7694: Missing make or model
+2025-04-11 10:04:11,921 - ImportGA4Vehicles - WARNING - Skipping row 7713: Missing make or model
+2025-04-11 10:04:11,921 - ImportGA4Vehicles - WARNING - Skipping row 7728: Missing make or model
+2025-04-11 10:04:11,921 - ImportGA4Vehicles - WARNING - Skipping row 7748: Missing make or model
+2025-04-11 10:04:11,922 - ImportGA4Vehicles - WARNING - Skipping row 7758: Missing make or model
+2025-04-11 10:04:11,922 - ImportGA4Vehicles - WARNING - Skipping row 7761: Missing make or model
+2025-04-11 10:04:11,922 - ImportGA4Vehicles - WARNING - Skipping row 7762: Missing make or model
+2025-04-11 10:04:11,922 - ImportGA4Vehicles - WARNING - Skipping row 7766: Missing make or model
+2025-04-11 10:04:11,922 - ImportGA4Vehicles - WARNING - Skipping row 7770: Missing make or model
+2025-04-11 10:04:11,922 - ImportGA4Vehicles - WARNING - Skipping row 7771: Missing make or model
+2025-04-11 10:04:11,922 - ImportGA4Vehicles - WARNING - Skipping row 7779: Missing make or model
+2025-04-11 10:04:11,922 - ImportGA4Vehicles - WARNING - Skipping row 7780: Missing make or model
+2025-04-11 10:04:11,922 - ImportGA4Vehicles - WARNING - Skipping row 7782: Missing make or model
+2025-04-11 10:04:11,922 - ImportGA4Vehicles - INFO - Imported 7400 vehicles so far
+2025-04-11 10:04:11,923 - ImportGA4Vehicles - WARNING - Skipping row 7789: No registration number
+2025-04-11 10:04:11,923 - ImportGA4Vehicles - WARNING - Skipping row 7790: Missing make or model
+2025-04-11 10:04:11,923 - ImportGA4Vehicles - WARNING - Skipping row 7792: Missing make or model
+2025-04-11 10:04:11,923 - ImportGA4Vehicles - WARNING - Skipping row 7808: Missing make or model
+2025-04-11 10:04:11,923 - ImportGA4Vehicles - WARNING - Skipping row 7809: Missing make or model
+2025-04-11 10:04:11,923 - ImportGA4Vehicles - WARNING - Skipping row 7813: Missing make or model
+2025-04-11 10:04:11,923 - ImportGA4Vehicles - WARNING - Skipping row 7815: Missing make or model
+2025-04-11 10:04:11,923 - ImportGA4Vehicles - WARNING - Skipping row 7821: Missing make or model
+2025-04-11 10:04:11,923 - ImportGA4Vehicles - WARNING - Skipping row 7822: Missing make or model
+2025-04-11 10:04:11,924 - ImportGA4Vehicles - WARNING - Skipping row 7847: Missing make or model
+2025-04-11 10:04:11,924 - ImportGA4Vehicles - WARNING - Skipping row 7865: Missing make or model
+2025-04-11 10:04:11,924 - ImportGA4Vehicles - WARNING - Skipping row 7866: Missing make or model
+2025-04-11 10:04:11,924 - ImportGA4Vehicles - WARNING - Skipping row 7867: Missing make or model
+2025-04-11 10:04:11,924 - ImportGA4Vehicles - WARNING - Skipping row 7868: Missing make or model
+2025-04-11 10:04:11,924 - ImportGA4Vehicles - WARNING - Skipping row 7869: Missing make or model
+2025-04-11 10:04:11,924 - ImportGA4Vehicles - WARNING - Skipping row 7872: Missing make or model
+2025-04-11 10:04:11,924 - ImportGA4Vehicles - WARNING - Skipping row 7873: Missing make or model
+2025-04-11 10:04:11,924 - ImportGA4Vehicles - WARNING - Skipping row 7874: Missing make or model
+2025-04-11 10:04:11,924 - ImportGA4Vehicles - WARNING - Skipping row 7875: Missing make or model
+2025-04-11 10:04:11,924 - ImportGA4Vehicles - WARNING - Skipping row 7876: Missing make or model
+2025-04-11 10:04:11,924 - ImportGA4Vehicles - WARNING - Skipping row 7877: Missing make or model
+2025-04-11 10:04:11,924 - ImportGA4Vehicles - WARNING - Skipping row 7884: Missing make or model
+2025-04-11 10:04:11,924 - ImportGA4Vehicles - WARNING - Skipping row 7886: Missing make or model
+2025-04-11 10:04:11,924 - ImportGA4Vehicles - WARNING - Skipping row 7887: Missing make or model
+2025-04-11 10:04:11,924 - ImportGA4Vehicles - WARNING - Skipping row 7889: Missing make or model
+2025-04-11 10:04:11,924 - ImportGA4Vehicles - WARNING - Skipping row 7890: Missing make or model
+2025-04-11 10:04:11,924 - ImportGA4Vehicles - WARNING - Skipping row 7892: Missing make or model
+2025-04-11 10:04:11,924 - ImportGA4Vehicles - WARNING - Skipping row 7893: Missing make or model
+2025-04-11 10:04:11,924 - ImportGA4Vehicles - WARNING - Skipping row 7894: Missing make or model
+2025-04-11 10:04:11,925 - ImportGA4Vehicles - WARNING - Skipping row 7895: Missing make or model
+2025-04-11 10:04:11,925 - ImportGA4Vehicles - WARNING - Skipping row 7896: Missing make or model
+2025-04-11 10:04:11,925 - ImportGA4Vehicles - WARNING - Skipping row 7898: Missing make or model
+2025-04-11 10:04:11,925 - ImportGA4Vehicles - WARNING - Skipping row 7899: Missing make or model
+2025-04-11 10:04:11,925 - ImportGA4Vehicles - WARNING - Skipping row 7901: Missing make or model
+2025-04-11 10:04:11,925 - ImportGA4Vehicles - WARNING - Skipping row 7902: Missing make or model
+2025-04-11 10:04:11,925 - ImportGA4Vehicles - WARNING - Skipping row 7903: Missing make or model
+2025-04-11 10:04:11,925 - ImportGA4Vehicles - WARNING - Skipping row 7905: Missing make or model
+2025-04-11 10:04:11,925 - ImportGA4Vehicles - WARNING - Skipping row 7913: Missing make or model
+2025-04-11 10:04:11,925 - ImportGA4Vehicles - WARNING - Skipping row 7916: Missing make or model
+2025-04-11 10:04:11,925 - ImportGA4Vehicles - WARNING - Skipping row 7922: Missing make or model
+2025-04-11 10:04:11,925 - ImportGA4Vehicles - WARNING - Skipping row 7923: Missing make or model
+2025-04-11 10:04:11,925 - ImportGA4Vehicles - WARNING - Skipping row 7925: Missing make or model
+2025-04-11 10:04:11,925 - ImportGA4Vehicles - INFO - Imported 7500 vehicles so far
+2025-04-11 10:04:11,926 - ImportGA4Vehicles - ERROR - Error importing vehicles: field larger than field limit (131072)
+2025-04-11 10:04:11,927 - ImportGA4Vehicles - INFO - Total vehicles imported: 0
+2025-04-11 10:04:11,927 - ImportGA4Vehicles - INFO - Import GA4 Vehicles completed
+2025-04-11 10:04:44,802 - ImportGA4Vehicles - INFO - Starting Import GA4 Vehicles
+2025-04-11 10:04:44,802 - ImportGA4Vehicles - INFO - Importing vehicles to /Users/adamrutstein/Library/CloudStorage/GoogleDrive-adam@elimotors.co.uk/My Drive/GA4_Direct_Access_Tool_Package/data/garage_system.db
+2025-04-11 10:04:44,802 - ImportGA4Vehicles - INFO - Importing vehicles from /Users/adamrutstein/Library/CloudStorage/GoogleDrive-adam@elimotors.co.uk/My Drive/Data Exports/Vehicles.csv to /Users/adamrutstein/Library/CloudStorage/GoogleDrive-adam@elimotors.co.uk/My Drive/GA4_Direct_Access_Tool_Package/data/garage_system.db
+2025-04-11 10:04:44,803 - ImportGA4Vehicles - INFO - Found 7500 existing vehicles in database
+2025-04-11 10:04:56,549 - ImportGA4Vehicles - INFO - Clearing existing vehicle data
+2025-04-11 10:04:56,551 - ImportGA4Vehicles - INFO - Creating customer ID mapping
+2025-04-11 10:04:56,556 - ImportGA4Vehicles - INFO - Created mapping for 6984 customers
+2025-04-11 10:04:56,556 - ImportGA4Vehicles - INFO - Found 98 columns in CSV file
+2025-04-11 10:04:56,568 - ImportGA4Vehicles - INFO - Imported 100 vehicles so far
+2025-04-11 10:04:56,572 - ImportGA4Vehicles - INFO - Imported 200 vehicles so far
+2025-04-11 10:04:56,575 - ImportGA4Vehicles - INFO - Imported 300 vehicles so far
+2025-04-11 10:04:56,578 - ImportGA4Vehicles - INFO - Imported 400 vehicles so far
+2025-04-11 10:04:56,580 - ImportGA4Vehicles - WARNING - Skipping row 495: Missing make or model
+2025-04-11 10:04:56,581 - ImportGA4Vehicles - INFO - Imported 500 vehicles so far
+2025-04-11 10:04:56,583 - ImportGA4Vehicles - INFO - Imported 600 vehicles so far
+2025-04-11 10:04:56,585 - ImportGA4Vehicles - INFO - Imported 700 vehicles so far
+2025-04-11 10:04:56,588 - ImportGA4Vehicles - WARNING - Skipping row 792: Missing make or model
+2025-04-11 10:04:56,588 - ImportGA4Vehicles - WARNING - Skipping row 795: Missing make or model
+2025-04-11 10:04:56,588 - ImportGA4Vehicles - INFO - Imported 800 vehicles so far
+2025-04-11 10:04:56,588 - ImportGA4Vehicles - WARNING - Skipping row 807: Missing make or model
+2025-04-11 10:04:56,588 - ImportGA4Vehicles - WARNING - Skipping row 816: Missing make or model
+2025-04-11 10:04:56,590 - ImportGA4Vehicles - INFO - Imported 900 vehicles so far
+2025-04-11 10:04:56,591 - ImportGA4Vehicles - WARNING - Skipping row 939: Missing make or model
+2025-04-11 10:04:56,593 - ImportGA4Vehicles - INFO - Imported 1000 vehicles so far
+2025-04-11 10:04:56,595 - ImportGA4Vehicles - INFO - Imported 1100 vehicles so far
+2025-04-11 10:04:56,597 - ImportGA4Vehicles - INFO - Imported 1200 vehicles so far
+2025-04-11 10:04:56,599 - ImportGA4Vehicles - INFO - Imported 1300 vehicles so far
+2025-04-11 10:04:56,601 - ImportGA4Vehicles - WARNING - Skipping row 1389: Missing make or model
+2025-04-11 10:04:56,602 - ImportGA4Vehicles - INFO - Imported 1400 vehicles so far
+2025-04-11 10:04:56,603 - ImportGA4Vehicles - WARNING - Skipping row 1435: Missing make or model
+2025-04-11 10:04:56,603 - ImportGA4Vehicles - WARNING - Skipping row 1475: Missing make or model
+2025-04-11 10:04:56,604 - ImportGA4Vehicles - INFO - Imported 1500 vehicles so far
+2025-04-11 10:04:56,606 - ImportGA4Vehicles - INFO - Imported 1600 vehicles so far
+2025-04-11 10:04:56,607 - ImportGA4Vehicles - WARNING - Skipping row 1623: Missing make or model
+2025-04-11 10:04:56,607 - ImportGA4Vehicles - WARNING - Skipping row 1645: Missing make or model
+2025-04-11 10:04:56,608 - ImportGA4Vehicles - INFO - Imported 1700 vehicles so far
+2025-04-11 10:04:56,609 - ImportGA4Vehicles - WARNING - Skipping row 1734: Missing make or model
+2025-04-11 10:04:56,611 - ImportGA4Vehicles - INFO - Imported 1800 vehicles so far
+2025-04-11 10:04:56,613 - ImportGA4Vehicles - INFO - Imported 1900 vehicles so far
+2025-04-11 10:04:56,615 - ImportGA4Vehicles - INFO - Imported 2000 vehicles so far
+2025-04-11 10:04:56,617 - ImportGA4Vehicles - WARNING - Skipping row 2076: Missing make or model
+2025-04-11 10:04:56,617 - ImportGA4Vehicles - INFO - Imported 2100 vehicles so far
+2025-04-11 10:04:56,619 - ImportGA4Vehicles - WARNING - Skipping row 2152: Missing make or model
+2025-04-11 10:04:56,619 - ImportGA4Vehicles - WARNING - Skipping row 2157: Missing make or model
+2025-04-11 10:04:56,620 - ImportGA4Vehicles - WARNING - Skipping row 2208: Missing make or model
+2025-04-11 10:04:56,620 - ImportGA4Vehicles - WARNING - Skipping row 2213: Missing make or model
+2025-04-11 10:04:56,620 - ImportGA4Vehicles - WARNING - Skipping row 2215: Missing make or model
+2025-04-11 10:04:56,620 - ImportGA4Vehicles - INFO - Imported 2200 vehicles so far
+2025-04-11 10:04:56,622 - ImportGA4Vehicles - INFO - Imported 2300 vehicles so far
+2025-04-11 10:04:56,624 - ImportGA4Vehicles - INFO - Imported 2400 vehicles so far
+2025-04-11 10:04:56,626 - ImportGA4Vehicles - WARNING - Skipping row 2480: Missing make or model
+2025-04-11 10:04:56,626 - ImportGA4Vehicles - INFO - Imported 2500 vehicles so far
+2025-04-11 10:04:56,627 - ImportGA4Vehicles - WARNING - Skipping row 2552: Missing make or model
+2025-04-11 10:04:56,628 - ImportGA4Vehicles - WARNING - Skipping row 2602: Missing make or model
+2025-04-11 10:04:56,629 - ImportGA4Vehicles - INFO - Imported 2600 vehicles so far
+2025-04-11 10:04:56,629 - ImportGA4Vehicles - WARNING - Skipping row 2636: Missing make or model
+2025-04-11 10:04:56,629 - ImportGA4Vehicles - WARNING - Skipping row 2645: Missing make or model
+2025-04-11 10:04:56,629 - ImportGA4Vehicles - WARNING - Skipping row 2646: Missing make or model
+2025-04-11 10:04:56,630 - ImportGA4Vehicles - WARNING - Skipping row 2659: Missing make or model
+2025-04-11 10:04:56,631 - ImportGA4Vehicles - INFO - Imported 2700 vehicles so far
+2025-04-11 10:04:56,633 - ImportGA4Vehicles - INFO - Imported 2800 vehicles so far
+2025-04-11 10:04:56,634 - ImportGA4Vehicles - WARNING - Skipping row 2842: Missing make or model
+2025-04-11 10:04:56,635 - ImportGA4Vehicles - WARNING - Skipping row 2914: Missing make or model
+2025-04-11 10:04:56,635 - ImportGA4Vehicles - INFO - Imported 2900 vehicles so far
+2025-04-11 10:04:56,638 - ImportGA4Vehicles - WARNING - Skipping row 3024: Missing make or model
+2025-04-11 10:04:56,638 - ImportGA4Vehicles - INFO - Imported 3000 vehicles so far
+2025-04-11 10:04:56,640 - ImportGA4Vehicles - INFO - Imported 3100 vehicles so far
+2025-04-11 10:04:56,642 - ImportGA4Vehicles - WARNING - Skipping row 3180: Missing make or model
+2025-04-11 10:04:56,643 - ImportGA4Vehicles - INFO - Imported 3200 vehicles so far
+2025-04-11 10:04:56,644 - ImportGA4Vehicles - WARNING - Skipping row 3288: Missing make or model
+2025-04-11 10:04:56,645 - ImportGA4Vehicles - INFO - Imported 3300 vehicles so far
+2025-04-11 10:04:56,647 - ImportGA4Vehicles - INFO - Imported 3400 vehicles so far
+2025-04-11 10:04:56,650 - ImportGA4Vehicles - WARNING - Skipping row 3517: Missing make or model
+2025-04-11 10:04:56,650 - ImportGA4Vehicles - INFO - Imported 3500 vehicles so far
+2025-04-11 10:04:56,652 - ImportGA4Vehicles - WARNING - Skipping row 3581: Missing make or model
+2025-04-11 10:04:56,652 - ImportGA4Vehicles - WARNING - Skipping row 3582: Missing make or model
+2025-04-11 10:04:56,653 - ImportGA4Vehicles - INFO - Imported 3600 vehicles so far
+2025-04-11 10:04:56,655 - ImportGA4Vehicles - INFO - Imported 3700 vehicles so far
+2025-04-11 10:04:56,657 - ImportGA4Vehicles - WARNING - Skipping row 3798: Missing make or model
+2025-04-11 10:04:56,658 - ImportGA4Vehicles - INFO - Imported 3800 vehicles so far
+2025-04-11 10:04:56,660 - ImportGA4Vehicles - WARNING - Skipping row 3924: Missing make or model
+2025-04-11 10:04:56,660 - ImportGA4Vehicles - INFO - Imported 3900 vehicles so far
+2025-04-11 10:04:56,662 - ImportGA4Vehicles - WARNING - Skipping row 4030: Missing make or model
+2025-04-11 10:04:56,662 - ImportGA4Vehicles - INFO - Imported 4000 vehicles so far
+2025-04-11 10:04:56,664 - ImportGA4Vehicles - WARNING - Skipping row 4061: Missing make or model
+2025-04-11 10:04:56,665 - ImportGA4Vehicles - INFO - Imported 4100 vehicles so far
+2025-04-11 10:04:56,667 - ImportGA4Vehicles - WARNING - Skipping row 4189: Missing make or model
+2025-04-11 10:04:56,667 - ImportGA4Vehicles - WARNING - Skipping row 4198: Missing make or model
+2025-04-11 10:04:56,668 - ImportGA4Vehicles - INFO - Imported 4200 vehicles so far
+2025-04-11 10:04:56,670 - ImportGA4Vehicles - WARNING - Skipping row 4313: Missing make or model
+2025-04-11 10:04:56,670 - ImportGA4Vehicles - INFO - Imported 4300 vehicles so far
+2025-04-11 10:04:56,671 - ImportGA4Vehicles - WARNING - Skipping row 4380: Missing make or model
+2025-04-11 10:04:56,672 - ImportGA4Vehicles - WARNING - Skipping row 4421: Missing make or model
+2025-04-11 10:04:56,673 - ImportGA4Vehicles - INFO - Imported 4400 vehicles so far
+2025-04-11 10:04:56,673 - ImportGA4Vehicles - WARNING - Skipping row 4462: Missing make or model
+2025-04-11 10:04:56,675 - ImportGA4Vehicles - INFO - Imported 4500 vehicles so far
+2025-04-11 10:04:56,677 - ImportGA4Vehicles - WARNING - Skipping row 4609: Missing make or model
+2025-04-11 10:04:56,677 - ImportGA4Vehicles - WARNING - Skipping row 4611: Missing make or model
+2025-04-11 10:04:56,677 - ImportGA4Vehicles - WARNING - Skipping row 4640: Missing make or model
+2025-04-11 10:04:56,677 - ImportGA4Vehicles - INFO - Imported 4600 vehicles so far
+2025-04-11 10:04:56,679 - ImportGA4Vehicles - INFO - Imported 4700 vehicles so far
+2025-04-11 10:04:56,680 - ImportGA4Vehicles - WARNING - Skipping row 4764: Missing make or model
+2025-04-11 10:04:56,681 - ImportGA4Vehicles - WARNING - Skipping row 4814: Missing make or model
+2025-04-11 10:04:56,681 - ImportGA4Vehicles - INFO - Imported 4800 vehicles so far
+2025-04-11 10:04:56,682 - ImportGA4Vehicles - WARNING - Skipping row 4851: Missing make or model
+2025-04-11 10:04:56,684 - ImportGA4Vehicles - INFO - Imported 4900 vehicles so far
+2025-04-11 10:04:56,685 - ImportGA4Vehicles - WARNING - Skipping row 4986: Missing make or model
+2025-04-11 10:04:56,686 - ImportGA4Vehicles - WARNING - Skipping row 5042: Missing make or model
+2025-04-11 10:04:56,686 - ImportGA4Vehicles - INFO - Imported 5000 vehicles so far
+2025-04-11 10:04:56,687 - ImportGA4Vehicles - WARNING - Skipping row 5103: Missing make or model
+2025-04-11 10:04:56,688 - ImportGA4Vehicles - INFO - Imported 5100 vehicles so far
+2025-04-11 10:04:56,688 - ImportGA4Vehicles - WARNING - Skipping row 5153: Missing make or model
+2025-04-11 10:04:56,689 - ImportGA4Vehicles - WARNING - Skipping row 5218: Missing make or model
+2025-04-11 10:04:56,690 - ImportGA4Vehicles - INFO - Imported 5200 vehicles so far
+2025-04-11 10:04:56,691 - ImportGA4Vehicles - WARNING - Skipping row 5285: Missing make or model
+2025-04-11 10:04:56,692 - ImportGA4Vehicles - WARNING - Skipping row 5337: Missing make or model
+2025-04-11 10:04:56,692 - ImportGA4Vehicles - INFO - Imported 5300 vehicles so far
+2025-04-11 10:04:56,694 - ImportGA4Vehicles - INFO - Imported 5400 vehicles so far
+2025-04-11 10:04:56,696 - ImportGA4Vehicles - INFO - Imported 5500 vehicles so far
+2025-04-11 10:04:56,698 - ImportGA4Vehicles - INFO - Imported 5600 vehicles so far
+2025-04-11 10:04:56,700 - ImportGA4Vehicles - WARNING - Skipping row 5728: Missing make or model
+2025-04-11 10:04:56,701 - ImportGA4Vehicles - INFO - Imported 5700 vehicles so far
+2025-04-11 10:04:56,702 - ImportGA4Vehicles - WARNING - Skipping row 5782: Missing make or model
+2025-04-11 10:04:56,703 - ImportGA4Vehicles - INFO - Imported 5800 vehicles so far
+2025-04-11 10:04:56,704 - ImportGA4Vehicles - WARNING - Skipping row 5883: Missing make or model
+2025-04-11 10:04:56,705 - ImportGA4Vehicles - INFO - Imported 5900 vehicles so far
+2025-04-11 10:04:56,707 - ImportGA4Vehicles - INFO - Imported 6000 vehicles so far
+2025-04-11 10:04:56,709 - ImportGA4Vehicles - INFO - Imported 6100 vehicles so far
+2025-04-11 10:04:56,709 - ImportGA4Vehicles - WARNING - Skipping row 6162: Missing make or model
+2025-04-11 10:04:56,709 - ImportGA4Vehicles - WARNING - Skipping row 6165: Missing make or model
+2025-04-11 10:04:56,711 - ImportGA4Vehicles - WARNING - Skipping row 6235: Missing make or model
+2025-04-11 10:04:56,711 - ImportGA4Vehicles - INFO - Imported 6200 vehicles so far
+2025-04-11 10:04:56,713 - ImportGA4Vehicles - INFO - Imported 6300 vehicles so far
+2025-04-11 10:04:56,715 - ImportGA4Vehicles - INFO - Imported 6400 vehicles so far
+2025-04-11 10:04:56,716 - ImportGA4Vehicles - WARNING - Skipping row 6482: Missing make or model
+2025-04-11 10:04:56,716 - ImportGA4Vehicles - WARNING - Skipping row 6505: Missing make or model
+2025-04-11 10:04:56,717 - ImportGA4Vehicles - WARNING - Skipping row 6548: Missing make or model
+2025-04-11 10:04:56,717 - ImportGA4Vehicles - WARNING - Skipping row 6555: Missing make or model
+2025-04-11 10:04:56,717 - ImportGA4Vehicles - WARNING - Skipping row 6559: Missing make or model
+2025-04-11 10:04:56,717 - ImportGA4Vehicles - WARNING - Skipping row 6563: Missing make or model
+2025-04-11 10:04:56,717 - ImportGA4Vehicles - INFO - Imported 6500 vehicles so far
+2025-04-11 10:04:56,718 - ImportGA4Vehicles - WARNING - Skipping row 6570: Missing make or model
+2025-04-11 10:04:56,718 - ImportGA4Vehicles - WARNING - Skipping row 6577: Missing make or model
+2025-04-11 10:04:56,718 - ImportGA4Vehicles - WARNING - Skipping row 6579: Missing make or model
+2025-04-11 10:04:56,718 - ImportGA4Vehicles - WARNING - Skipping row 6582: Missing make or model
+2025-04-11 10:04:56,718 - ImportGA4Vehicles - WARNING - Skipping row 6583: Missing make or model
+2025-04-11 10:04:56,718 - ImportGA4Vehicles - WARNING - Skipping row 6587: Missing make or model
+2025-04-11 10:04:56,718 - ImportGA4Vehicles - WARNING - Skipping row 6589: Missing make or model
+2025-04-11 10:04:56,718 - ImportGA4Vehicles - WARNING - Skipping row 6591: Missing make or model
+2025-04-11 10:04:56,718 - ImportGA4Vehicles - WARNING - Skipping row 6594: Missing make or model
+2025-04-11 10:04:56,718 - ImportGA4Vehicles - WARNING - Skipping row 6598: Missing make or model
+2025-04-11 10:04:56,718 - ImportGA4Vehicles - WARNING - Skipping row 6600: Missing make or model
+2025-04-11 10:04:56,718 - ImportGA4Vehicles - WARNING - Skipping row 6607: Missing make or model
+2025-04-11 10:04:56,718 - ImportGA4Vehicles - WARNING - Skipping row 6609: Missing make or model
+2025-04-11 10:04:56,719 - ImportGA4Vehicles - WARNING - Skipping row 6623: Missing make or model
+2025-04-11 10:04:56,719 - ImportGA4Vehicles - WARNING - Skipping row 6625: Missing make or model
+2025-04-11 10:04:56,719 - ImportGA4Vehicles - WARNING - Skipping row 6626: Missing make or model
+2025-04-11 10:04:56,719 - ImportGA4Vehicles - WARNING - Skipping row 6629: Missing make or model
+2025-04-11 10:04:56,719 - ImportGA4Vehicles - WARNING - Skipping row 6630: Missing make or model
+2025-04-11 10:04:56,719 - ImportGA4Vehicles - WARNING - Skipping row 6632: Missing make or model
+2025-04-11 10:04:56,719 - ImportGA4Vehicles - WARNING - Skipping row 6644: Missing make or model
+2025-04-11 10:04:56,719 - ImportGA4Vehicles - WARNING - Skipping row 6647: Missing make or model
+2025-04-11 10:04:56,719 - ImportGA4Vehicles - WARNING - Skipping row 6652: Missing make or model
+2025-04-11 10:04:56,719 - ImportGA4Vehicles - WARNING - Skipping row 6654: Missing make or model
+2025-04-11 10:04:56,719 - ImportGA4Vehicles - WARNING - Skipping row 6656: Missing make or model
+2025-04-11 10:04:56,719 - ImportGA4Vehicles - WARNING - Skipping row 6658: Missing make or model
+2025-04-11 10:04:56,719 - ImportGA4Vehicles - WARNING - Skipping row 6660: Missing make or model
+2025-04-11 10:04:56,719 - ImportGA4Vehicles - WARNING - Skipping row 6662: Missing make or model
+2025-04-11 10:04:56,719 - ImportGA4Vehicles - WARNING - Skipping row 6663: Missing make or model
+2025-04-11 10:04:56,720 - ImportGA4Vehicles - WARNING - Skipping row 6672: Missing make or model
+2025-04-11 10:04:56,720 - ImportGA4Vehicles - WARNING - Skipping row 6674: Missing make or model
+2025-04-11 10:04:56,720 - ImportGA4Vehicles - WARNING - Skipping row 6675: Missing make or model
+2025-04-11 10:04:56,720 - ImportGA4Vehicles - WARNING - Skipping row 6676: Missing make or model
+2025-04-11 10:04:56,720 - ImportGA4Vehicles - WARNING - Skipping row 6677: Missing make or model
+2025-04-11 10:04:56,720 - ImportGA4Vehicles - WARNING - Skipping row 6680: Missing make or model
+2025-04-11 10:04:56,720 - ImportGA4Vehicles - WARNING - Skipping row 6683: Missing make or model
+2025-04-11 10:04:56,720 - ImportGA4Vehicles - WARNING - Skipping row 6687: Missing make or model
+2025-04-11 10:04:56,720 - ImportGA4Vehicles - WARNING - Skipping row 6691: Missing make or model
+2025-04-11 10:04:56,720 - ImportGA4Vehicles - WARNING - Skipping row 6695: Missing make or model
+2025-04-11 10:04:56,720 - ImportGA4Vehicles - WARNING - Skipping row 6699: Missing make or model
+2025-04-11 10:04:56,720 - ImportGA4Vehicles - INFO - Imported 6600 vehicles so far
+2025-04-11 10:04:56,721 - ImportGA4Vehicles - WARNING - Skipping row 6721: Missing make or model
+2025-04-11 10:04:56,721 - ImportGA4Vehicles - WARNING - Skipping row 6723: Missing make or model
+2025-04-11 10:04:56,721 - ImportGA4Vehicles - WARNING - Skipping row 6726: Missing make or model
+2025-04-11 10:04:56,721 - ImportGA4Vehicles - WARNING - Skipping row 6731: Missing make or model
+2025-04-11 10:04:56,721 - ImportGA4Vehicles - WARNING - Skipping row 6734: Missing make or model
+2025-04-11 10:04:56,721 - ImportGA4Vehicles - WARNING - Skipping row 6742: Missing make or model
+2025-04-11 10:04:56,721 - ImportGA4Vehicles - WARNING - Skipping row 6743: Missing make or model
+2025-04-11 10:04:56,721 - ImportGA4Vehicles - WARNING - Skipping row 6746: Missing make or model
+2025-04-11 10:04:56,721 - ImportGA4Vehicles - WARNING - Skipping row 6747: Missing make or model
+2025-04-11 10:04:56,721 - ImportGA4Vehicles - WARNING - Skipping row 6753: Missing make or model
+2025-04-11 10:04:56,721 - ImportGA4Vehicles - WARNING - Skipping row 6755: Missing make or model
+2025-04-11 10:04:56,722 - ImportGA4Vehicles - WARNING - Skipping row 6762: Missing make or model
+2025-04-11 10:04:56,722 - ImportGA4Vehicles - WARNING - Skipping row 6778: Missing make or model
+2025-04-11 10:04:56,722 - ImportGA4Vehicles - WARNING - Skipping row 6785: Missing make or model
+2025-04-11 10:04:56,722 - ImportGA4Vehicles - WARNING - Skipping row 6786: Missing make or model
+2025-04-11 10:04:56,722 - ImportGA4Vehicles - WARNING - Skipping row 6789: Missing make or model
+2025-04-11 10:04:56,722 - ImportGA4Vehicles - WARNING - Skipping row 6790: Missing make or model
+2025-04-11 10:04:56,722 - ImportGA4Vehicles - WARNING - Skipping row 6791: Missing make or model
+2025-04-11 10:04:56,722 - ImportGA4Vehicles - WARNING - Skipping row 6793: Missing make or model
+2025-04-11 10:04:56,722 - ImportGA4Vehicles - WARNING - Skipping row 6795: Missing make or model
+2025-04-11 10:04:56,722 - ImportGA4Vehicles - WARNING - Skipping row 6798: Missing make or model
+2025-04-11 10:04:56,722 - ImportGA4Vehicles - WARNING - Skipping row 6800: Missing make or model
+2025-04-11 10:04:56,722 - ImportGA4Vehicles - WARNING - Skipping row 6803: Missing make or model
+2025-04-11 10:04:56,722 - ImportGA4Vehicles - WARNING - Skipping row 6804: Missing make or model
+2025-04-11 10:04:56,722 - ImportGA4Vehicles - WARNING - Skipping row 6811: Missing make or model
+2025-04-11 10:04:56,723 - ImportGA4Vehicles - WARNING - Skipping row 6814: Missing make or model
+2025-04-11 10:04:56,723 - ImportGA4Vehicles - WARNING - Skipping row 6816: Missing make or model
+2025-04-11 10:04:56,723 - ImportGA4Vehicles - WARNING - Skipping row 6817: Missing make or model
+2025-04-11 10:04:56,723 - ImportGA4Vehicles - WARNING - Skipping row 6822: Missing make or model
+2025-04-11 10:04:56,723 - ImportGA4Vehicles - WARNING - Skipping row 6828: Missing make or model
+2025-04-11 10:04:56,723 - ImportGA4Vehicles - WARNING - Skipping row 6834: Missing make or model
+2025-04-11 10:04:56,723 - ImportGA4Vehicles - WARNING - Skipping row 6838: Missing make or model
+2025-04-11 10:04:56,723 - ImportGA4Vehicles - INFO - Imported 6700 vehicles so far
+2025-04-11 10:04:56,723 - ImportGA4Vehicles - WARNING - Skipping row 6840: Missing make or model
+2025-04-11 10:04:56,723 - ImportGA4Vehicles - WARNING - Skipping row 6844: Missing make or model
+2025-04-11 10:04:56,723 - ImportGA4Vehicles - WARNING - Skipping row 6849: Missing make or model
+2025-04-11 10:04:56,724 - ImportGA4Vehicles - WARNING - Skipping row 6852: Missing make or model
+2025-04-11 10:04:56,724 - ImportGA4Vehicles - WARNING - Skipping row 6853: Missing make or model
+2025-04-11 10:04:56,724 - ImportGA4Vehicles - WARNING - Skipping row 6856: Missing make or model
+2025-04-11 10:04:56,724 - ImportGA4Vehicles - WARNING - Skipping row 6858: Missing make or model
+2025-04-11 10:04:56,724 - ImportGA4Vehicles - WARNING - Skipping row 6861: Missing make or model
+2025-04-11 10:04:56,724 - ImportGA4Vehicles - WARNING - Skipping row 6865: Missing make or model
+2025-04-11 10:04:56,724 - ImportGA4Vehicles - WARNING - Skipping row 6869: Missing make or model
+2025-04-11 10:04:56,724 - ImportGA4Vehicles - WARNING - Skipping row 6870: Missing make or model
+2025-04-11 10:04:56,724 - ImportGA4Vehicles - WARNING - Skipping row 6871: Missing make or model
+2025-04-11 10:04:56,724 - ImportGA4Vehicles - WARNING - Skipping row 6873: Missing make or model
+2025-04-11 10:04:56,724 - ImportGA4Vehicles - WARNING - Skipping row 6878: Missing make or model
+2025-04-11 10:04:56,724 - ImportGA4Vehicles - WARNING - Skipping row 6882: Missing make or model
+2025-04-11 10:04:56,724 - ImportGA4Vehicles - WARNING - Skipping row 6899: Missing make or model
+2025-04-11 10:04:56,724 - ImportGA4Vehicles - WARNING - Skipping row 6903: Missing make or model
+2025-04-11 10:04:56,724 - ImportGA4Vehicles - WARNING - Skipping row 6904: Missing make or model
+2025-04-11 10:04:56,725 - ImportGA4Vehicles - WARNING - Skipping row 6911: Missing make or model
+2025-04-11 10:04:56,725 - ImportGA4Vehicles - WARNING - Skipping row 6913: Missing make or model
+2025-04-11 10:04:56,725 - ImportGA4Vehicles - WARNING - Skipping row 6916: Missing make or model
+2025-04-11 10:04:56,725 - ImportGA4Vehicles - WARNING - Skipping row 6919: Missing make or model
+2025-04-11 10:04:56,725 - ImportGA4Vehicles - WARNING - Skipping row 6922: Missing make or model
+2025-04-11 10:04:56,725 - ImportGA4Vehicles - WARNING - Skipping row 6925: Missing make or model
+2025-04-11 10:04:56,725 - ImportGA4Vehicles - WARNING - Skipping row 6927: Missing make or model
+2025-04-11 10:04:56,725 - ImportGA4Vehicles - WARNING - Skipping row 6937: Missing make or model
+2025-04-11 10:04:56,725 - ImportGA4Vehicles - WARNING - Skipping row 6941: Missing make or model
+2025-04-11 10:04:56,725 - ImportGA4Vehicles - WARNING - Skipping row 6944: Missing make or model
+2025-04-11 10:04:56,725 - ImportGA4Vehicles - WARNING - Skipping row 6945: Missing make or model
+2025-04-11 10:04:56,725 - ImportGA4Vehicles - WARNING - Skipping row 6947: Missing make or model
+2025-04-11 10:04:56,725 - ImportGA4Vehicles - WARNING - Skipping row 6948: Missing make or model
+2025-04-11 10:04:56,725 - ImportGA4Vehicles - WARNING - Skipping row 6953: Missing make or model
+2025-04-11 10:04:56,725 - ImportGA4Vehicles - WARNING - Skipping row 6954: Missing make or model
+2025-04-11 10:04:56,725 - ImportGA4Vehicles - WARNING - Skipping row 6955: Missing make or model
+2025-04-11 10:04:56,725 - ImportGA4Vehicles - WARNING - Skipping row 6958: Missing make or model
+2025-04-11 10:04:56,725 - ImportGA4Vehicles - WARNING - Skipping row 6962: Missing make or model
+2025-04-11 10:04:56,725 - ImportGA4Vehicles - WARNING - Skipping row 6963: Missing make or model
+2025-04-11 10:04:56,726 - ImportGA4Vehicles - WARNING - Skipping row 6967: Missing make or model
+2025-04-11 10:04:56,726 - ImportGA4Vehicles - WARNING - Skipping row 6970: Missing make or model
+2025-04-11 10:04:56,726 - ImportGA4Vehicles - WARNING - Skipping row 6972: Missing make or model
+2025-04-11 10:04:56,726 - ImportGA4Vehicles - WARNING - Skipping row 6977: Missing make or model
+2025-04-11 10:04:56,726 - ImportGA4Vehicles - INFO - Imported 6800 vehicles so far
+2025-04-11 10:04:56,726 - ImportGA4Vehicles - WARNING - Skipping row 6981: Missing make or model
+2025-04-11 10:04:56,726 - ImportGA4Vehicles - WARNING - Skipping row 6985: Missing make or model
+2025-04-11 10:04:56,727 - ImportGA4Vehicles - WARNING - Skipping row 6998: Missing make or model
+2025-04-11 10:04:56,727 - ImportGA4Vehicles - WARNING - Skipping row 7008: Missing make or model
+2025-04-11 10:04:56,727 - ImportGA4Vehicles - WARNING - Skipping row 7010: Missing make or model
+2025-04-11 10:04:56,727 - ImportGA4Vehicles - WARNING - Skipping row 7022: Missing make or model
+2025-04-11 10:04:56,727 - ImportGA4Vehicles - WARNING - Skipping row 7027: Missing make or model
+2025-04-11 10:04:56,727 - ImportGA4Vehicles - WARNING - Skipping row 7028: Missing make or model
+2025-04-11 10:04:56,727 - ImportGA4Vehicles - WARNING - Skipping row 7032: Missing make or model
+2025-04-11 10:04:56,728 - ImportGA4Vehicles - WARNING - Skipping row 7041: Missing make or model
+2025-04-11 10:04:56,728 - ImportGA4Vehicles - WARNING - Skipping row 7042: Missing make or model
+2025-04-11 10:04:56,728 - ImportGA4Vehicles - WARNING - Skipping row 7052: Missing make or model
+2025-04-11 10:04:56,728 - ImportGA4Vehicles - WARNING - Skipping row 7061: Missing make or model
+2025-04-11 10:04:56,728 - ImportGA4Vehicles - WARNING - Skipping row 7062: Missing make or model
+2025-04-11 10:04:56,728 - ImportGA4Vehicles - WARNING - Skipping row 7063: Missing make or model
+2025-04-11 10:04:56,728 - ImportGA4Vehicles - WARNING - Skipping row 7067: Missing make or model
+2025-04-11 10:04:56,728 - ImportGA4Vehicles - WARNING - Skipping row 7071: Missing make or model
+2025-04-11 10:04:56,728 - ImportGA4Vehicles - WARNING - Skipping row 7073: Missing make or model
+2025-04-11 10:04:56,728 - ImportGA4Vehicles - WARNING - Skipping row 7075: Missing make or model
+2025-04-11 10:04:56,728 - ImportGA4Vehicles - WARNING - Skipping row 7076: Missing make or model
+2025-04-11 10:04:56,728 - ImportGA4Vehicles - WARNING - Skipping row 7078: Missing make or model
+2025-04-11 10:04:56,728 - ImportGA4Vehicles - WARNING - Skipping row 7080: Missing make or model
+2025-04-11 10:04:56,728 - ImportGA4Vehicles - WARNING - Skipping row 7082: Missing make or model
+2025-04-11 10:04:56,728 - ImportGA4Vehicles - WARNING - Skipping row 7085: Missing make or model
+2025-04-11 10:04:56,728 - ImportGA4Vehicles - WARNING - Skipping row 7086: Missing make or model
+2025-04-11 10:04:56,728 - ImportGA4Vehicles - WARNING - Skipping row 7087: Missing make or model
+2025-04-11 10:04:56,728 - ImportGA4Vehicles - WARNING - Skipping row 7088: Missing make or model
+2025-04-11 10:04:56,728 - ImportGA4Vehicles - WARNING - Skipping row 7089: Missing make or model
+2025-04-11 10:04:56,729 - ImportGA4Vehicles - WARNING - Skipping row 7098: Missing make or model
+2025-04-11 10:04:56,729 - ImportGA4Vehicles - WARNING - Skipping row 7100: Missing make or model
+2025-04-11 10:04:56,729 - ImportGA4Vehicles - INFO - Imported 6900 vehicles so far
+2025-04-11 10:04:56,729 - ImportGA4Vehicles - WARNING - Skipping row 7112: Missing make or model
+2025-04-11 10:04:56,729 - ImportGA4Vehicles - WARNING - Skipping row 7117: Missing make or model
+2025-04-11 10:04:56,729 - ImportGA4Vehicles - WARNING - Skipping row 7119: Missing make or model
+2025-04-11 10:04:56,729 - ImportGA4Vehicles - WARNING - Skipping row 7124: Missing make or model
+2025-04-11 10:04:56,729 - ImportGA4Vehicles - WARNING - Skipping row 7125: Missing make or model
+2025-04-11 10:04:56,729 - ImportGA4Vehicles - WARNING - Skipping row 7128: Missing make or model
+2025-04-11 10:04:56,730 - ImportGA4Vehicles - WARNING - Skipping row 7132: Missing make or model
+2025-04-11 10:04:56,730 - ImportGA4Vehicles - WARNING - Skipping row 7133: Missing make or model
+2025-04-11 10:04:56,730 - ImportGA4Vehicles - WARNING - Skipping row 7139: Missing make or model
+2025-04-11 10:04:56,730 - ImportGA4Vehicles - WARNING - Skipping row 7140: Missing make or model
+2025-04-11 10:04:56,730 - ImportGA4Vehicles - WARNING - Skipping row 7141: Missing make or model
+2025-04-11 10:04:56,730 - ImportGA4Vehicles - WARNING - Skipping row 7149: Missing make or model
+2025-04-11 10:04:56,730 - ImportGA4Vehicles - WARNING - Skipping row 7156: Missing make or model
+2025-04-11 10:04:56,730 - ImportGA4Vehicles - WARNING - Skipping row 7168: Missing make or model
+2025-04-11 10:04:56,730 - ImportGA4Vehicles - WARNING - Skipping row 7169: Missing make or model
+2025-04-11 10:04:56,730 - ImportGA4Vehicles - WARNING - Skipping row 7170: Missing make or model
+2025-04-11 10:04:56,730 - ImportGA4Vehicles - WARNING - Skipping row 7173: Missing make or model
+2025-04-11 10:04:56,730 - ImportGA4Vehicles - WARNING - Skipping row 7175: Missing make or model
+2025-04-11 10:04:56,730 - ImportGA4Vehicles - WARNING - Skipping row 7176: Missing make or model
+2025-04-11 10:04:56,730 - ImportGA4Vehicles - WARNING - Skipping row 7178: Missing make or model
+2025-04-11 10:04:56,731 - ImportGA4Vehicles - WARNING - Skipping row 7186: Missing make or model
+2025-04-11 10:04:56,731 - ImportGA4Vehicles - WARNING - Skipping row 7189: Missing make or model
+2025-04-11 10:04:56,731 - ImportGA4Vehicles - WARNING - Skipping row 7196: Missing make or model
+2025-04-11 10:04:56,731 - ImportGA4Vehicles - WARNING - Skipping row 7198: Missing make or model
+2025-04-11 10:04:56,731 - ImportGA4Vehicles - WARNING - Skipping row 7199: Missing make or model
+2025-04-11 10:04:56,731 - ImportGA4Vehicles - WARNING - Skipping row 7201: Missing make or model
+2025-04-11 10:04:56,731 - ImportGA4Vehicles - WARNING - Skipping row 7203: Missing make or model
+2025-04-11 10:04:56,731 - ImportGA4Vehicles - WARNING - Skipping row 7208: Missing make or model
+2025-04-11 10:04:56,731 - ImportGA4Vehicles - WARNING - Skipping row 7219: Missing make or model
+2025-04-11 10:04:56,731 - ImportGA4Vehicles - WARNING - Skipping row 7223: Missing make or model
+2025-04-11 10:04:56,731 - ImportGA4Vehicles - WARNING - Skipping row 7227: Missing make or model
+2025-04-11 10:04:56,731 - ImportGA4Vehicles - WARNING - Skipping row 7228: Missing make or model
+2025-04-11 10:04:56,731 - ImportGA4Vehicles - WARNING - Skipping row 7229: Missing make or model
+2025-04-11 10:04:56,731 - ImportGA4Vehicles - WARNING - Skipping row 7230: Missing make or model
+2025-04-11 10:04:56,731 - ImportGA4Vehicles - WARNING - Skipping row 7235: Missing make or model
+2025-04-11 10:04:56,732 - ImportGA4Vehicles - WARNING - Skipping row 7240: Missing make or model
+2025-04-11 10:04:56,732 - ImportGA4Vehicles - WARNING - Skipping row 7244: Missing make or model
+2025-04-11 10:04:56,732 - ImportGA4Vehicles - WARNING - Skipping row 7245: Missing make or model
+2025-04-11 10:04:56,732 - ImportGA4Vehicles - WARNING - Skipping row 7248: Missing make or model
+2025-04-11 10:04:56,732 - ImportGA4Vehicles - INFO - Imported 7000 vehicles so far
+2025-04-11 10:04:56,732 - ImportGA4Vehicles - WARNING - Skipping row 7254: Missing make or model
+2025-04-11 10:04:56,732 - ImportGA4Vehicles - WARNING - Skipping row 7258: Missing make or model
+2025-04-11 10:04:56,732 - ImportGA4Vehicles - WARNING - Skipping row 7260: Missing make or model
+2025-04-11 10:04:56,732 - ImportGA4Vehicles - WARNING - Skipping row 7261: Missing make or model
+2025-04-11 10:04:56,732 - ImportGA4Vehicles - WARNING - Skipping row 7265: Missing make or model
+2025-04-11 10:04:56,732 - ImportGA4Vehicles - WARNING - Skipping row 7266: Missing make or model
+2025-04-11 10:04:56,732 - ImportGA4Vehicles - WARNING - Skipping row 7270: Missing make or model
+2025-04-11 10:04:56,733 - ImportGA4Vehicles - WARNING - Skipping row 7274: Missing make or model
+2025-04-11 10:04:56,733 - ImportGA4Vehicles - WARNING - Skipping row 7275: Missing make or model
+2025-04-11 10:04:56,733 - ImportGA4Vehicles - WARNING - Skipping row 7276: Missing make or model
+2025-04-11 10:04:56,733 - ImportGA4Vehicles - WARNING - Skipping row 7280: Missing make or model
+2025-04-11 10:04:56,733 - ImportGA4Vehicles - WARNING - Skipping row 7281: Missing make or model
+2025-04-11 10:04:56,733 - ImportGA4Vehicles - WARNING - Skipping row 7287: Missing make or model
+2025-04-11 10:04:56,733 - ImportGA4Vehicles - WARNING - Skipping row 7293: Missing make or model
+2025-04-11 10:04:56,733 - ImportGA4Vehicles - WARNING - Skipping row 7294: Missing make or model
+2025-04-11 10:04:56,733 - ImportGA4Vehicles - WARNING - Skipping row 7301: Missing make or model
+2025-04-11 10:04:56,733 - ImportGA4Vehicles - WARNING - Skipping row 7305: Missing make or model
+2025-04-11 10:04:56,733 - ImportGA4Vehicles - WARNING - Skipping row 7307: Missing make or model
+2025-04-11 10:04:56,733 - ImportGA4Vehicles - WARNING - Skipping row 7311: Missing make or model
+2025-04-11 10:04:56,733 - ImportGA4Vehicles - WARNING - Skipping row 7313: Missing make or model
+2025-04-11 10:04:56,733 - ImportGA4Vehicles - WARNING - Skipping row 7314: Missing make or model
+2025-04-11 10:04:56,733 - ImportGA4Vehicles - WARNING - Skipping row 7315: Missing make or model
+2025-04-11 10:04:56,733 - ImportGA4Vehicles - WARNING - Skipping row 7319: Missing make or model
+2025-04-11 10:04:56,733 - ImportGA4Vehicles - WARNING - Skipping row 7320: Missing make or model
+2025-04-11 10:04:56,733 - ImportGA4Vehicles - WARNING - Skipping row 7321: Missing make or model
+2025-04-11 10:04:56,733 - ImportGA4Vehicles - WARNING - Skipping row 7322: Missing make or model
+2025-04-11 10:04:56,733 - ImportGA4Vehicles - WARNING - Skipping row 7323: Missing make or model
+2025-04-11 10:04:56,733 - ImportGA4Vehicles - WARNING - Skipping row 7324: Missing make or model
+2025-04-11 10:04:56,733 - ImportGA4Vehicles - WARNING - Skipping row 7329: Missing make or model
+2025-04-11 10:04:56,734 - ImportGA4Vehicles - WARNING - Skipping row 7336: Missing make or model
+2025-04-11 10:04:56,734 - ImportGA4Vehicles - WARNING - Skipping row 7342: Missing make or model
+2025-04-11 10:04:56,734 - ImportGA4Vehicles - WARNING - Skipping row 7343: Missing make or model
+2025-04-11 10:04:56,734 - ImportGA4Vehicles - WARNING - Skipping row 7344: Missing make or model
+2025-04-11 10:04:56,734 - ImportGA4Vehicles - WARNING - Skipping row 7349: Missing make or model
+2025-04-11 10:04:56,734 - ImportGA4Vehicles - WARNING - Skipping row 7351: Missing make or model
+2025-04-11 10:04:56,734 - ImportGA4Vehicles - WARNING - Skipping row 7352: Missing make or model
+2025-04-11 10:04:56,734 - ImportGA4Vehicles - WARNING - Skipping row 7353: Missing make or model
+2025-04-11 10:04:56,734 - ImportGA4Vehicles - WARNING - Skipping row 7356: Missing make or model
+2025-04-11 10:04:56,734 - ImportGA4Vehicles - WARNING - Skipping row 7357: Missing make or model
+2025-04-11 10:04:56,734 - ImportGA4Vehicles - WARNING - Skipping row 7358: Missing make or model
+2025-04-11 10:04:56,734 - ImportGA4Vehicles - WARNING - Skipping row 7361: Missing make or model
+2025-04-11 10:04:56,734 - ImportGA4Vehicles - WARNING - Skipping row 7365: Missing make or model
+2025-04-11 10:04:56,734 - ImportGA4Vehicles - WARNING - Skipping row 7367: Missing make or model
+2025-04-11 10:04:56,734 - ImportGA4Vehicles - WARNING - Skipping row 7368: Missing make or model
+2025-04-11 10:04:56,734 - ImportGA4Vehicles - WARNING - Skipping row 7370: Missing make or model
+2025-04-11 10:04:56,734 - ImportGA4Vehicles - WARNING - Skipping row 7372: Missing make or model
+2025-04-11 10:04:56,734 - ImportGA4Vehicles - WARNING - Skipping row 7374: Missing make or model
+2025-04-11 10:04:56,734 - ImportGA4Vehicles - WARNING - Skipping row 7377: Missing make or model
+2025-04-11 10:04:56,734 - ImportGA4Vehicles - WARNING - Skipping row 7380: Missing make or model
+2025-04-11 10:04:56,734 - ImportGA4Vehicles - WARNING - Skipping row 7388: Missing make or model
+2025-04-11 10:04:56,735 - ImportGA4Vehicles - WARNING - Skipping row 7393: Missing make or model
+2025-04-11 10:04:56,735 - ImportGA4Vehicles - WARNING - Skipping row 7397: Missing make or model
+2025-04-11 10:04:56,735 - ImportGA4Vehicles - WARNING - Skipping row 7400: Missing make or model
+2025-04-11 10:04:56,735 - ImportGA4Vehicles - WARNING - Skipping row 7401: Missing make or model
+2025-04-11 10:04:56,735 - ImportGA4Vehicles - WARNING - Skipping row 7402: Missing make or model
+2025-04-11 10:04:56,735 - ImportGA4Vehicles - INFO - Imported 7100 vehicles so far
+2025-04-11 10:04:56,735 - ImportGA4Vehicles - WARNING - Skipping row 7405: Missing make or model
+2025-04-11 10:04:56,735 - ImportGA4Vehicles - WARNING - Skipping row 7407: Missing make or model
+2025-04-11 10:04:56,735 - ImportGA4Vehicles - WARNING - Skipping row 7408: Missing make or model
+2025-04-11 10:04:56,735 - ImportGA4Vehicles - WARNING - Skipping row 7414: Missing make or model
+2025-04-11 10:04:56,735 - ImportGA4Vehicles - WARNING - Skipping row 7416: Missing make or model
+2025-04-11 10:04:56,735 - ImportGA4Vehicles - WARNING - Skipping row 7418: Missing make or model
+2025-04-11 10:04:56,736 - ImportGA4Vehicles - WARNING - Skipping row 7419: Missing make or model
+2025-04-11 10:04:56,736 - ImportGA4Vehicles - WARNING - Skipping row 7420: Missing make or model
+2025-04-11 10:04:56,736 - ImportGA4Vehicles - WARNING - Skipping row 7424: Missing make or model
+2025-04-11 10:04:56,736 - ImportGA4Vehicles - WARNING - Skipping row 7426: Missing make or model
+2025-04-11 10:04:56,736 - ImportGA4Vehicles - WARNING - Skipping row 7428: Missing make or model
+2025-04-11 10:04:56,736 - ImportGA4Vehicles - WARNING - Skipping row 7430: Missing make or model
+2025-04-11 10:04:56,736 - ImportGA4Vehicles - WARNING - Skipping row 7436: Missing make or model
+2025-04-11 10:04:56,736 - ImportGA4Vehicles - WARNING - Skipping row 7437: Missing make or model
+2025-04-11 10:04:56,736 - ImportGA4Vehicles - WARNING - Skipping row 7441: Missing make or model
+2025-04-11 10:04:56,736 - ImportGA4Vehicles - WARNING - Skipping row 7443: Missing make or model
+2025-04-11 10:04:56,736 - ImportGA4Vehicles - WARNING - Skipping row 7446: Missing make or model
+2025-04-11 10:04:56,736 - ImportGA4Vehicles - WARNING - Skipping row 7447: Missing make or model
+2025-04-11 10:04:56,736 - ImportGA4Vehicles - WARNING - Skipping row 7451: Missing make or model
+2025-04-11 10:04:56,736 - ImportGA4Vehicles - WARNING - Skipping row 7461: Missing make or model
+2025-04-11 10:04:56,736 - ImportGA4Vehicles - WARNING - Skipping row 7462: Missing make or model
+2025-04-11 10:04:56,736 - ImportGA4Vehicles - WARNING - Skipping row 7466: Missing make or model
+2025-04-11 10:04:56,736 - ImportGA4Vehicles - WARNING - Skipping row 7467: Missing make or model
+2025-04-11 10:04:56,736 - ImportGA4Vehicles - WARNING - Skipping row 7468: Missing make or model
+2025-04-11 10:04:56,736 - ImportGA4Vehicles - WARNING - Skipping row 7471: Missing make or model
+2025-04-11 10:04:56,736 - ImportGA4Vehicles - WARNING - Skipping row 7473: Missing make or model
+2025-04-11 10:04:56,737 - ImportGA4Vehicles - WARNING - Skipping row 7475: Missing make or model
+2025-04-11 10:04:56,737 - ImportGA4Vehicles - WARNING - Skipping row 7477: Missing make or model
+2025-04-11 10:04:56,737 - ImportGA4Vehicles - WARNING - Skipping row 7478: Missing make or model
+2025-04-11 10:04:56,737 - ImportGA4Vehicles - WARNING - Skipping row 7481: Missing make or model
+2025-04-11 10:04:56,737 - ImportGA4Vehicles - WARNING - Skipping row 7496: Missing make or model
+2025-04-11 10:04:56,737 - ImportGA4Vehicles - WARNING - Skipping row 7497: Missing make or model
+2025-04-11 10:04:56,737 - ImportGA4Vehicles - WARNING - Skipping row 7500: Missing make or model
+2025-04-11 10:04:56,737 - ImportGA4Vehicles - WARNING - Skipping row 7510: Missing make or model
+2025-04-11 10:04:56,737 - ImportGA4Vehicles - WARNING - Skipping row 7511: Missing make or model
+2025-04-11 10:04:56,737 - ImportGA4Vehicles - WARNING - Skipping row 7512: Missing make or model
+2025-04-11 10:04:56,737 - ImportGA4Vehicles - WARNING - Skipping row 7513: Missing make or model
+2025-04-11 10:04:56,737 - ImportGA4Vehicles - WARNING - Skipping row 7517: Missing make or model
+2025-04-11 10:04:56,737 - ImportGA4Vehicles - WARNING - Skipping row 7526: Missing make or model
+2025-04-11 10:04:56,738 - ImportGA4Vehicles - WARNING - Skipping row 7535: Missing make or model
+2025-04-11 10:04:56,738 - ImportGA4Vehicles - WARNING - Skipping row 7538: Missing make or model
+2025-04-11 10:04:56,738 - ImportGA4Vehicles - WARNING - Skipping row 7539: Missing make or model
+2025-04-11 10:04:56,738 - ImportGA4Vehicles - WARNING - Skipping row 7544: Missing make or model
+2025-04-11 10:04:56,738 - ImportGA4Vehicles - WARNING - Skipping row 7546: Missing make or model
+2025-04-11 10:04:56,738 - ImportGA4Vehicles - WARNING - Skipping row 7547: Missing make or model
+2025-04-11 10:04:56,738 - ImportGA4Vehicles - WARNING - Skipping row 7549: Missing make or model
+2025-04-11 10:04:56,738 - ImportGA4Vehicles - INFO - Imported 7200 vehicles so far
+2025-04-11 10:04:56,738 - ImportGA4Vehicles - WARNING - Skipping row 7557: Missing make or model
+2025-04-11 10:04:56,738 - ImportGA4Vehicles - WARNING - Skipping row 7558: Missing make or model
+2025-04-11 10:04:56,738 - ImportGA4Vehicles - WARNING - Skipping row 7560: Missing make or model
+2025-04-11 10:04:56,738 - ImportGA4Vehicles - WARNING - Skipping row 7561: Missing make or model
+2025-04-11 10:04:56,738 - ImportGA4Vehicles - WARNING - Skipping row 7562: Missing make or model
+2025-04-11 10:04:56,738 - ImportGA4Vehicles - WARNING - Skipping row 7563: Missing make or model
+2025-04-11 10:04:56,738 - ImportGA4Vehicles - WARNING - Skipping row 7568: Missing make or model
+2025-04-11 10:04:56,739 - ImportGA4Vehicles - WARNING - Skipping row 7578: Missing make or model
+2025-04-11 10:04:56,739 - ImportGA4Vehicles - WARNING - Skipping row 7594: Missing make or model
+2025-04-11 10:04:56,739 - ImportGA4Vehicles - WARNING - Skipping row 7595: Missing make or model
+2025-04-11 10:04:56,739 - ImportGA4Vehicles - WARNING - Skipping row 7604: Missing make or model
+2025-04-11 10:04:56,739 - ImportGA4Vehicles - WARNING - Skipping row 7605: Missing make or model
+2025-04-11 10:04:56,739 - ImportGA4Vehicles - WARNING - Skipping row 7612: Missing make or model
+2025-04-11 10:04:56,739 - ImportGA4Vehicles - WARNING - Skipping row 7616: Missing make or model
+2025-04-11 10:04:56,739 - ImportGA4Vehicles - WARNING - Skipping row 7617: Missing make or model
+2025-04-11 10:04:56,740 - ImportGA4Vehicles - WARNING - Skipping row 7631: Missing make or model
+2025-04-11 10:04:56,740 - ImportGA4Vehicles - WARNING - Skipping row 7632: Missing make or model
+2025-04-11 10:04:56,740 - ImportGA4Vehicles - WARNING - Skipping row 7664: Missing make or model
+2025-04-11 10:04:56,740 - ImportGA4Vehicles - WARNING - Skipping row 7665: Missing make or model
+2025-04-11 10:04:56,740 - ImportGA4Vehicles - INFO - Imported 7300 vehicles so far
+2025-04-11 10:04:56,741 - ImportGA4Vehicles - WARNING - Skipping row 7670: Missing make or model
+2025-04-11 10:04:56,741 - ImportGA4Vehicles - WARNING - Skipping row 7674: Missing make or model
+2025-04-11 10:04:56,741 - ImportGA4Vehicles - WARNING - Skipping row 7675: Missing make or model
+2025-04-11 10:04:56,741 - ImportGA4Vehicles - WARNING - Skipping row 7680: Missing make or model
+2025-04-11 10:04:56,741 - ImportGA4Vehicles - WARNING - Skipping row 7694: Missing make or model
+2025-04-11 10:04:56,742 - ImportGA4Vehicles - WARNING - Skipping row 7713: Missing make or model
+2025-04-11 10:04:56,742 - ImportGA4Vehicles - WARNING - Skipping row 7728: Missing make or model
+2025-04-11 10:04:56,742 - ImportGA4Vehicles - WARNING - Skipping row 7748: Missing make or model
+2025-04-11 10:04:56,742 - ImportGA4Vehicles - WARNING - Skipping row 7758: Missing make or model
+2025-04-11 10:04:56,743 - ImportGA4Vehicles - WARNING - Skipping row 7761: Missing make or model
+2025-04-11 10:04:56,743 - ImportGA4Vehicles - WARNING - Skipping row 7762: Missing make or model
+2025-04-11 10:04:56,743 - ImportGA4Vehicles - WARNING - Skipping row 7766: Missing make or model
+2025-04-11 10:04:56,743 - ImportGA4Vehicles - WARNING - Skipping row 7770: Missing make or model
+2025-04-11 10:04:56,743 - ImportGA4Vehicles - WARNING - Skipping row 7771: Missing make or model
+2025-04-11 10:04:56,743 - ImportGA4Vehicles - WARNING - Skipping row 7779: Missing make or model
+2025-04-11 10:04:56,743 - ImportGA4Vehicles - WARNING - Skipping row 7780: Missing make or model
+2025-04-11 10:04:56,743 - ImportGA4Vehicles - WARNING - Skipping row 7782: Missing make or model
+2025-04-11 10:04:56,743 - ImportGA4Vehicles - INFO - Imported 7400 vehicles so far
+2025-04-11 10:04:56,743 - ImportGA4Vehicles - WARNING - Skipping row 7789: No registration number
+2025-04-11 10:04:56,743 - ImportGA4Vehicles - WARNING - Skipping row 7790: Missing make or model
+2025-04-11 10:04:56,744 - ImportGA4Vehicles - WARNING - Skipping row 7792: Missing make or model
+2025-04-11 10:04:56,744 - ImportGA4Vehicles - WARNING - Skipping row 7808: Missing make or model
+2025-04-11 10:04:56,744 - ImportGA4Vehicles - WARNING - Skipping row 7809: Missing make or model
+2025-04-11 10:04:56,744 - ImportGA4Vehicles - WARNING - Skipping row 7813: Missing make or model
+2025-04-11 10:04:56,744 - ImportGA4Vehicles - WARNING - Skipping row 7815: Missing make or model
+2025-04-11 10:04:56,744 - ImportGA4Vehicles - WARNING - Skipping row 7821: Missing make or model
+2025-04-11 10:04:56,744 - ImportGA4Vehicles - WARNING - Skipping row 7822: Missing make or model
+2025-04-11 10:04:56,745 - ImportGA4Vehicles - WARNING - Skipping row 7847: Missing make or model
+2025-04-11 10:04:56,745 - ImportGA4Vehicles - WARNING - Skipping row 7865: Missing make or model
+2025-04-11 10:04:56,745 - ImportGA4Vehicles - WARNING - Skipping row 7866: Missing make or model
+2025-04-11 10:04:56,745 - ImportGA4Vehicles - WARNING - Skipping row 7867: Missing make or model
+2025-04-11 10:04:56,745 - ImportGA4Vehicles - WARNING - Skipping row 7868: Missing make or model
+2025-04-11 10:04:56,745 - ImportGA4Vehicles - WARNING - Skipping row 7869: Missing make or model
+2025-04-11 10:04:56,745 - ImportGA4Vehicles - WARNING - Skipping row 7872: Missing make or model
+2025-04-11 10:04:56,745 - ImportGA4Vehicles - WARNING - Skipping row 7873: Missing make or model
+2025-04-11 10:04:56,745 - ImportGA4Vehicles - WARNING - Skipping row 7874: Missing make or model
+2025-04-11 10:04:56,745 - ImportGA4Vehicles - WARNING - Skipping row 7875: Missing make or model
+2025-04-11 10:04:56,745 - ImportGA4Vehicles - WARNING - Skipping row 7876: Missing make or model
+2025-04-11 10:04:56,745 - ImportGA4Vehicles - WARNING - Skipping row 7877: Missing make or model
+2025-04-11 10:04:56,745 - ImportGA4Vehicles - WARNING - Skipping row 7884: Missing make or model
+2025-04-11 10:04:56,745 - ImportGA4Vehicles - WARNING - Skipping row 7886: Missing make or model
+2025-04-11 10:04:56,745 - ImportGA4Vehicles - WARNING - Skipping row 7887: Missing make or model
+2025-04-11 10:04:56,745 - ImportGA4Vehicles - WARNING - Skipping row 7889: Missing make or model
+2025-04-11 10:04:56,745 - ImportGA4Vehicles - WARNING - Skipping row 7890: Missing make or model
+2025-04-11 10:04:56,745 - ImportGA4Vehicles - WARNING - Skipping row 7892: Missing make or model
+2025-04-11 10:04:56,745 - ImportGA4Vehicles - WARNING - Skipping row 7893: Missing make or model
+2025-04-11 10:04:56,745 - ImportGA4Vehicles - WARNING - Skipping row 7894: Missing make or model
+2025-04-11 10:04:56,745 - ImportGA4Vehicles - WARNING - Skipping row 7895: Missing make or model
+2025-04-11 10:04:56,745 - ImportGA4Vehicles - WARNING - Skipping row 7896: Missing make or model
+2025-04-11 10:04:56,746 - ImportGA4Vehicles - WARNING - Skipping row 7898: Missing make or model
+2025-04-11 10:04:56,746 - ImportGA4Vehicles - WARNING - Skipping row 7899: Missing make or model
+2025-04-11 10:04:56,746 - ImportGA4Vehicles - WARNING - Skipping row 7901: Missing make or model
+2025-04-11 10:04:56,746 - ImportGA4Vehicles - WARNING - Skipping row 7902: Missing make or model
+2025-04-11 10:04:56,746 - ImportGA4Vehicles - WARNING - Skipping row 7903: Missing make or model
+2025-04-11 10:04:56,746 - ImportGA4Vehicles - WARNING - Skipping row 7905: Missing make or model
+2025-04-11 10:04:56,746 - ImportGA4Vehicles - WARNING - Skipping row 7913: Missing make or model
+2025-04-11 10:04:56,746 - ImportGA4Vehicles - WARNING - Skipping row 7916: Missing make or model
+2025-04-11 10:04:56,746 - ImportGA4Vehicles - WARNING - Skipping row 7922: Missing make or model
+2025-04-11 10:04:56,746 - ImportGA4Vehicles - WARNING - Skipping row 7923: Missing make or model
+2025-04-11 10:04:56,746 - ImportGA4Vehicles - WARNING - Skipping row 7925: Missing make or model
+2025-04-11 10:04:56,746 - ImportGA4Vehicles - INFO - Imported 7500 vehicles so far
+2025-04-11 10:04:56,750 - ImportGA4Vehicles - WARNING - Skipping row 7929: Missing make or model
+2025-04-11 10:04:56,750 - ImportGA4Vehicles - WARNING - Skipping row 7933: Missing make or model
+2025-04-11 10:04:56,750 - ImportGA4Vehicles - WARNING - Skipping row 7934: Missing make or model
+2025-04-11 10:04:56,750 - ImportGA4Vehicles - WARNING - Skipping row 7935: Missing make or model
+2025-04-11 10:04:56,750 - ImportGA4Vehicles - WARNING - Skipping row 7936: Missing make or model
+2025-04-11 10:04:56,750 - ImportGA4Vehicles - WARNING - Skipping row 7938: Missing make or model
+2025-04-11 10:04:56,750 - ImportGA4Vehicles - WARNING - Skipping row 7939: Missing make or model
+2025-04-11 10:04:56,750 - ImportGA4Vehicles - WARNING - Skipping row 7940: Missing make or model
+2025-04-11 10:04:56,750 - ImportGA4Vehicles - WARNING - Skipping row 7942: Missing make or model
+2025-04-11 10:04:56,750 - ImportGA4Vehicles - WARNING - Skipping row 7943: Missing make or model
+2025-04-11 10:04:56,750 - ImportGA4Vehicles - WARNING - Skipping row 7944: Missing make or model
+2025-04-11 10:04:56,750 - ImportGA4Vehicles - WARNING - Skipping row 7945: Missing make or model
+2025-04-11 10:04:56,750 - ImportGA4Vehicles - WARNING - Skipping row 7946: Missing make or model
+2025-04-11 10:04:56,750 - ImportGA4Vehicles - WARNING - Skipping row 7947: Missing make or model
+2025-04-11 10:04:56,751 - ImportGA4Vehicles - WARNING - Skipping row 7954: Missing make or model
+2025-04-11 10:04:56,751 - ImportGA4Vehicles - WARNING - Skipping row 7959: Missing make or model
+2025-04-11 10:04:56,751 - ImportGA4Vehicles - WARNING - Skipping row 7960: Missing make or model
+2025-04-11 10:04:56,751 - ImportGA4Vehicles - WARNING - Skipping row 7961: Missing make or model
+2025-04-11 10:04:56,751 - ImportGA4Vehicles - WARNING - Skipping row 7966: Missing make or model
+2025-04-11 10:04:56,751 - ImportGA4Vehicles - WARNING - Skipping row 7967: Missing make or model
+2025-04-11 10:04:56,751 - ImportGA4Vehicles - WARNING - Skipping row 7968: Missing make or model
+2025-04-11 10:04:56,751 - ImportGA4Vehicles - WARNING - Skipping row 7969: Missing make or model
+2025-04-11 10:04:56,751 - ImportGA4Vehicles - WARNING - Skipping row 7971: Missing make or model
+2025-04-11 10:04:56,751 - ImportGA4Vehicles - WARNING - Skipping row 7972: Missing make or model
+2025-04-11 10:04:56,751 - ImportGA4Vehicles - WARNING - Skipping row 7973: Missing make or model
+2025-04-11 10:04:56,751 - ImportGA4Vehicles - WARNING - Skipping row 7974: Missing make or model
+2025-04-11 10:04:56,751 - ImportGA4Vehicles - WARNING - Skipping row 7975: Missing make or model
+2025-04-11 10:04:56,751 - ImportGA4Vehicles - WARNING - Skipping row 7977: Missing make or model
+2025-04-11 10:04:56,751 - ImportGA4Vehicles - WARNING - Skipping row 7986: Missing make or model
+2025-04-11 10:04:56,751 - ImportGA4Vehicles - WARNING - Skipping row 7988: Missing make or model
+2025-04-11 10:04:56,751 - ImportGA4Vehicles - WARNING - Skipping row 7989: Missing make or model
+2025-04-11 10:04:56,751 - ImportGA4Vehicles - WARNING - Skipping row 7992: Missing make or model
+2025-04-11 10:04:56,751 - ImportGA4Vehicles - WARNING - Skipping row 7993: Missing make or model
+2025-04-11 10:04:56,751 - ImportGA4Vehicles - WARNING - Skipping row 7994: Missing make or model
+2025-04-11 10:04:56,751 - ImportGA4Vehicles - WARNING - Skipping row 7999: Missing make or model
+2025-04-11 10:04:56,751 - ImportGA4Vehicles - WARNING - Skipping row 8000: Missing make or model
+2025-04-11 10:04:56,751 - ImportGA4Vehicles - WARNING - Skipping row 8005: Missing make or model
+2025-04-11 10:04:56,751 - ImportGA4Vehicles - WARNING - Skipping row 8007: Missing make or model
+2025-04-11 10:04:56,751 - ImportGA4Vehicles - WARNING - Skipping row 8009: Missing make or model
+2025-04-11 10:04:56,751 - ImportGA4Vehicles - WARNING - Skipping row 8012: Missing make or model
+2025-04-11 10:04:56,752 - ImportGA4Vehicles - WARNING - Skipping row 8013: Missing make or model
+2025-04-11 10:04:56,752 - ImportGA4Vehicles - WARNING - Skipping row 8018: Missing make or model
+2025-04-11 10:04:56,752 - ImportGA4Vehicles - WARNING - Skipping row 8020: Missing make or model
+2025-04-11 10:04:56,752 - ImportGA4Vehicles - WARNING - Skipping row 8022: Missing make or model
+2025-04-11 10:04:56,752 - ImportGA4Vehicles - WARNING - Skipping row 8024: Missing make or model
+2025-04-11 10:04:56,752 - ImportGA4Vehicles - WARNING - Skipping row 8029: Missing make or model
+2025-04-11 10:04:56,752 - ImportGA4Vehicles - WARNING - Skipping row 8035: Missing make or model
+2025-04-11 10:04:56,752 - ImportGA4Vehicles - WARNING - Skipping row 8036: Missing make or model
+2025-04-11 10:04:56,752 - ImportGA4Vehicles - WARNING - Skipping row 8038: Missing make or model
+2025-04-11 10:04:56,752 - ImportGA4Vehicles - WARNING - Skipping row 8040: Missing make or model
+2025-04-11 10:04:56,752 - ImportGA4Vehicles - WARNING - Skipping row 8041: Missing make or model
+2025-04-11 10:04:56,752 - ImportGA4Vehicles - WARNING - Skipping row 8045: Missing make or model
+2025-04-11 10:04:56,752 - ImportGA4Vehicles - WARNING - Skipping row 8055: Missing make or model
+2025-04-11 10:04:56,752 - ImportGA4Vehicles - WARNING - Skipping row 8059: Missing make or model
+2025-04-11 10:04:56,752 - ImportGA4Vehicles - WARNING - Skipping row 8065: Missing make or model
+2025-04-11 10:04:56,753 - ImportGA4Vehicles - WARNING - Skipping row 8083: Missing make or model
+2025-04-11 10:04:56,753 - ImportGA4Vehicles - WARNING - Skipping row 8084: Missing make or model
+2025-04-11 10:04:56,753 - ImportGA4Vehicles - INFO - Imported 7600 vehicles so far
+2025-04-11 10:04:56,753 - ImportGA4Vehicles - WARNING - Skipping row 8086: Missing make or model
+2025-04-11 10:04:56,753 - ImportGA4Vehicles - WARNING - Skipping row 8087: Missing make or model
+2025-04-11 10:04:56,753 - ImportGA4Vehicles - WARNING - Skipping row 8088: Missing make or model
+2025-04-11 10:04:56,753 - ImportGA4Vehicles - WARNING - Skipping row 8090: Missing make or model
+2025-04-11 10:04:56,753 - ImportGA4Vehicles - WARNING - Skipping row 8092: Missing make or model
+2025-04-11 10:04:56,753 - ImportGA4Vehicles - WARNING - Skipping row 8093: Missing make or model
+2025-04-11 10:04:56,753 - ImportGA4Vehicles - WARNING - Skipping row 8094: Missing make or model
+2025-04-11 10:04:56,753 - ImportGA4Vehicles - WARNING - Skipping row 8095: Missing make or model
+2025-04-11 10:04:56,753 - ImportGA4Vehicles - WARNING - Skipping row 8098: Missing make or model
+2025-04-11 10:04:56,753 - ImportGA4Vehicles - WARNING - Skipping row 8102: Missing make or model
+2025-04-11 10:04:56,753 - ImportGA4Vehicles - WARNING - Skipping row 8105: Missing make or model
+2025-04-11 10:04:56,754 - ImportGA4Vehicles - WARNING - Skipping row 8108: Missing make or model
+2025-04-11 10:04:56,754 - ImportGA4Vehicles - WARNING - Skipping row 8112: Missing make or model
+2025-04-11 10:04:56,754 - ImportGA4Vehicles - WARNING - Skipping row 8113: Missing make or model
+2025-04-11 10:04:56,754 - ImportGA4Vehicles - WARNING - Skipping row 8116: Missing make or model
+2025-04-11 10:04:56,754 - ImportGA4Vehicles - WARNING - Skipping row 8118: Missing make or model
+2025-04-11 10:04:56,754 - ImportGA4Vehicles - WARNING - Skipping row 8119: Missing make or model
+2025-04-11 10:04:56,754 - ImportGA4Vehicles - WARNING - Skipping row 8120: Missing make or model
+2025-04-11 10:04:56,754 - ImportGA4Vehicles - WARNING - Skipping row 8122: Missing make or model
+2025-04-11 10:04:56,754 - ImportGA4Vehicles - WARNING - Skipping row 8130: Missing make or model
+2025-04-11 10:04:56,754 - ImportGA4Vehicles - WARNING - Skipping row 8131: Missing make or model
+2025-04-11 10:04:56,754 - ImportGA4Vehicles - WARNING - Skipping row 8132: Missing make or model
+2025-04-11 10:04:56,754 - ImportGA4Vehicles - WARNING - Skipping row 8133: Missing make or model
+2025-04-11 10:04:56,754 - ImportGA4Vehicles - WARNING - Skipping row 8134: Missing make or model
+2025-04-11 10:04:56,754 - ImportGA4Vehicles - WARNING - Skipping row 8136: Missing make or model
+2025-04-11 10:04:56,754 - ImportGA4Vehicles - WARNING - Skipping row 8137: Missing make or model
+2025-04-11 10:04:56,754 - ImportGA4Vehicles - WARNING - Skipping row 8140: Missing make or model
+2025-04-11 10:04:56,754 - ImportGA4Vehicles - WARNING - Skipping row 8151: Missing make or model
+2025-04-11 10:04:56,754 - ImportGA4Vehicles - WARNING - Skipping row 8156: Missing make or model
+2025-04-11 10:04:56,755 - ImportGA4Vehicles - WARNING - Skipping row 8164: Missing make or model
+2025-04-11 10:04:56,755 - ImportGA4Vehicles - WARNING - Skipping row 8168: Missing make or model
+2025-04-11 10:04:56,755 - ImportGA4Vehicles - WARNING - Skipping row 8180: Missing make or model
+2025-04-11 10:04:56,755 - ImportGA4Vehicles - WARNING - Skipping row 8183: Missing make or model
+2025-04-11 10:04:56,755 - ImportGA4Vehicles - WARNING - Skipping row 8184: Missing make or model
+2025-04-11 10:04:56,755 - ImportGA4Vehicles - WARNING - Skipping row 8185: Missing make or model
+2025-04-11 10:04:56,755 - ImportGA4Vehicles - WARNING - Skipping row 8186: Missing make or model
+2025-04-11 10:04:56,755 - ImportGA4Vehicles - WARNING - Skipping row 8193: Missing make or model
+2025-04-11 10:04:56,755 - ImportGA4Vehicles - WARNING - Skipping row 8194: Missing make or model
+2025-04-11 10:04:56,755 - ImportGA4Vehicles - WARNING - Skipping row 8199: Missing make or model
+2025-04-11 10:04:56,755 - ImportGA4Vehicles - WARNING - Skipping row 8201: Missing make or model
+2025-04-11 10:04:56,755 - ImportGA4Vehicles - WARNING - Skipping row 8204: Missing make or model
+2025-04-11 10:04:56,755 - ImportGA4Vehicles - WARNING - Skipping row 8206: Missing make or model
+2025-04-11 10:04:56,755 - ImportGA4Vehicles - WARNING - Skipping row 8207: Missing make or model
+2025-04-11 10:04:56,755 - ImportGA4Vehicles - WARNING - Skipping row 8211: Missing make or model
+2025-04-11 10:04:56,755 - ImportGA4Vehicles - WARNING - Skipping row 8212: Missing make or model
+2025-04-11 10:04:56,755 - ImportGA4Vehicles - WARNING - Skipping row 8213: Missing make or model
+2025-04-11 10:04:56,755 - ImportGA4Vehicles - WARNING - Skipping row 8214: Missing make or model
+2025-04-11 10:04:56,755 - ImportGA4Vehicles - WARNING - Skipping row 8215: Missing make or model
+2025-04-11 10:04:56,755 - ImportGA4Vehicles - WARNING - Skipping row 8216: Missing make or model
+2025-04-11 10:04:56,756 - ImportGA4Vehicles - WARNING - Skipping row 8217: Missing make or model
+2025-04-11 10:04:56,756 - ImportGA4Vehicles - WARNING - Skipping row 8222: Missing make or model
+2025-04-11 10:04:56,756 - ImportGA4Vehicles - WARNING - Skipping row 8224: Missing make or model
+2025-04-11 10:04:56,756 - ImportGA4Vehicles - WARNING - Skipping row 8227: Missing make or model
+2025-04-11 10:04:56,756 - ImportGA4Vehicles - WARNING - Skipping row 8228: Missing make or model
+2025-04-11 10:04:56,756 - ImportGA4Vehicles - WARNING - Skipping row 8230: Missing make or model
+2025-04-11 10:04:56,756 - ImportGA4Vehicles - WARNING - Skipping row 8235: Missing make or model
+2025-04-11 10:04:56,756 - ImportGA4Vehicles - WARNING - Skipping row 8236: Missing make or model
+2025-04-11 10:04:56,756 - ImportGA4Vehicles - WARNING - Skipping row 8241: Missing make or model
+2025-04-11 10:04:56,756 - ImportGA4Vehicles - WARNING - Skipping row 8243: Missing make or model
+2025-04-11 10:04:56,756 - ImportGA4Vehicles - INFO - Imported 7700 vehicles so far
+2025-04-11 10:04:56,756 - ImportGA4Vehicles - WARNING - Skipping row 8248: Missing make or model
+2025-04-11 10:04:56,756 - ImportGA4Vehicles - WARNING - Skipping row 8250: Missing make or model
+2025-04-11 10:04:56,756 - ImportGA4Vehicles - WARNING - Skipping row 8252: Missing make or model
+2025-04-11 10:04:56,756 - ImportGA4Vehicles - WARNING - Skipping row 8253: Missing make or model
+2025-04-11 10:04:56,757 - ImportGA4Vehicles - WARNING - Skipping row 8254: Missing make or model
+2025-04-11 10:04:56,757 - ImportGA4Vehicles - WARNING - Skipping row 8258: Missing make or model
+2025-04-11 10:04:56,757 - ImportGA4Vehicles - WARNING - Skipping row 8265: Missing make or model
+2025-04-11 10:04:56,757 - ImportGA4Vehicles - WARNING - Skipping row 8268: Missing make or model
+2025-04-11 10:04:56,757 - ImportGA4Vehicles - WARNING - Skipping row 8273: Missing make or model
+2025-04-11 10:04:56,757 - ImportGA4Vehicles - WARNING - Skipping row 8275: Missing make or model
+2025-04-11 10:04:56,757 - ImportGA4Vehicles - WARNING - Skipping row 8276: Missing make or model
+2025-04-11 10:04:56,757 - ImportGA4Vehicles - WARNING - Skipping row 8278: Missing make or model
+2025-04-11 10:04:56,757 - ImportGA4Vehicles - WARNING - Skipping row 8283: Missing make or model
+2025-04-11 10:04:56,757 - ImportGA4Vehicles - WARNING - Skipping row 8284: Missing make or model
+2025-04-11 10:04:56,757 - ImportGA4Vehicles - WARNING - Skipping row 8285: Missing make or model
+2025-04-11 10:04:56,757 - ImportGA4Vehicles - WARNING - Skipping row 8286: Missing make or model
+2025-04-11 10:04:56,757 - ImportGA4Vehicles - WARNING - Skipping row 8291: Missing make or model
+2025-04-11 10:04:56,757 - ImportGA4Vehicles - WARNING - Skipping row 8293: Missing make or model
+2025-04-11 10:04:56,757 - ImportGA4Vehicles - WARNING - Skipping row 8297: Missing make or model
+2025-04-11 10:04:56,757 - ImportGA4Vehicles - WARNING - Skipping row 8299: Missing make or model
+2025-04-11 10:04:56,757 - ImportGA4Vehicles - WARNING - Skipping row 8300: Missing make or model
+2025-04-11 10:04:56,757 - ImportGA4Vehicles - WARNING - Skipping row 8302: Missing make or model
+2025-04-11 10:04:56,757 - ImportGA4Vehicles - WARNING - Skipping row 8305: Missing make or model
+2025-04-11 10:04:56,757 - ImportGA4Vehicles - WARNING - Skipping row 8307: Missing make or model
+2025-04-11 10:04:56,758 - ImportGA4Vehicles - WARNING - Skipping row 8311: Missing make or model
+2025-04-11 10:04:56,758 - ImportGA4Vehicles - WARNING - Skipping row 8320: Missing make or model
+2025-04-11 10:04:56,758 - ImportGA4Vehicles - WARNING - Skipping row 8322: Missing make or model
+2025-04-11 10:04:56,758 - ImportGA4Vehicles - WARNING - Skipping row 8323: Missing make or model
+2025-04-11 10:04:56,758 - ImportGA4Vehicles - WARNING - Skipping row 8325: Missing make or model
+2025-04-11 10:04:56,758 - ImportGA4Vehicles - WARNING - Skipping row 8327: Missing make or model
+2025-04-11 10:04:56,758 - ImportGA4Vehicles - WARNING - Skipping row 8328: Missing make or model
+2025-04-11 10:04:56,758 - ImportGA4Vehicles - WARNING - Skipping row 8330: Missing make or model
+2025-04-11 10:04:56,758 - ImportGA4Vehicles - WARNING - Skipping row 8337: Missing make or model
+2025-04-11 10:04:56,758 - ImportGA4Vehicles - WARNING - Skipping row 8338: Missing make or model
+2025-04-11 10:04:56,758 - ImportGA4Vehicles - WARNING - Skipping row 8339: Missing make or model
+2025-04-11 10:04:56,758 - ImportGA4Vehicles - WARNING - Skipping row 8344: Missing make or model
+2025-04-11 10:04:56,758 - ImportGA4Vehicles - WARNING - Skipping row 8345: Missing make or model
+2025-04-11 10:04:56,758 - ImportGA4Vehicles - WARNING - Skipping row 8348: Missing make or model
+2025-04-11 10:04:56,758 - ImportGA4Vehicles - WARNING - Skipping row 8350: Missing make or model
+2025-04-11 10:04:56,758 - ImportGA4Vehicles - WARNING - Skipping row 8353: Missing make or model
+2025-04-11 10:04:56,758 - ImportGA4Vehicles - WARNING - Skipping row 8356: Missing make or model
+2025-04-11 10:04:56,758 - ImportGA4Vehicles - WARNING - Skipping row 8364: Missing make or model
+2025-04-11 10:04:56,758 - ImportGA4Vehicles - WARNING - Skipping row 8366: Missing make or model
+2025-04-11 10:04:56,758 - ImportGA4Vehicles - WARNING - Skipping row 8367: Missing make or model
+2025-04-11 10:04:56,758 - ImportGA4Vehicles - WARNING - Skipping row 8368: Missing make or model
+2025-04-11 10:04:56,758 - ImportGA4Vehicles - WARNING - Skipping row 8369: Missing make or model
+2025-04-11 10:04:56,758 - ImportGA4Vehicles - WARNING - Skipping row 8370: Missing make or model
+2025-04-11 10:04:56,758 - ImportGA4Vehicles - WARNING - Skipping row 8371: Missing make or model
+2025-04-11 10:04:56,759 - ImportGA4Vehicles - WARNING - Skipping row 8375: Missing make or model
+2025-04-11 10:04:56,759 - ImportGA4Vehicles - WARNING - Skipping row 8378: Missing make or model
+2025-04-11 10:04:56,759 - ImportGA4Vehicles - WARNING - Skipping row 8379: Missing make or model
+2025-04-11 10:04:56,759 - ImportGA4Vehicles - WARNING - Skipping row 8382: Missing make or model
+2025-04-11 10:04:56,759 - ImportGA4Vehicles - WARNING - Skipping row 8383: Missing make or model
+2025-04-11 10:04:56,759 - ImportGA4Vehicles - WARNING - Skipping row 8384: Missing make or model
+2025-04-11 10:04:56,759 - ImportGA4Vehicles - WARNING - Skipping row 8390: Missing make or model
+2025-04-11 10:04:56,759 - ImportGA4Vehicles - WARNING - Skipping row 8394: Missing make or model
+2025-04-11 10:04:56,759 - ImportGA4Vehicles - WARNING - Skipping row 8400: Missing make or model
+2025-04-11 10:04:56,759 - ImportGA4Vehicles - WARNING - Skipping row 8401: Missing make or model
+2025-04-11 10:04:56,759 - ImportGA4Vehicles - INFO - Imported 7800 vehicles so far
+2025-04-11 10:04:56,760 - ImportGA4Vehicles - WARNING - Skipping row 8404: Missing make or model
+2025-04-11 10:04:56,760 - ImportGA4Vehicles - WARNING - Skipping row 8405: Missing make or model
+2025-04-11 10:04:56,760 - ImportGA4Vehicles - WARNING - Skipping row 8411: Missing make or model
+2025-04-11 10:04:56,760 - ImportGA4Vehicles - WARNING - Skipping row 8412: Missing make or model
+2025-04-11 10:04:56,760 - ImportGA4Vehicles - WARNING - Skipping row 8415: Missing make or model
+2025-04-11 10:04:56,760 - ImportGA4Vehicles - WARNING - Skipping row 8417: Missing make or model
+2025-04-11 10:04:56,760 - ImportGA4Vehicles - WARNING - Skipping row 8418: Missing make or model
+2025-04-11 10:04:56,760 - ImportGA4Vehicles - WARNING - Skipping row 8420: Missing make or model
+2025-04-11 10:04:56,760 - ImportGA4Vehicles - WARNING - Skipping row 8422: Missing make or model
+2025-04-11 10:04:56,760 - ImportGA4Vehicles - WARNING - Skipping row 8423: Missing make or model
+2025-04-11 10:04:56,760 - ImportGA4Vehicles - WARNING - Skipping row 8424: Missing make or model
+2025-04-11 10:04:56,760 - ImportGA4Vehicles - WARNING - Skipping row 8426: Missing make or model
+2025-04-11 10:04:56,760 - ImportGA4Vehicles - WARNING - Skipping row 8427: Missing make or model
+2025-04-11 10:04:56,760 - ImportGA4Vehicles - WARNING - Skipping row 8428: Missing make or model
+2025-04-11 10:04:56,760 - ImportGA4Vehicles - WARNING - Skipping row 8429: Missing make or model
+2025-04-11 10:04:56,760 - ImportGA4Vehicles - WARNING - Skipping row 8431: Missing make or model
+2025-04-11 10:04:56,760 - ImportGA4Vehicles - WARNING - Skipping row 8433: Missing make or model
+2025-04-11 10:04:56,760 - ImportGA4Vehicles - WARNING - Skipping row 8435: Missing make or model
+2025-04-11 10:04:56,760 - ImportGA4Vehicles - WARNING - Skipping row 8440: Missing make or model
+2025-04-11 10:04:56,760 - ImportGA4Vehicles - WARNING - Skipping row 8443: Missing make or model
+2025-04-11 10:04:56,760 - ImportGA4Vehicles - WARNING - Skipping row 8444: Missing make or model
+2025-04-11 10:04:56,760 - ImportGA4Vehicles - WARNING - Skipping row 8446: Missing make or model
+2025-04-11 10:04:56,760 - ImportGA4Vehicles - WARNING - Skipping row 8447: Missing make or model
+2025-04-11 10:04:56,760 - ImportGA4Vehicles - WARNING - Skipping row 8448: Missing make or model
+2025-04-11 10:04:56,761 - ImportGA4Vehicles - WARNING - Skipping row 8451: Missing make or model
+2025-04-11 10:04:56,761 - ImportGA4Vehicles - WARNING - Skipping row 8452: Missing make or model
+2025-04-11 10:04:56,761 - ImportGA4Vehicles - WARNING - Skipping row 8453: Missing make or model
+2025-04-11 10:04:56,761 - ImportGA4Vehicles - WARNING - Skipping row 8454: Missing make or model
+2025-04-11 10:04:56,761 - ImportGA4Vehicles - WARNING - Skipping row 8455: Missing make or model
+2025-04-11 10:04:56,761 - ImportGA4Vehicles - WARNING - Skipping row 8456: Missing make or model
+2025-04-11 10:04:56,761 - ImportGA4Vehicles - WARNING - Skipping row 8458: Missing make or model
+2025-04-11 10:04:56,761 - ImportGA4Vehicles - WARNING - Skipping row 8459: Missing make or model
+2025-04-11 10:04:56,761 - ImportGA4Vehicles - WARNING - Skipping row 8465: Missing make or model
+2025-04-11 10:04:56,761 - ImportGA4Vehicles - WARNING - Skipping row 8468: Missing make or model
+2025-04-11 10:04:56,761 - ImportGA4Vehicles - WARNING - Skipping row 8473: Missing make or model
+2025-04-11 10:04:56,761 - ImportGA4Vehicles - WARNING - Skipping row 8476: Missing make or model
+2025-04-11 10:04:56,761 - ImportGA4Vehicles - WARNING - Skipping row 8477: Missing make or model
+2025-04-11 10:04:56,761 - ImportGA4Vehicles - WARNING - Skipping row 8478: Missing make or model
+2025-04-11 10:04:56,761 - ImportGA4Vehicles - WARNING - Skipping row 8479: Missing make or model
+2025-04-11 10:04:56,761 - ImportGA4Vehicles - WARNING - Skipping row 8484: Missing make or model
+2025-04-11 10:04:56,761 - ImportGA4Vehicles - WARNING - Skipping row 8485: Missing make or model
+2025-04-11 10:04:56,761 - ImportGA4Vehicles - WARNING - Skipping row 8489: Missing make or model
+2025-04-11 10:04:56,761 - ImportGA4Vehicles - WARNING - Skipping row 8493: Missing make or model
+2025-04-11 10:04:56,761 - ImportGA4Vehicles - WARNING - Skipping row 8497: Missing make or model
+2025-04-11 10:04:56,761 - ImportGA4Vehicles - WARNING - Skipping row 8499: Missing make or model
+2025-04-11 10:04:56,761 - ImportGA4Vehicles - WARNING - Skipping row 8500: Missing make or model
+2025-04-11 10:04:56,761 - ImportGA4Vehicles - WARNING - Skipping row 8502: Missing make or model
+2025-04-11 10:04:56,762 - ImportGA4Vehicles - WARNING - Skipping row 8506: Missing make or model
+2025-04-11 10:04:56,762 - ImportGA4Vehicles - WARNING - Skipping row 8508: Missing make or model
+2025-04-11 10:04:56,762 - ImportGA4Vehicles - WARNING - Skipping row 8510: Missing make or model
+2025-04-11 10:04:56,762 - ImportGA4Vehicles - WARNING - Skipping row 8513: Missing make or model
+2025-04-11 10:04:56,762 - ImportGA4Vehicles - WARNING - Skipping row 8516: Missing make or model
+2025-04-11 10:04:56,762 - ImportGA4Vehicles - WARNING - Skipping row 8517: Missing make or model
+2025-04-11 10:04:56,762 - ImportGA4Vehicles - WARNING - Skipping row 8519: Missing make or model
+2025-04-11 10:04:56,762 - ImportGA4Vehicles - WARNING - Skipping row 8524: Missing make or model
+2025-04-11 10:04:56,762 - ImportGA4Vehicles - WARNING - Skipping row 8525: Missing make or model
+2025-04-11 10:04:56,762 - ImportGA4Vehicles - WARNING - Skipping row 8529: Missing make or model
+2025-04-11 10:04:56,762 - ImportGA4Vehicles - WARNING - Skipping row 8533: Missing make or model
+2025-04-11 10:04:56,762 - ImportGA4Vehicles - WARNING - Skipping row 8535: Missing make or model
+2025-04-11 10:04:56,762 - ImportGA4Vehicles - WARNING - Skipping row 8538: Missing make or model
+2025-04-11 10:04:56,762 - ImportGA4Vehicles - WARNING - Skipping row 8542: Missing make or model
+2025-04-11 10:04:56,762 - ImportGA4Vehicles - WARNING - Skipping row 8543: Missing make or model
+2025-04-11 10:04:56,762 - ImportGA4Vehicles - WARNING - Skipping row 8552: Missing make or model
+2025-04-11 10:04:56,763 - ImportGA4Vehicles - WARNING - Skipping row 8564: Missing make or model
+2025-04-11 10:04:56,763 - ImportGA4Vehicles - INFO - Imported 7900 vehicles so far
+2025-04-11 10:04:56,763 - ImportGA4Vehicles - WARNING - Skipping row 8571: Missing make or model
+2025-04-11 10:04:56,763 - ImportGA4Vehicles - WARNING - Skipping row 8574: Missing make or model
+2025-04-11 10:04:56,763 - ImportGA4Vehicles - WARNING - Skipping row 8578: Missing make or model
+2025-04-11 10:04:56,763 - ImportGA4Vehicles - WARNING - Skipping row 8579: Missing make or model
+2025-04-11 10:04:56,763 - ImportGA4Vehicles - WARNING - Skipping row 8584: Missing make or model
+2025-04-11 10:04:56,763 - ImportGA4Vehicles - WARNING - Skipping row 8585: Missing make or model
+2025-04-11 10:04:56,763 - ImportGA4Vehicles - WARNING - Skipping row 8586: Missing make or model
+2025-04-11 10:04:56,763 - ImportGA4Vehicles - WARNING - Skipping row 8589: Missing make or model
+2025-04-11 10:04:56,763 - ImportGA4Vehicles - WARNING - Skipping row 8594: Missing make or model
+2025-04-11 10:04:56,764 - ImportGA4Vehicles - WARNING - Skipping row 8598: Missing make or model
+2025-04-11 10:04:56,764 - ImportGA4Vehicles - WARNING - Skipping row 8603: Missing make or model
+2025-04-11 10:04:56,764 - ImportGA4Vehicles - WARNING - Skipping row 8606: Missing make or model
+2025-04-11 10:04:56,764 - ImportGA4Vehicles - WARNING - Skipping row 8612: Missing make or model
+2025-04-11 10:04:56,764 - ImportGA4Vehicles - WARNING - Skipping row 8613: Missing make or model
+2025-04-11 10:04:56,764 - ImportGA4Vehicles - WARNING - Skipping row 8615: Missing make or model
+2025-04-11 10:04:56,764 - ImportGA4Vehicles - WARNING - Skipping row 8620: Missing make or model
+2025-04-11 10:04:56,764 - ImportGA4Vehicles - WARNING - Skipping row 8622: Missing make or model
+2025-04-11 10:04:56,764 - ImportGA4Vehicles - WARNING - Skipping row 8624: Missing make or model
+2025-04-11 10:04:56,764 - ImportGA4Vehicles - WARNING - Skipping row 8630: Missing make or model
+2025-04-11 10:04:56,764 - ImportGA4Vehicles - WARNING - Skipping row 8632: Missing make or model
+2025-04-11 10:04:56,764 - ImportGA4Vehicles - WARNING - Skipping row 8633: Missing make or model
+2025-04-11 10:04:56,764 - ImportGA4Vehicles - WARNING - Skipping row 8642: Missing make or model
+2025-04-11 10:04:56,764 - ImportGA4Vehicles - WARNING - Skipping row 8648: Missing make or model
+2025-04-11 10:04:56,765 - ImportGA4Vehicles - WARNING - Skipping row 8652: Missing make or model
+2025-04-11 10:04:56,765 - ImportGA4Vehicles - WARNING - Skipping row 8662: Missing make or model
+2025-04-11 10:04:56,765 - ImportGA4Vehicles - WARNING - Skipping row 8666: Missing make or model
+2025-04-11 10:04:56,765 - ImportGA4Vehicles - WARNING - Skipping row 8674: Missing make or model
+2025-04-11 10:04:56,765 - ImportGA4Vehicles - WARNING - Skipping row 8676: Missing make or model
+2025-04-11 10:04:56,765 - ImportGA4Vehicles - WARNING - Skipping row 8677: Missing make or model
+2025-04-11 10:04:56,765 - ImportGA4Vehicles - WARNING - Skipping row 8685: Missing make or model
+2025-04-11 10:04:56,765 - ImportGA4Vehicles - WARNING - Skipping row 8688: Missing make or model
+2025-04-11 10:04:56,765 - ImportGA4Vehicles - WARNING - Skipping row 8694: Missing make or model
+2025-04-11 10:04:56,765 - ImportGA4Vehicles - WARNING - Skipping row 8695: Missing make or model
+2025-04-11 10:04:56,765 - ImportGA4Vehicles - WARNING - Skipping row 8696: Missing make or model
+2025-04-11 10:04:56,765 - ImportGA4Vehicles - INFO - Imported 8000 vehicles so far
+2025-04-11 10:04:56,766 - ImportGA4Vehicles - WARNING - Skipping row 8702: Missing make or model
+2025-04-11 10:04:56,766 - ImportGA4Vehicles - WARNING - Skipping row 8708: Missing make or model
+2025-04-11 10:04:56,766 - ImportGA4Vehicles - WARNING - Skipping row 8727: Missing make or model
+2025-04-11 10:04:56,766 - ImportGA4Vehicles - WARNING - Skipping row 8735: Missing make or model
+2025-04-11 10:04:56,766 - ImportGA4Vehicles - WARNING - Skipping row 8736: Missing make or model
+2025-04-11 10:04:56,767 - ImportGA4Vehicles - WARNING - Skipping row 8737: Missing make or model
+2025-04-11 10:04:56,767 - ImportGA4Vehicles - WARNING - Skipping row 8739: Missing make or model
+2025-04-11 10:04:56,767 - ImportGA4Vehicles - WARNING - Skipping row 8741: Missing make or model
+2025-04-11 10:04:56,767 - ImportGA4Vehicles - WARNING - Skipping row 8744: Missing make or model
+2025-04-11 10:04:56,767 - ImportGA4Vehicles - WARNING - Skipping row 8746: Missing make or model
+2025-04-11 10:04:56,767 - ImportGA4Vehicles - WARNING - Skipping row 8748: Missing make or model
+2025-04-11 10:04:56,767 - ImportGA4Vehicles - WARNING - Skipping row 8752: Missing make or model
+2025-04-11 10:04:56,767 - ImportGA4Vehicles - WARNING - Skipping row 8766: Missing make or model
+2025-04-11 10:04:56,767 - ImportGA4Vehicles - WARNING - Skipping row 8767: Missing make or model
+2025-04-11 10:04:56,767 - ImportGA4Vehicles - WARNING - Skipping row 8770: Missing make or model
+2025-04-11 10:04:56,767 - ImportGA4Vehicles - WARNING - Skipping row 8777: Missing make or model
+2025-04-11 10:04:56,767 - ImportGA4Vehicles - WARNING - Skipping row 8780: Missing make or model
+2025-04-11 10:04:56,767 - ImportGA4Vehicles - WARNING - Skipping row 8781: Missing make or model
+2025-04-11 10:04:56,767 - ImportGA4Vehicles - WARNING - Skipping row 8794: Missing make or model
+2025-04-11 10:04:56,767 - ImportGA4Vehicles - WARNING - Skipping row 8795: Missing make or model
+2025-04-11 10:04:56,768 - ImportGA4Vehicles - WARNING - Skipping row 8798: Missing make or model
+2025-04-11 10:04:56,768 - ImportGA4Vehicles - WARNING - Skipping row 8804: Missing make or model
+2025-04-11 10:04:56,768 - ImportGA4Vehicles - WARNING - Skipping row 8807: Missing make or model
+2025-04-11 10:04:56,768 - ImportGA4Vehicles - WARNING - Skipping row 8808: Missing make or model
+2025-04-11 10:04:56,768 - ImportGA4Vehicles - WARNING - Skipping row 8810: Missing make or model
+2025-04-11 10:04:56,768 - ImportGA4Vehicles - WARNING - Skipping row 8812: Missing make or model
+2025-04-11 10:04:56,768 - ImportGA4Vehicles - WARNING - Skipping row 8813: Missing make or model
+2025-04-11 10:04:56,768 - ImportGA4Vehicles - WARNING - Skipping row 8816: Missing make or model
+2025-04-11 10:04:56,768 - ImportGA4Vehicles - WARNING - Skipping row 8817: Missing make or model
+2025-04-11 10:04:56,768 - ImportGA4Vehicles - WARNING - Skipping row 8819: Missing make or model
+2025-04-11 10:04:56,768 - ImportGA4Vehicles - WARNING - Skipping row 8821: Missing make or model
+2025-04-11 10:04:56,768 - ImportGA4Vehicles - WARNING - Skipping row 8826: Missing make or model
+2025-04-11 10:04:56,768 - ImportGA4Vehicles - WARNING - Skipping row 8832: Missing make or model
+2025-04-11 10:04:56,768 - ImportGA4Vehicles - INFO - Imported 8100 vehicles so far
+2025-04-11 10:04:56,768 - ImportGA4Vehicles - WARNING - Skipping row 8834: Missing make or model
+2025-04-11 10:04:56,769 - ImportGA4Vehicles - WARNING - Skipping row 8837: Missing make or model
+2025-04-11 10:04:56,769 - ImportGA4Vehicles - WARNING - Skipping row 8841: Missing make or model
+2025-04-11 10:04:56,769 - ImportGA4Vehicles - WARNING - Skipping row 8844: Missing make or model
+2025-04-11 10:04:56,769 - ImportGA4Vehicles - WARNING - Skipping row 8848: Missing make or model
+2025-04-11 10:04:56,769 - ImportGA4Vehicles - WARNING - Skipping row 8849: Missing make or model
+2025-04-11 10:04:56,769 - ImportGA4Vehicles - WARNING - Skipping row 8850: Missing make or model
+2025-04-11 10:04:56,769 - ImportGA4Vehicles - WARNING - Skipping row 8851: Missing make or model
+2025-04-11 10:04:56,769 - ImportGA4Vehicles - WARNING - Skipping row 8852: Missing make or model
+2025-04-11 10:04:56,769 - ImportGA4Vehicles - WARNING - Skipping row 8853: Missing make or model
+2025-04-11 10:04:56,769 - ImportGA4Vehicles - WARNING - Skipping row 8854: Missing make or model
+2025-04-11 10:04:56,769 - ImportGA4Vehicles - WARNING - Skipping row 8861: Missing make or model
+2025-04-11 10:04:56,769 - ImportGA4Vehicles - WARNING - Skipping row 8864: Missing make or model
+2025-04-11 10:04:56,769 - ImportGA4Vehicles - WARNING - Skipping row 8868: Missing make or model
+2025-04-11 10:04:56,769 - ImportGA4Vehicles - WARNING - Skipping row 8870: Missing make or model
+2025-04-11 10:04:56,769 - ImportGA4Vehicles - WARNING - Skipping row 8874: Missing make or model
+2025-04-11 10:04:56,770 - ImportGA4Vehicles - WARNING - Skipping row 8888: Missing make or model
+2025-04-11 10:04:56,770 - ImportGA4Vehicles - WARNING - Skipping row 8889: Missing make or model
+2025-04-11 10:04:56,770 - ImportGA4Vehicles - WARNING - Skipping row 8900: Missing make or model
+2025-04-11 10:04:56,770 - ImportGA4Vehicles - WARNING - Skipping row 8903: Missing make or model
+2025-04-11 10:04:56,770 - ImportGA4Vehicles - WARNING - Skipping row 8907: Missing make or model
+2025-04-11 10:04:56,770 - ImportGA4Vehicles - WARNING - Skipping row 8915: Missing make or model
+2025-04-11 10:04:56,770 - ImportGA4Vehicles - WARNING - Skipping row 8916: Missing make or model
+2025-04-11 10:04:56,770 - ImportGA4Vehicles - WARNING - Skipping row 8917: Missing make or model
+2025-04-11 10:04:56,770 - ImportGA4Vehicles - WARNING - Skipping row 8918: Missing make or model
+2025-04-11 10:04:56,770 - ImportGA4Vehicles - WARNING - Skipping row 8920: Missing make or model
+2025-04-11 10:04:56,770 - ImportGA4Vehicles - WARNING - Skipping row 8923: Missing make or model
+2025-04-11 10:04:56,770 - ImportGA4Vehicles - WARNING - Skipping row 8928: Missing make or model
+2025-04-11 10:04:56,770 - ImportGA4Vehicles - WARNING - Skipping row 8931: Missing make or model
+2025-04-11 10:04:56,770 - ImportGA4Vehicles - WARNING - Skipping row 8934: Missing make or model
+2025-04-11 10:04:56,771 - ImportGA4Vehicles - WARNING - Skipping row 8938: Missing make or model
+2025-04-11 10:04:56,771 - ImportGA4Vehicles - WARNING - Skipping row 8939: Missing make or model
+2025-04-11 10:04:56,771 - ImportGA4Vehicles - WARNING - Skipping row 8940: Missing make or model
+2025-04-11 10:04:56,771 - ImportGA4Vehicles - WARNING - Skipping row 8941: Missing make or model
+2025-04-11 10:04:56,771 - ImportGA4Vehicles - WARNING - Skipping row 8943: Missing make or model
+2025-04-11 10:04:56,771 - ImportGA4Vehicles - WARNING - Skipping row 8944: Missing make or model
+2025-04-11 10:04:56,771 - ImportGA4Vehicles - WARNING - Skipping row 8946: Missing make or model
+2025-04-11 10:04:56,771 - ImportGA4Vehicles - WARNING - Skipping row 8949: Missing make or model
+2025-04-11 10:04:56,771 - ImportGA4Vehicles - WARNING - Skipping row 8952: Missing make or model
+2025-04-11 10:04:56,771 - ImportGA4Vehicles - WARNING - Skipping row 8954: Missing make or model
+2025-04-11 10:04:56,771 - ImportGA4Vehicles - WARNING - Skipping row 8957: Missing make or model
+2025-04-11 10:04:56,771 - ImportGA4Vehicles - WARNING - Skipping row 8958: Missing make or model
+2025-04-11 10:04:56,771 - ImportGA4Vehicles - WARNING - Skipping row 8960: Missing make or model
+2025-04-11 10:04:56,771 - ImportGA4Vehicles - WARNING - Skipping row 8961: Missing make or model
+2025-04-11 10:04:56,771 - ImportGA4Vehicles - WARNING - Skipping row 8964: Missing make or model
+2025-04-11 10:04:56,771 - ImportGA4Vehicles - WARNING - Skipping row 8966: Missing make or model
+2025-04-11 10:04:56,771 - ImportGA4Vehicles - WARNING - Skipping row 8967: Missing make or model
+2025-04-11 10:04:56,771 - ImportGA4Vehicles - WARNING - Skipping row 8972: Missing make or model
+2025-04-11 10:04:56,771 - ImportGA4Vehicles - WARNING - Skipping row 8974: Missing make or model
+2025-04-11 10:04:56,771 - ImportGA4Vehicles - WARNING - Skipping row 8976: Missing make or model
+2025-04-11 10:04:56,771 - ImportGA4Vehicles - WARNING - Skipping row 8982: Missing make or model
+2025-04-11 10:04:56,771 - ImportGA4Vehicles - WARNING - Skipping row 8983: Missing make or model
+2025-04-11 10:04:56,771 - ImportGA4Vehicles - WARNING - Skipping row 8985: Missing make or model
+2025-04-11 10:04:56,771 - ImportGA4Vehicles - INFO - Imported 8200 vehicles so far
+2025-04-11 10:04:56,772 - ImportGA4Vehicles - WARNING - Skipping row 8987: Missing make or model
+2025-04-11 10:04:56,772 - ImportGA4Vehicles - WARNING - Skipping row 8988: Missing make or model
+2025-04-11 10:04:56,772 - ImportGA4Vehicles - WARNING - Skipping row 8990: Missing make or model
+2025-04-11 10:04:56,772 - ImportGA4Vehicles - WARNING - Skipping row 8994: Missing make or model
+2025-04-11 10:04:56,772 - ImportGA4Vehicles - WARNING - Skipping row 8997: Missing make or model
+2025-04-11 10:04:56,772 - ImportGA4Vehicles - WARNING - Skipping row 9005: Missing make or model
+2025-04-11 10:04:56,772 - ImportGA4Vehicles - WARNING - Skipping row 9008: Missing make or model
+2025-04-11 10:04:56,772 - ImportGA4Vehicles - WARNING - Skipping row 9010: Missing make or model
+2025-04-11 10:04:56,772 - ImportGA4Vehicles - WARNING - Skipping row 9011: Missing make or model
+2025-04-11 10:04:56,772 - ImportGA4Vehicles - WARNING - Skipping row 9014: Missing make or model
+2025-04-11 10:04:56,772 - ImportGA4Vehicles - WARNING - Skipping row 9019: Missing make or model
+2025-04-11 10:04:56,772 - ImportGA4Vehicles - WARNING - Skipping row 9020: Missing make or model
+2025-04-11 10:04:56,772 - ImportGA4Vehicles - WARNING - Skipping row 9025: Missing make or model
+2025-04-11 10:04:56,772 - ImportGA4Vehicles - WARNING - Skipping row 9026: Missing make or model
+2025-04-11 10:04:56,773 - ImportGA4Vehicles - WARNING - Skipping row 9029: Missing make or model
+2025-04-11 10:04:56,774 - ImportGA4Vehicles - INFO - Imported 8300 vehicles so far
+2025-04-11 10:04:56,776 - ImportGA4Vehicles - INFO - Imported 8400 vehicles so far
+2025-04-11 10:04:56,778 - ImportGA4Vehicles - INFO - Imported 8500 vehicles so far
+2025-04-11 10:04:56,780 - ImportGA4Vehicles - INFO - Imported 8600 vehicles so far
+2025-04-11 10:04:56,782 - ImportGA4Vehicles - INFO - Imported 8700 vehicles so far
+2025-04-11 10:04:56,783 - ImportGA4Vehicles - WARNING - Skipping row 9507: Missing make or model
+2025-04-11 10:04:56,783 - ImportGA4Vehicles - WARNING - Skipping row 9510: Missing make or model
+2025-04-11 10:04:56,783 - ImportGA4Vehicles - WARNING - Skipping row 9518: Missing make or model
+2025-04-11 10:04:56,783 - ImportGA4Vehicles - WARNING - Skipping row 9521: Missing make or model
+2025-04-11 10:04:56,783 - ImportGA4Vehicles - WARNING - Skipping row 9525: Missing make or model
+2025-04-11 10:04:56,783 - ImportGA4Vehicles - WARNING - Skipping row 9529: Missing make or model
+2025-04-11 10:04:56,783 - ImportGA4Vehicles - WARNING - Skipping row 9531: Missing make or model
+2025-04-11 10:04:56,783 - ImportGA4Vehicles - WARNING - Skipping row 9533: Missing make or model
+2025-04-11 10:04:56,784 - ImportGA4Vehicles - WARNING - Skipping row 9541: Missing make or model
+2025-04-11 10:04:56,784 - ImportGA4Vehicles - WARNING - Skipping row 9547: Missing make or model
+2025-04-11 10:04:56,784 - ImportGA4Vehicles - WARNING - Skipping row 9550: Missing make or model
+2025-04-11 10:04:56,784 - ImportGA4Vehicles - WARNING - Skipping row 9551: Missing make or model
+2025-04-11 10:04:56,784 - ImportGA4Vehicles - WARNING - Skipping row 9552: Missing make or model
+2025-04-11 10:04:56,784 - ImportGA4Vehicles - WARNING - Skipping row 9556: Missing make or model
+2025-04-11 10:04:56,784 - ImportGA4Vehicles - WARNING - Skipping row 9561: Missing make or model
+2025-04-11 10:04:56,784 - ImportGA4Vehicles - WARNING - Skipping row 9562: Missing make or model
+2025-04-11 10:04:56,784 - ImportGA4Vehicles - WARNING - Skipping row 9570: Missing make or model
+2025-04-11 10:04:56,784 - ImportGA4Vehicles - WARNING - Skipping row 9574: Missing make or model
+2025-04-11 10:04:56,784 - ImportGA4Vehicles - WARNING - Skipping row 9575: Missing make or model
+2025-04-11 10:04:56,784 - ImportGA4Vehicles - WARNING - Skipping row 9577: Missing make or model
+2025-04-11 10:04:56,784 - ImportGA4Vehicles - WARNING - Skipping row 9579: Missing make or model
+2025-04-11 10:04:56,784 - ImportGA4Vehicles - WARNING - Skipping row 9580: Missing make or model
+2025-04-11 10:04:56,784 - ImportGA4Vehicles - WARNING - Skipping row 9581: Missing make or model
+2025-04-11 10:04:56,784 - ImportGA4Vehicles - WARNING - Skipping row 9583: Missing make or model
+2025-04-11 10:04:56,784 - ImportGA4Vehicles - WARNING - Skipping row 9586: Missing make or model
+2025-04-11 10:04:56,785 - ImportGA4Vehicles - WARNING - Skipping row 9588: Missing make or model
+2025-04-11 10:04:56,785 - ImportGA4Vehicles - WARNING - Skipping row 9590: Missing make or model
+2025-04-11 10:04:56,785 - ImportGA4Vehicles - WARNING - Skipping row 9597: Missing make or model
+2025-04-11 10:04:56,785 - ImportGA4Vehicles - WARNING - Skipping row 9598: Missing make or model
+2025-04-11 10:04:56,785 - ImportGA4Vehicles - WARNING - Skipping row 9607: Missing make or model
+2025-04-11 10:04:56,785 - ImportGA4Vehicles - WARNING - Skipping row 9608: Missing make or model
+2025-04-11 10:04:56,785 - ImportGA4Vehicles - WARNING - Skipping row 9612: Missing make or model
+2025-04-11 10:04:56,785 - ImportGA4Vehicles - WARNING - Skipping row 9621: Missing make or model
+2025-04-11 10:04:56,785 - ImportGA4Vehicles - WARNING - Skipping row 9622: Missing make or model
+2025-04-11 10:04:56,785 - ImportGA4Vehicles - WARNING - Skipping row 9631: Missing make or model
+2025-04-11 10:04:56,785 - ImportGA4Vehicles - WARNING - Skipping row 9636: Missing make or model
+2025-04-11 10:04:56,785 - ImportGA4Vehicles - INFO - Imported 8800 vehicles so far
+2025-04-11 10:04:56,786 - ImportGA4Vehicles - WARNING - Skipping row 9643: Missing make or model
+2025-04-11 10:04:56,786 - ImportGA4Vehicles - WARNING - Skipping row 9644: Missing make or model
+2025-04-11 10:04:56,786 - ImportGA4Vehicles - WARNING - Skipping row 9645: Missing make or model
+2025-04-11 10:04:56,786 - ImportGA4Vehicles - WARNING - Skipping row 9650: Missing make or model
+2025-04-11 10:04:56,786 - ImportGA4Vehicles - WARNING - Skipping row 9653: Missing make or model
+2025-04-11 10:04:56,786 - ImportGA4Vehicles - WARNING - Skipping row 9654: Missing make or model
+2025-04-11 10:04:56,786 - ImportGA4Vehicles - WARNING - Skipping row 9656: Missing make or model
+2025-04-11 10:04:56,786 - ImportGA4Vehicles - WARNING - Skipping row 9657: Missing make or model
+2025-04-11 10:04:56,786 - ImportGA4Vehicles - WARNING - Skipping row 9659: Missing make or model
+2025-04-11 10:04:56,786 - ImportGA4Vehicles - WARNING - Skipping row 9669: Missing make or model
+2025-04-11 10:04:56,786 - ImportGA4Vehicles - WARNING - Skipping row 9671: Missing make or model
+2025-04-11 10:04:56,786 - ImportGA4Vehicles - WARNING - Skipping row 9673: Missing make or model
+2025-04-11 10:04:56,786 - ImportGA4Vehicles - WARNING - Skipping row 9677: Missing make or model
+2025-04-11 10:04:56,787 - ImportGA4Vehicles - WARNING - Skipping row 9681: Missing make or model
+2025-04-11 10:04:56,787 - ImportGA4Vehicles - WARNING - Skipping row 9684: Missing make or model
+2025-04-11 10:04:56,787 - ImportGA4Vehicles - WARNING - Skipping row 9688: Missing make or model
+2025-04-11 10:04:56,787 - ImportGA4Vehicles - WARNING - Skipping row 9699: Missing make or model
+2025-04-11 10:04:56,787 - ImportGA4Vehicles - WARNING - Skipping row 9705: Missing make or model
+2025-04-11 10:04:56,787 - ImportGA4Vehicles - WARNING - Skipping row 9706: Missing make or model
+2025-04-11 10:04:56,787 - ImportGA4Vehicles - WARNING - Skipping row 9711: Missing make or model
+2025-04-11 10:04:56,787 - ImportGA4Vehicles - WARNING - Skipping row 9713: Missing make or model
+2025-04-11 10:04:56,787 - ImportGA4Vehicles - WARNING - Skipping row 9716: Missing make or model
+2025-04-11 10:04:56,787 - ImportGA4Vehicles - WARNING - Skipping row 9718: Missing make or model
+2025-04-11 10:04:56,787 - ImportGA4Vehicles - WARNING - Skipping row 9720: Missing make or model
+2025-04-11 10:04:56,787 - ImportGA4Vehicles - WARNING - Skipping row 9721: Missing make or model
+2025-04-11 10:04:56,787 - ImportGA4Vehicles - WARNING - Skipping row 9725: Missing make or model
+2025-04-11 10:04:56,787 - ImportGA4Vehicles - WARNING - Skipping row 9731: Missing make or model
+2025-04-11 10:04:56,788 - ImportGA4Vehicles - WARNING - Skipping row 9736: Missing make or model
+2025-04-11 10:04:56,788 - ImportGA4Vehicles - WARNING - Skipping row 9741: Missing make or model
+2025-04-11 10:04:56,788 - ImportGA4Vehicles - WARNING - Skipping row 9745: Missing make or model
+2025-04-11 10:04:56,788 - ImportGA4Vehicles - WARNING - Skipping row 9746: Missing make or model
+2025-04-11 10:04:56,788 - ImportGA4Vehicles - WARNING - Skipping row 9752: Missing make or model
+2025-04-11 10:04:56,788 - ImportGA4Vehicles - WARNING - Skipping row 9754: Missing make or model
+2025-04-11 10:04:56,788 - ImportGA4Vehicles - WARNING - Skipping row 9759: Missing make or model
+2025-04-11 10:04:56,788 - ImportGA4Vehicles - WARNING - Skipping row 9767: Missing make or model
+2025-04-11 10:04:56,788 - ImportGA4Vehicles - WARNING - Skipping row 9768: Missing make or model
+2025-04-11 10:04:56,788 - ImportGA4Vehicles - WARNING - Skipping row 9769: Missing make or model
+2025-04-11 10:04:56,788 - ImportGA4Vehicles - INFO - Imported 8900 vehicles so far
+2025-04-11 10:04:56,788 - ImportGA4Vehicles - WARNING - Skipping row 9775: Missing make or model
+2025-04-11 10:04:56,789 - ImportGA4Vehicles - WARNING - Skipping row 9777: Missing make or model
+2025-04-11 10:04:56,789 - ImportGA4Vehicles - WARNING - Skipping row 9779: Missing make or model
+2025-04-11 10:04:56,789 - ImportGA4Vehicles - WARNING - Skipping row 9789: Missing make or model
+2025-04-11 10:04:56,789 - ImportGA4Vehicles - WARNING - Skipping row 9794: Missing make or model
+2025-04-11 10:04:56,789 - ImportGA4Vehicles - WARNING - Skipping row 9795: Missing make or model
+2025-04-11 10:04:56,789 - ImportGA4Vehicles - WARNING - Skipping row 9798: Missing make or model
+2025-04-11 10:04:56,789 - ImportGA4Vehicles - WARNING - Skipping row 9805: Missing make or model
+2025-04-11 10:04:56,789 - ImportGA4Vehicles - WARNING - Skipping row 9811: Missing make or model
+2025-04-11 10:04:56,789 - ImportGA4Vehicles - WARNING - Skipping row 9815: Missing make or model
+2025-04-11 10:04:56,790 - ImportGA4Vehicles - WARNING - Skipping row 9829: Missing make or model
+2025-04-11 10:04:56,790 - ImportGA4Vehicles - WARNING - Skipping row 9830: Missing make or model
+2025-04-11 10:04:56,790 - ImportGA4Vehicles - WARNING - Skipping row 9833: Missing make or model
+2025-04-11 10:04:56,790 - ImportGA4Vehicles - WARNING - Skipping row 9834: Missing make or model
+2025-04-11 10:04:56,790 - ImportGA4Vehicles - WARNING - Skipping row 9840: Missing make or model
+2025-04-11 10:04:56,790 - ImportGA4Vehicles - WARNING - Skipping row 9841: Missing make or model
+2025-04-11 10:04:56,790 - ImportGA4Vehicles - WARNING - Skipping row 9842: Missing make or model
+2025-04-11 10:04:56,790 - ImportGA4Vehicles - WARNING - Skipping row 9856: Missing make or model
+2025-04-11 10:04:56,790 - ImportGA4Vehicles - WARNING - Skipping row 9858: Missing make or model
+2025-04-11 10:04:56,790 - ImportGA4Vehicles - WARNING - Skipping row 9863: Missing make or model
+2025-04-11 10:04:56,790 - ImportGA4Vehicles - WARNING - Skipping row 9870: Missing make or model
+2025-04-11 10:04:56,790 - ImportGA4Vehicles - WARNING - Skipping row 9875: Missing make or model
+2025-04-11 10:04:56,791 - ImportGA4Vehicles - WARNING - Skipping row 9881: Missing make or model
+2025-04-11 10:04:56,791 - ImportGA4Vehicles - WARNING - Skipping row 9882: Missing make or model
+2025-04-11 10:04:56,791 - ImportGA4Vehicles - WARNING - Skipping row 9884: Missing make or model
+2025-04-11 10:04:56,791 - ImportGA4Vehicles - WARNING - Skipping row 9891: Missing make or model
+2025-04-11 10:04:56,791 - ImportGA4Vehicles - WARNING - Skipping row 9898: Missing make or model
+2025-04-11 10:04:56,791 - ImportGA4Vehicles - WARNING - Skipping row 9901: Missing make or model
+2025-04-11 10:04:56,791 - ImportGA4Vehicles - INFO - Imported 9000 vehicles so far
+2025-04-11 10:04:56,791 - ImportGA4Vehicles - WARNING - Skipping row 9904: Missing make or model
+2025-04-11 10:04:56,791 - ImportGA4Vehicles - WARNING - Skipping row 9908: Missing make or model
+2025-04-11 10:04:56,791 - ImportGA4Vehicles - WARNING - Skipping row 9909: Missing make or model
+2025-04-11 10:04:56,791 - ImportGA4Vehicles - WARNING - Skipping row 9912: Missing make or model
+2025-04-11 10:04:56,791 - ImportGA4Vehicles - WARNING - Skipping row 9915: Missing make or model
+2025-04-11 10:04:56,792 - ImportGA4Vehicles - WARNING - Skipping row 9921: Missing make or model
+2025-04-11 10:04:56,792 - ImportGA4Vehicles - WARNING - Skipping row 9922: Missing make or model
+2025-04-11 10:04:56,792 - ImportGA4Vehicles - WARNING - Skipping row 9923: Missing make or model
+2025-04-11 10:04:56,792 - ImportGA4Vehicles - WARNING - Skipping row 9925: Missing make or model
+2025-04-11 10:04:56,792 - ImportGA4Vehicles - WARNING - Skipping row 9928: Missing make or model
+2025-04-11 10:04:56,792 - ImportGA4Vehicles - WARNING - Skipping row 9932: Missing make or model
+2025-04-11 10:04:56,792 - ImportGA4Vehicles - WARNING - Skipping row 9938: Missing make or model
+2025-04-11 10:04:56,792 - ImportGA4Vehicles - WARNING - Skipping row 9946: Missing make or model
+2025-04-11 10:04:56,792 - ImportGA4Vehicles - WARNING - Skipping row 9947: Missing make or model
+2025-04-11 10:04:56,792 - ImportGA4Vehicles - WARNING - Skipping row 9949: Missing make or model
+2025-04-11 10:04:56,793 - ImportGA4Vehicles - WARNING - Skipping row 9974: Missing make or model
+2025-04-11 10:04:56,793 - ImportGA4Vehicles - WARNING - Skipping row 9975: Missing make or model
+2025-04-11 10:04:56,793 - ImportGA4Vehicles - WARNING - Skipping row 9977: Missing make or model
+2025-04-11 10:04:56,793 - ImportGA4Vehicles - WARNING - Skipping row 9984: Missing make or model
+2025-04-11 10:04:56,793 - ImportGA4Vehicles - WARNING - Skipping row 9986: Missing make or model
+2025-04-11 10:04:56,793 - ImportGA4Vehicles - WARNING - Skipping row 9987: Missing make or model
+2025-04-11 10:04:56,793 - ImportGA4Vehicles - WARNING - Skipping row 9993: Missing make or model
+2025-04-11 10:04:56,793 - ImportGA4Vehicles - WARNING - Skipping row 9994: Missing make or model
+2025-04-11 10:04:56,793 - ImportGA4Vehicles - WARNING - Skipping row 9998: Missing make or model
+2025-04-11 10:04:56,793 - ImportGA4Vehicles - WARNING - Skipping row 10018: Missing make or model
+2025-04-11 10:04:56,793 - ImportGA4Vehicles - WARNING - Skipping row 10022: Missing make or model
+2025-04-11 10:04:56,794 - ImportGA4Vehicles - INFO - Imported 9100 vehicles so far
+2025-04-11 10:04:56,794 - ImportGA4Vehicles - WARNING - Skipping row 10033: Missing make or model
+2025-04-11 10:04:56,794 - ImportGA4Vehicles - WARNING - Skipping row 10034: Missing make or model
+2025-04-11 10:04:56,794 - ImportGA4Vehicles - WARNING - Skipping row 10035: Missing make or model
+2025-04-11 10:04:56,794 - ImportGA4Vehicles - WARNING - Skipping row 10049: Missing make or model
+2025-04-11 10:04:56,794 - ImportGA4Vehicles - WARNING - Skipping row 10054: Missing make or model
+2025-04-11 10:04:56,794 - ImportGA4Vehicles - WARNING - Skipping row 10055: Missing make or model
+2025-04-11 10:04:56,794 - ImportGA4Vehicles - WARNING - Skipping row 10057: Missing make or model
+2025-04-11 10:04:56,794 - ImportGA4Vehicles - WARNING - Skipping row 10058: Missing make or model
+2025-04-11 10:04:56,795 - ImportGA4Vehicles - WARNING - Skipping row 10059: Missing make or model
+2025-04-11 10:04:56,795 - ImportGA4Vehicles - WARNING - Skipping row 10061: Missing make or model
+2025-04-11 10:04:56,795 - ImportGA4Vehicles - WARNING - Skipping row 10066: Missing make or model
+2025-04-11 10:04:56,795 - ImportGA4Vehicles - WARNING - Skipping row 10068: Missing make or model
+2025-04-11 10:04:56,795 - ImportGA4Vehicles - WARNING - Skipping row 10069: Missing make or model
+2025-04-11 10:04:56,795 - ImportGA4Vehicles - WARNING - Skipping row 10073: Missing make or model
+2025-04-11 10:04:56,795 - ImportGA4Vehicles - WARNING - Skipping row 10074: Missing make or model
+2025-04-11 10:04:56,795 - ImportGA4Vehicles - WARNING - Skipping row 10079: Missing make or model
+2025-04-11 10:04:56,795 - ImportGA4Vehicles - WARNING - Skipping row 10083: Missing make or model
+2025-04-11 10:04:56,795 - ImportGA4Vehicles - WARNING - Skipping row 10088: Missing make or model
+2025-04-11 10:04:56,795 - ImportGA4Vehicles - WARNING - Skipping row 10102: Missing make or model
+2025-04-11 10:04:56,795 - ImportGA4Vehicles - WARNING - Skipping row 10104: Missing make or model
+2025-04-11 10:04:56,795 - ImportGA4Vehicles - WARNING - Skipping row 10105: Missing make or model
+2025-04-11 10:04:56,796 - ImportGA4Vehicles - WARNING - Skipping row 10117: Missing make or model
+2025-04-11 10:04:56,796 - ImportGA4Vehicles - WARNING - Skipping row 10126: Missing make or model
+2025-04-11 10:04:56,796 - ImportGA4Vehicles - WARNING - Skipping row 10129: Missing make or model
+2025-04-11 10:04:56,796 - ImportGA4Vehicles - WARNING - Skipping row 10131: Missing make or model
+2025-04-11 10:04:56,796 - ImportGA4Vehicles - WARNING - Skipping row 10132: Missing make or model
+2025-04-11 10:04:56,796 - ImportGA4Vehicles - WARNING - Skipping row 10133: Missing make or model
+2025-04-11 10:04:56,796 - ImportGA4Vehicles - WARNING - Skipping row 10138: Missing make or model
+2025-04-11 10:04:56,796 - ImportGA4Vehicles - WARNING - Skipping row 10139: Missing make or model
+2025-04-11 10:04:56,796 - ImportGA4Vehicles - WARNING - Skipping row 10142: Missing make or model
+2025-04-11 10:04:56,796 - ImportGA4Vehicles - WARNING - Skipping row 10157: Missing make or model
+2025-04-11 10:04:56,796 - ImportGA4Vehicles - WARNING - Skipping row 10158: Missing make or model
+2025-04-11 10:04:56,796 - ImportGA4Vehicles - WARNING - Skipping row 10159: Missing make or model
+2025-04-11 10:04:56,796 - ImportGA4Vehicles - INFO - Imported 9200 vehicles so far
+2025-04-11 10:04:56,797 - ImportGA4Vehicles - WARNING - Skipping row 10168: Missing make or model
+2025-04-11 10:04:56,797 - ImportGA4Vehicles - WARNING - Skipping row 10172: Missing make or model
+2025-04-11 10:04:56,797 - ImportGA4Vehicles - WARNING - Skipping row 10178: Missing make or model
+2025-04-11 10:04:56,797 - ImportGA4Vehicles - WARNING - Skipping row 10179: Missing make or model
+2025-04-11 10:04:56,797 - ImportGA4Vehicles - WARNING - Skipping row 10182: Missing make or model
+2025-04-11 10:04:56,797 - ImportGA4Vehicles - WARNING - Skipping row 10184: Missing make or model
+2025-04-11 10:04:56,797 - ImportGA4Vehicles - WARNING - Skipping row 10185: Missing make or model
+2025-04-11 10:04:56,797 - ImportGA4Vehicles - WARNING - Skipping row 10191: Missing make or model
+2025-04-11 10:04:56,798 - ImportGA4Vehicles - WARNING - Skipping row 10202: Missing make or model
+2025-04-11 10:04:56,798 - ImportGA4Vehicles - WARNING - Skipping row 10204: Missing make or model
+2025-04-11 10:04:56,798 - ImportGA4Vehicles - WARNING - Skipping row 10205: Missing make or model
+2025-04-11 10:04:56,798 - ImportGA4Vehicles - WARNING - Skipping row 10211: Missing make or model
+2025-04-11 10:04:56,798 - ImportGA4Vehicles - WARNING - Skipping row 10214: Missing make or model
+2025-04-11 10:04:56,798 - ImportGA4Vehicles - WARNING - Skipping row 10218: Missing make or model
+2025-04-11 10:04:56,798 - ImportGA4Vehicles - WARNING - Skipping row 10225: Missing make or model
+2025-04-11 10:04:56,798 - ImportGA4Vehicles - WARNING - Skipping row 10226: Missing make or model
+2025-04-11 10:04:56,798 - ImportGA4Vehicles - WARNING - Skipping row 10241: Missing make or model
+2025-04-11 10:04:56,798 - ImportGA4Vehicles - WARNING - Skipping row 10243: Missing make or model
+2025-04-11 10:04:56,799 - ImportGA4Vehicles - WARNING - Skipping row 10257: Missing make or model
+2025-04-11 10:04:56,799 - ImportGA4Vehicles - WARNING - Skipping row 10273: Missing make or model
+2025-04-11 10:04:56,799 - ImportGA4Vehicles - INFO - Total rows processed: 10274
+2025-04-11 10:04:56,799 - ImportGA4Vehicles - INFO - Rows imported: 9293
+2025-04-11 10:04:56,799 - ImportGA4Vehicles - INFO - Vehicles linked to customers: 8289
+2025-04-11 10:04:56,799 - ImportGA4Vehicles - INFO - Rows skipped: 981
+2025-04-11 10:04:56,799 - ImportGA4Vehicles - INFO - Rows with errors: 0
+2025-04-11 10:04:56,799 - ImportGA4Vehicles - INFO - Total vehicles imported: 9293
+2025-04-11 10:04:56,799 - ImportGA4Vehicles - INFO - Import GA4 Vehicles completed

@@ -1,0 +1,499 @@
+{% extends 'base.html' %}
+
+{% block title %}Customer Details - {{ customer.first_name }} {{ customer.last_name }}{% endblock %}
+
+{% block content %}
+<div class="container-fluid">
+    <!-- Customer Header -->
+    <div class="row mb-4">
+        <div class="col-md-8">
+            <h1 class="display-5 mb-2">
+                <i class="bi bi-person-circle me-2"></i> {{ customer.first_name }} {{ customer.last_name }}
+            </h1>
+            <p class="text-muted mb-0">Customer #{{ customer.id }} • Created {{ customer.created_at }}</p>
+        </div>
+        <div class="col-md-4 text-md-end">
+            <div class="btn-group" role="group">
+                <a href="{{ url_for('edit_customer', customer_id=customer.id) }}" class="btn btn-outline-primary">
+                    <i class="bi bi-pencil"></i> Edit
+                </a>
+                <button type="button" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#deleteModal">
+                    <i class="bi bi-trash"></i> Delete
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Customer Information -->
+    <div class="row mb-4">
+        <div class="col-md-4">
+            <div class="card shadow-sm h-100">
+                <div class="card-header">
+                    <h5 class="mb-0"><i class="bi bi-info-circle me-2"></i> Contact Information</h5>
+                </div>
+                <div class="card-body">
+                    <div class="d-flex align-items-center mb-3">
+                        <div class="avatar-circle bg-primary text-white me-3" style="width: 60px; height: 60px; font-size: 1.5rem;">
+                            {{ customer.first_name[0] if customer.first_name else '' }}{{ customer.last_name[0] if customer.last_name else '' }}
+                        </div>
+                        <div>
+                            <h4 class="mb-0">{{ customer.first_name }} {{ customer.last_name }}</h4>
+                            <p class="text-muted mb-0">Customer #{{ customer.id }}</p>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-3">
+                        {% if customer.email %}
+                            <div class="d-flex align-items-center mb-2">
+                                <i class="bi bi-envelope-fill me-2 text-primary"></i>
+                                <a href="mailto:{{ customer.email }}" class="text-decoration-none">{{ customer.email }}</a>
+                            </div>
+                        {% endif %}
+                        
+                        {% if customer.phone %}
+                            <div class="d-flex align-items-center mb-2">
+                                <i class="bi bi-telephone-fill me-2 text-primary"></i>
+                                <a href="tel:{{ customer.phone }}" class="text-decoration-none">{{ customer.phone }}</a>
+                            </div>
+                        {% endif %}
+                    </div>
+                    
+                    <div class="mb-3">
+                        <h6 class="text-muted mb-2">Address</h6>
+                        {% if customer.address %}
+                            <address class="mb-0">
+                                {{ customer.address }}<br>
+                                {% if customer.city %}{{ customer.city }}{% endif %}
+                                {% if customer.city and customer.postal_code %}, {% endif %}
+                                {% if customer.postal_code %}{{ customer.postal_code }}{% endif %}
+                            </address>
+                            <a href="https://www.google.com/maps/search/?api=1&query={{ customer.address|urlencode }}{% if customer.city %},{{ customer.city|urlencode }}{% endif %}{% if customer.postal_code %},{{ customer.postal_code|urlencode }}{% endif %}" 
+                               class="btn btn-sm btn-outline-secondary mt-2" target="_blank">
+                                <i class="bi bi-geo-alt"></i> View on Map
+                            </a>
+                        {% else %}
+                            <p class="text-muted">No address provided</p>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-8">
+            <div class="card shadow-sm h-100">
+                <div class="card-header">
+                    <h5 class="mb-0"><i class="bi bi-card-text me-2"></i> Notes & Details</h5>
+                </div>
+                <div class="card-body">
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <h6 class="text-muted mb-2">Customer Since</h6>
+                            <p>{{ customer.created_at }}</p>
+                        </div>
+                        <div class="col-md-6">
+                            <h6 class="text-muted mb-2">Last Updated</h6>
+                            <p>{{ customer.updated_at }}</p>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-3">
+                        <h6 class="text-muted mb-2">Notes</h6>
+                        {% if customer.notes %}
+                            <div class="p-3 bg-light rounded">
+                                {{ customer.notes|nl2br }}
+                            </div>
+                        {% else %}
+                            <p class="text-muted">No notes available</p>
+                        {% endif %}
+                    </div>
+                    
+                    <div class="d-grid">
+                        <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#addNoteModal">
+                            <i class="bi bi-plus-circle"></i> Add Note
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Vehicles Section -->
+    <div class="row mb-4">
+        <div class="col-md-12">
+            <div class="card shadow-sm">
+                <div class="card-header d-flex justify-content-between align-items-center">
+                    <h5 class="mb-0"><i class="bi bi-car-front me-2"></i> Vehicles ({{ vehicles|length }})</h5>
+                    <a href="{{ url_for('create_vehicle', customer_id=customer.id) }}" class="btn btn-sm btn-primary">
+                        <i class="bi bi-plus-circle"></i> Add Vehicle
+                    </a>
+                </div>
+                <div class="card-body p-0">
+                    <div class="table-responsive">
+                        <table class="table table-hover mb-0">
+                            <thead class="table-light">
+                                <tr>
+                                    <th>Registration</th>
+                                    <th>Make & Model</th>
+                                    <th>MOT Status</th>
+                                    <th>MOT Expiry</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% if vehicles %}
+                                    {% for vehicle in vehicles %}
+                                    <tr>
+                                        <td>
+                                            <a href="{{ url_for('vehicle_detail', vehicle_id=vehicle.id) }}" class="text-decoration-none fw-bold">
+                                                {{ vehicle.registration }}
+                                            </a>
+                                        </td>
+                                        <td>
+                                            {{ vehicle.make }} {{ vehicle.model }}
+                                            {% if vehicle.year %}<span class="text-muted">({{ vehicle.year }})</span>{% endif %}
+                                            {% if vehicle.color %}<span class="badge bg-light text-dark">{{ vehicle.color }}</span>{% endif %}
+                                        </td>
+                                        <td>
+                                            {% if vehicle.mot_status == 'Valid' %}
+                                                <span class="badge bg-success">Valid</span>
+                                            {% elif vehicle.mot_status == 'Expired' %}
+                                                <span class="badge bg-danger">Expired</span>
+                                            {% elif vehicle.mot_status == 'Due Soon' %}
+                                                <span class="badge bg-warning text-dark">Due Soon</span>
+                                            {% else %}
+                                                <span class="badge bg-secondary">Unknown</span>
+                                            {% endif %}
+                                        </td>
+                                        <td>
+                                            {% if vehicle.mot_expiry %}
+                                                {{ vehicle.mot_expiry }}
+                                            {% else %}
+                                                <span class="text-muted">Not available</span>
+                                            {% endif %}
+                                        </td>
+                                        <td>
+                                            <div class="btn-group btn-group-sm">
+                                                <a href="{{ url_for('vehicle_detail', vehicle_id=vehicle.id) }}" class="btn btn-outline-primary">
+                                                    <i class="bi bi-eye"></i>
+                                                </a>
+                                                <a href="{{ url_for('edit_vehicle', vehicle_id=vehicle.id) }}" class="btn btn-outline-secondary">
+                                                    <i class="bi bi-pencil"></i>
+                                                </a>
+                                                <a href="{{ url_for('verify_vehicle_mot', vehicle_id=vehicle.id) }}" class="btn btn-outline-info">
+                                                    <i class="bi bi-check2-circle"></i>
+                                                </a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    {% endfor %}
+                                {% else %}
+                                    <tr>
+                                        <td colspan="5" class="text-center py-4">
+                                            <div class="d-flex flex-column align-items-center">
+                                                <i class="bi bi-car-front fs-1 text-muted mb-3"></i>
+                                                <p class="lead mb-0">No vehicles found</p>
+                                                <p class="text-muted">Add a vehicle to this customer</p>
+                                                <a href="{{ url_for('create_vehicle', customer_id=customer.id) }}" class="btn btn-primary mt-2">
+                                                    <i class="bi bi-plus-circle"></i> Add Vehicle
+                                                </a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                {% endif %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Recent Activity -->
+    <div class="row">
+        <!-- Appointments -->
+        <div class="col-md-6 mb-4">
+            <div class="card shadow-sm">
+                <div class="card-header d-flex justify-content-between align-items-center">
+                    <h5 class="mb-0"><i class="bi bi-calendar-check me-2"></i> Recent Appointments</h5>
+                    <a href="{{ url_for('create_appointment', customer_id=customer.id) }}" class="btn btn-sm btn-primary">
+                        <i class="bi bi-plus-circle"></i> New Appointment
+                    </a>
+                </div>
+                <div class="card-body p-0">
+                    <div class="list-group list-group-flush">
+                        {% if appointments %}
+                            {% for appointment in appointments %}
+                                <div class="list-group-item">
+                                    <div class="d-flex w-100 justify-content-between">
+                                        <h6 class="mb-1">{{ appointment.appointment_type }}</h6>
+                                        <small>
+                                            {% if appointment.status == 'Scheduled' %}
+                                                <span class="badge bg-primary">{{ appointment.status }}</span>
+                                            {% elif appointment.status == 'Completed' %}
+                                                <span class="badge bg-success">{{ appointment.status }}</span>
+                                            {% elif appointment.status == 'Cancelled' %}
+                                                <span class="badge bg-danger">{{ appointment.status }}</span>
+                                            {% else %}
+                                                <span class="badge bg-secondary">{{ appointment.status }}</span>
+                                            {% endif %}
+                                        </small>
+                                    </div>
+                                    <p class="mb-1">
+                                        {{ appointment.appointment_date }} at {{ appointment.appointment_time }}
+                                    </p>
+                                    <small class="text-muted">
+                                        Vehicle: {{ appointment.registration }} ({{ appointment.make }} {{ appointment.model }})
+                                    </small>
+                                </div>
+                            {% endfor %}
+                        {% else %}
+                            <div class="list-group-item text-center py-4">
+                                <i class="bi bi-calendar-x fs-1 text-muted mb-3"></i>
+                                <p class="mb-0">No appointments found</p>
+                            </div>
+                        {% endif %}
+                    </div>
+                </div>
+                {% if appointments %}
+                    <div class="card-footer text-center">
+                        <a href="{{ url_for('appointments', customer_id=customer.id) }}" class="text-decoration-none">
+                            View All Appointments <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+        
+        <!-- Invoices -->
+        <div class="col-md-6 mb-4">
+            <div class="card shadow-sm">
+                <div class="card-header d-flex justify-content-between align-items-center">
+                    <h5 class="mb-0"><i class="bi bi-receipt me-2"></i> Recent Invoices</h5>
+                    <a href="{{ url_for('create_invoice', customer_id=customer.id) }}" class="btn btn-sm btn-primary">
+                        <i class="bi bi-plus-circle"></i> New Invoice
+                    </a>
+                </div>
+                <div class="card-body p-0">
+                    <div class="list-group list-group-flush">
+                        {% if invoices %}
+                            {% for invoice in invoices %}
+                                <div class="list-group-item">
+                                    <div class="d-flex w-100 justify-content-between">
+                                        <h6 class="mb-1">Invoice #{{ invoice.invoice_number }}</h6>
+                                        <small>
+                                            {% if invoice.status == 'Paid' %}
+                                                <span class="badge bg-success">{{ invoice.status }}</span>
+                                            {% elif invoice.status == 'Unpaid' %}
+                                                <span class="badge bg-danger">{{ invoice.status }}</span>
+                                            {% elif invoice.status == 'Partial' %}
+                                                <span class="badge bg-warning text-dark">{{ invoice.status }}</span>
+                                            {% else %}
+                                                <span class="badge bg-secondary">{{ invoice.status }}</span>
+                                            {% endif %}
+                                        </small>
+                                    </div>
+                                    <p class="mb-1">
+                                        {{ invoice.invoice_date }} • £{{ "%.2f"|format(invoice.total_amount) }}
+                                    </p>
+                                    <small class="text-muted">
+                                        Vehicle: {{ invoice.registration }}
+                                    </small>
+                                </div>
+                            {% endfor %}
+                        {% else %}
+                            <div class="list-group-item text-center py-4">
+                                <i class="bi bi-receipt-cutoff fs-1 text-muted mb-3"></i>
+                                <p class="mb-0">No invoices found</p>
+                            </div>
+                        {% endif %}
+                    </div>
+                </div>
+                {% if invoices %}
+                    <div class="card-footer text-center">
+                        <a href="{{ url_for('invoices', customer_id=customer.id) }}" class="text-decoration-none">
+                            View All Invoices <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+
+    <!-- Documents and Reminders -->
+    <div class="row">
+        <!-- Documents -->
+        <div class="col-md-6 mb-4">
+            <div class="card shadow-sm">
+                <div class="card-header d-flex justify-content-between align-items-center">
+                    <h5 class="mb-0"><i class="bi bi-file-earmark-text me-2"></i> Documents</h5>
+                    <a href="{{ url_for('upload_document', customer_id=customer.id) }}" class="btn btn-sm btn-primary">
+                        <i class="bi bi-plus-circle"></i> Upload Document
+                    </a>
+                </div>
+                <div class="card-body p-0">
+                    <div class="list-group list-group-flush">
+                        {% if documents %}
+                            {% for document in documents %}
+                                <div class="list-group-item">
+                                    <div class="d-flex w-100 justify-content-between">
+                                        <h6 class="mb-1">{{ document.filename }}</h6>
+                                        <small>{{ document.uploaded_at }}</small>
+                                    </div>
+                                    <p class="mb-1">{{ document.document_type }}</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <small class="text-muted">
+                                            {% if document.vehicle_id %}
+                                                Vehicle: {{ document.registration }}
+                                            {% else %}
+                                                Customer document
+                                            {% endif %}
+                                        </small>
+                                        <div class="btn-group btn-group-sm">
+                                            <a href="{{ url_for('download_document', document_id=document.id) }}" class="btn btn-outline-primary">
+                                                <i class="bi bi-download"></i>
+                                            </a>
+                                            <button type="button" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#deleteDocumentModal{{ document.id }}">
+                                                <i class="bi bi-trash"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            {% endfor %}
+                        {% else %}
+                            <div class="list-group-item text-center py-4">
+                                <i class="bi bi-file-earmark-x fs-1 text-muted mb-3"></i>
+                                <p class="mb-0">No documents found</p>
+                            </div>
+                        {% endif %}
+                    </div>
+                </div>
+                {% if documents %}
+                    <div class="card-footer text-center">
+                        <a href="{{ url_for('documents', customer_id=customer.id) }}" class="text-decoration-none">
+                            View All Documents <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+        
+        <!-- Reminders -->
+        <div class="col-md-6 mb-4">
+            <div class="card shadow-sm">
+                <div class="card-header d-flex justify-content-between align-items-center">
+                    <h5 class="mb-0"><i class="bi bi-bell me-2"></i> MOT Reminders</h5>
+                    <a href="{{ url_for('create_reminder', customer_id=customer.id) }}" class="btn btn-sm btn-primary">
+                        <i class="bi bi-plus-circle"></i> New Reminder
+                    </a>
+                </div>
+                <div class="card-body p-0">
+                    <div class="list-group list-group-flush">
+                        {% if reminders %}
+                            {% for reminder in reminders %}
+                                <div class="list-group-item">
+                                    <div class="d-flex w-100 justify-content-between">
+                                        <h6 class="mb-1">{{ reminder.reminder_type }}</h6>
+                                        <small>
+                                            {% if reminder.is_overdue %}
+                                                <span class="badge bg-danger">Overdue</span>
+                                            {% elif reminder.is_due_soon %}
+                                                <span class="badge bg-warning text-dark">Due Soon</span>
+                                            {% else %}
+                                                <span class="badge bg-success">Scheduled</span>
+                                            {% endif %}
+                                        </small>
+                                    </div>
+                                    <p class="mb-1">Due: {{ reminder.due_date }}</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <small class="text-muted">
+                                            Vehicle: {{ reminder.registration }} ({{ reminder.make }} {{ reminder.model }})
+                                        </small>
+                                        <div class="btn-group btn-group-sm">
+                                            <a href="{{ url_for('edit_reminder', reminder_id=reminder.id) }}" class="btn btn-outline-secondary">
+                                                <i class="bi bi-pencil"></i>
+                                            </a>
+                                            <button type="button" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#deleteReminderModal{{ reminder.id }}">
+                                                <i class="bi bi-trash"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            {% endfor %}
+                        {% else %}
+                            <div class="list-group-item text-center py-4">
+                                <i class="bi bi-bell-slash fs-1 text-muted mb-3"></i>
+                                <p class="mb-0">No reminders found</p>
+                            </div>
+                        {% endif %}
+                    </div>
+                </div>
+                {% if reminders %}
+                    <div class="card-footer text-center">
+                        <a href="{{ url_for('reminders', customer_id=customer.id) }}" class="text-decoration-none">
+                            View All Reminders <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Delete Modal -->
+<div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="deleteModalLabel">Confirm Delete</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>Are you sure you want to delete <strong>{{ customer.first_name }} {{ customer.last_name }}</strong>?</p>
+                <p class="text-danger">This action cannot be undone. All associated data will also be deleted.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                <form action="{{ url_for('delete_customer', customer_id=customer.id) }}" method="POST">
+                    <button type="submit" class="btn btn-danger">Delete Customer</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Add Note Modal -->
+<div class="modal fade" id="addNoteModal" tabindex="-1" aria-labelledby="addNoteModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="addNoteModalLabel">Add Note</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <form action="{{ url_for('add_customer_note', customer_id=customer.id) }}" method="POST">
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label for="noteContent" class="form-label">Note</label>
+                        <textarea class="form-control" id="noteContent" name="note" rows="5" required></textarea>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button type="submit" class="btn btn-primary">Save Note</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block styles %}
+<style>
+    .avatar-circle {
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+    }
+</style>
+{% endblock %}

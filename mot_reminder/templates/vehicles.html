@@ -1,0 +1,467 @@
+{% extends 'base.html' %}
+
+{% block title %}Vehicles Due for MOT - MOT Reminder System{% endblock %}
+
+{% block content %}
+<div class="container-fluid">
+    <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+        <h1 class="h2">Vehicles Due for MOT</h1>
+        <div class="btn-toolbar mb-2 mb-md-0">
+            <div class="btn-group me-2">
+                <button type="button" class="btn btn-sm btn-outline-secondary" id="refresh-vehicles-btn">
+                    <i class="bi bi-arrow-repeat"></i> Refresh
+                </button>
+                <button type="button" class="btn btn-sm btn-outline-primary" id="create-reminders-btn">
+                    <i class="bi bi-bell"></i> Create Reminders
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Filter Controls -->
+    <div class="row mb-4">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="card-title mb-0">Filter Options</h5>
+                </div>
+                <div class="card-body">
+                    <form id="filter-form" class="row g-3">
+                        <div class="col-md-3">
+                            <label for="days-filter" class="form-label">Days to MOT Expiry</label>
+                            <select class="form-select" id="days-filter" multiple>
+                                <option value="30" selected>30 days</option>
+                                <option value="14" selected>14 days</option>
+                                <option value="7" selected>7 days</option>
+                                <option value="3" selected>3 days</option>
+                                <option value="1" selected>1 day</option>
+                            </select>
+                        </div>
+                        <div class="col-md-3">
+                            <label for="make-filter" class="form-label">Make</label>
+                            <select class="form-select" id="make-filter">
+                                <option value="">All Makes</option>
+                            </select>
+                        </div>
+                        <div class="col-md-3">
+                            <label for="search-filter" class="form-label">Search</label>
+                            <input type="text" class="form-control" id="search-filter" placeholder="Registration or Customer">
+                        </div>
+                        <div class="col-md-3 d-flex align-items-end">
+                            <button type="submit" class="btn btn-primary me-2">Apply Filters</button>
+                            <button type="button" class="btn btn-secondary" id="reset-filters">Reset</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Vehicles by Days to Expiry -->
+    {% for days in days_range %}
+    <div class="row mb-4 days-section" data-days="{{ days }}">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header alert-reminder-{{ days }}">
+                    <h5 class="card-title mb-0">
+                        {% if days == 1 %}
+                        <i class="bi bi-exclamation-triangle-fill me-2"></i> MOT Due Tomorrow
+                        {% else %}
+                        <i class="bi bi-calendar-event me-2"></i> MOT Due in {{ days }} Days
+                        {% endif %}
+                    </h5>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-striped table-hover">
+                            <thead>
+                                <tr>
+                                    <th>Registration</th>
+                                    <th>Make</th>
+                                    <th>Model</th>
+                                    <th>Customer</th>
+                                    <th>MOT Expiry</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% set vehicles_for_days = vehicles_by_days.get(days, []) %}
+                                {% if vehicles_for_days %}
+                                    {% for vehicle in vehicles_for_days %}
+                                    <tr class="vehicle-row" 
+                                        data-registration="{{ vehicle.registration }}"
+                                        data-make="{{ vehicle.make|default('') }}"
+                                        data-model="{{ vehicle.model|default('') }}"
+                                        data-customer="{{ vehicle.customer_name|default('') }}">
+                                        <td><strong>{{ vehicle.registration }}</strong></td>
+                                        <td>{{ vehicle.make|default('Unknown') }}</td>
+                                        <td>{{ vehicle.model|default('Unknown') }}</td>
+                                        <td>{{ vehicle.customer_name|default('Unknown') }}</td>
+                                        <td>{{ vehicle.mot_expiry }}</td>
+                                        <td>
+                                            <div class="btn-group">
+                                                <button type="button" class="btn btn-sm btn-primary create-reminder-btn" 
+                                                        data-registration="{{ vehicle.registration }}"
+                                                        data-days="{{ days }}">
+                                                    <i class="bi bi-bell"></i> Remind
+                                                </button>
+                                                <button type="button" class="btn btn-sm btn-info view-vehicle-btn"
+                                                        data-registration="{{ vehicle.registration }}">
+                                                    <i class="bi bi-eye"></i> View
+                                                </button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    {% endfor %}
+                                {% else %}
+                                    <tr>
+                                        <td colspan="6" class="text-center">No vehicles due for MOT in {{ days }} days</td>
+                                    </tr>
+                                {% endif %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <small class="text-muted">Total: {{ vehicles_by_days.get(days, [])|length }} vehicles</small>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+<!-- Vehicle Details Modal -->
+<div class="modal fade" id="vehicleDetailsModal" tabindex="-1" aria-labelledby="vehicleDetailsModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="vehicleDetailsModalLabel">Vehicle Details</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h6>Vehicle Information</h6>
+                        <table class="table">
+                            <tr>
+                                <th>Registration:</th>
+                                <td id="modal-registration"></td>
+                            </tr>
+                            <tr>
+                                <th>Make:</th>
+                                <td id="modal-make"></td>
+                            </tr>
+                            <tr>
+                                <th>Model:</th>
+                                <td id="modal-model"></td>
+                            </tr>
+                            <tr>
+                                <th>MOT Expiry:</th>
+                                <td id="modal-mot-expiry"></td>
+                            </tr>
+                            <tr>
+                                <th>Days to Expiry:</th>
+                                <td id="modal-days-to-expiry"></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="col-md-6">
+                        <h6>Customer Information</h6>
+                        <table class="table">
+                            <tr>
+                                <th>Name:</th>
+                                <td id="modal-customer-name"></td>
+                            </tr>
+                            <tr>
+                                <th>Email:</th>
+                                <td id="modal-customer-email"></td>
+                            </tr>
+                            <tr>
+                                <th>Phone:</th>
+                                <td id="modal-customer-phone"></td>
+                            </tr>
+                            <tr>
+                                <th>Address:</th>
+                                <td id="modal-customer-address"></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-md-12">
+                        <h6>Reminder History</h6>
+                        <div class="table-responsive">
+                            <table class="table table-sm">
+                                <thead>
+                                    <tr>
+                                        <th>Date</th>
+                                        <th>Type</th>
+                                        <th>Status</th>
+                                        <th>Notes</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="modal-reminder-history">
+                                    <tr>
+                                        <td colspan="4" class="text-center">Loading reminder history...</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" id="modal-create-reminder">Create Reminder</button>
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+    // Initialize variables
+    let allVehicles = [];
+    let vehicleMakes = new Set();
+    
+    // Load all vehicles
+    function loadVehicles() {
+        fetch('/api/vehicles?days=30,14,7,3,1')
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    allVehicles = data.vehicles;
+                    
+                    // Extract unique makes
+                    vehicleMakes.clear();
+                    for (const vehicle of allVehicles) {
+                        if (vehicle.make) {
+                            vehicleMakes.add(vehicle.make);
+                        }
+                    }
+                    
+                    // Populate make filter
+                    const makeFilter = document.getElementById('make-filter');
+                    makeFilter.innerHTML = '<option value="">All Makes</option>';
+                    
+                    for (const make of Array.from(vehicleMakes).sort()) {
+                        const option = document.createElement('option');
+                        option.value = make;
+                        option.textContent = make;
+                        makeFilter.appendChild(option);
+                    }
+                } else {
+                    console.error('Error loading vehicles:', data.message);
+                }
+            });
+    }
+    
+    // Apply filters
+    function applyFilters(event) {
+        if (event) {
+            event.preventDefault();
+        }
+        
+        const daysFilter = Array.from(document.getElementById('days-filter').selectedOptions).map(option => parseInt(option.value));
+        const makeFilter = document.getElementById('make-filter').value;
+        const searchFilter = document.getElementById('search-filter').value.toLowerCase();
+        
+        // Hide/show days sections
+        document.querySelectorAll('.days-section').forEach(section => {
+            const days = parseInt(section.dataset.days);
+            if (daysFilter.includes(days)) {
+                section.style.display = 'flex';
+            } else {
+                section.style.display = 'none';
+            }
+        });
+        
+        // Filter vehicle rows
+        document.querySelectorAll('.vehicle-row').forEach(row => {
+            const registration = row.dataset.registration.toLowerCase();
+            const make = row.dataset.make.toLowerCase();
+            const customer = row.dataset.customer.toLowerCase();
+            
+            let visible = true;
+            
+            // Apply make filter
+            if (makeFilter && make !== makeFilter.toLowerCase()) {
+                visible = false;
+            }
+            
+            // Apply search filter
+            if (searchFilter && !registration.includes(searchFilter) && !customer.includes(searchFilter)) {
+                visible = false;
+            }
+            
+            row.style.display = visible ? '' : 'none';
+        });
+    }
+    
+    // Reset filters
+    function resetFilters() {
+        // Reset days filter
+        const daysFilter = document.getElementById('days-filter');
+        for (const option of daysFilter.options) {
+            option.selected = true;
+        }
+        
+        // Reset make filter
+        document.getElementById('make-filter').value = '';
+        
+        // Reset search filter
+        document.getElementById('search-filter').value = '';
+        
+        // Apply reset filters
+        applyFilters();
+    }
+    
+    // Create reminder for a vehicle
+    function createReminderForVehicle(registration, days) {
+        // Find vehicle in allVehicles
+        const vehicle = allVehicles.find(v => v.registration === registration && v.days_to_expiry === days);
+        
+        if (!vehicle) {
+            alert(`Vehicle ${registration} not found with ${days} days to expiry`);
+            return;
+        }
+        
+        // Create reminder
+        fetch('/create_reminders', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded',
+            },
+            body: new URLSearchParams({
+                'days_range': days
+            })
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                alert(`Created reminder for ${registration}`);
+            } else {
+                alert(`Error: ${data.message}`);
+            }
+        });
+    }
+    
+    // View vehicle details
+    function viewVehicleDetails(registration) {
+        // Find vehicle in allVehicles
+        const vehicle = allVehicles.find(v => v.registration === registration);
+        
+        if (!vehicle) {
+            alert(`Vehicle ${registration} not found`);
+            return;
+        }
+        
+        // Populate modal
+        document.getElementById('modal-registration').textContent = vehicle.registration;
+        document.getElementById('modal-make').textContent = vehicle.make || 'Unknown';
+        document.getElementById('modal-model').textContent = vehicle.model || 'Unknown';
+        document.getElementById('modal-mot-expiry').textContent = vehicle.mot_expiry;
+        document.getElementById('modal-days-to-expiry').textContent = vehicle.days_to_expiry;
+        
+        document.getElementById('modal-customer-name').textContent = vehicle.customer_name || 'Unknown';
+        document.getElementById('modal-customer-email').textContent = vehicle.customer_email || 'Unknown';
+        document.getElementById('modal-customer-phone').textContent = vehicle.customer_phone || 'Unknown';
+        document.getElementById('modal-customer-address').textContent = vehicle.customer_address || 'Unknown';
+        
+        // Set up create reminder button
+        const createReminderBtn = document.getElementById('modal-create-reminder');
+        createReminderBtn.onclick = function() {
+            createReminderForVehicle(vehicle.registration, vehicle.days_to_expiry);
+        };
+        
+        // Get reminder history
+        const reminderHistoryBody = document.getElementById('modal-reminder-history');
+        reminderHistoryBody.innerHTML = '<tr><td colspan="4" class="text-center">Loading reminder history...</td></tr>';
+        
+        fetch(`/api/reminders?registration=${vehicle.registration}`)
+            .then(response => response.json())
+            .then(data => {
+                if (data.success && data.reminders.length > 0) {
+                    reminderHistoryBody.innerHTML = '';
+                    
+                    for (const reminder of data.reminders) {
+                        const row = document.createElement('tr');
+                        
+                        // Determine date to show
+                        let dateToShow = reminder.reminder_date;
+                        if (reminder.reminder_status === 'sent' && reminder.reminder_sent_date) {
+                            dateToShow = reminder.reminder_sent_date;
+                        }
+                        
+                        row.innerHTML = `
+                            <td>${dateToShow}</td>
+                            <td>${reminder.reminder_type || 'Unknown'}</td>
+                            <td>${reminder.reminder_status}</td>
+                            <td>${reminder.notes || ''}</td>
+                        `;
+                        
+                        reminderHistoryBody.appendChild(row);
+                    }
+                } else {
+                    reminderHistoryBody.innerHTML = '<tr><td colspan="4" class="text-center">No reminder history found</td></tr>';
+                }
+            });
+        
+        // Show modal
+        const modal = new bootstrap.Modal(document.getElementById('vehicleDetailsModal'));
+        modal.show();
+    }
+    
+    // Document ready
+    document.addEventListener('DOMContentLoaded', function() {
+        // Load vehicles
+        loadVehicles();
+        
+        // Set up filter form
+        document.getElementById('filter-form').addEventListener('submit', applyFilters);
+        document.getElementById('reset-filters').addEventListener('click', resetFilters);
+        
+        // Set up refresh button
+        document.getElementById('refresh-vehicles-btn').addEventListener('click', function() {
+            window.location.reload();
+        });
+        
+        // Set up create reminders button
+        document.getElementById('create-reminders-btn').addEventListener('click', function() {
+            fetch('/create_reminders', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded',
+                }
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    alert(data.message);
+                } else {
+                    alert(`Error: ${data.message}`);
+                }
+            });
+        });
+        
+        // Set up create reminder buttons
+        document.querySelectorAll('.create-reminder-btn').forEach(button => {
+            button.addEventListener('click', function() {
+                const registration = this.dataset.registration;
+                const days = parseInt(this.dataset.days);
+                createReminderForVehicle(registration, days);
+            });
+        });
+        
+        // Set up view vehicle buttons
+        document.querySelectorAll('.view-vehicle-btn').forEach(button => {
+            button.addEventListener('click', function() {
+                const registration = this.dataset.registration;
+                viewVehicleDetails(registration);
+            });
+        });
+    });
+</script>
+{% endblock %}

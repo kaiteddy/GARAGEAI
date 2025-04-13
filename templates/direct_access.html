@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GA4 Direct Access</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body { padding-top: 20px; }
+        .card { margin-bottom: 20px; }
+        .table-responsive { max-height: 400px; overflow-y: auto; }
+        .nav-tabs { margin-bottom: 20px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="mb-4">GA4 Direct Access</h1>
+        
+        <ul class="nav nav-tabs" id="mainTabs" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="files-tab" data-bs-toggle="tab" data-bs-target="#files" type="button" role="tab">GA4 Files</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="tables-tab" data-bs-toggle="tab" data-bs-target="#tables" type="button" role="tab">Database Tables</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="search-tab" data-bs-toggle="tab" data-bs-target="#search" type="button" role="tab">Search</button>
+            </li>
+        </ul>
+        
+        <div class="tab-content" id="mainTabsContent">
+            <!-- Files Tab -->
+            <div class="tab-pane fade show active" id="files" role="tabpanel">
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="mb-0">GA4 Data Files</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table table-striped" id="filesTable">
+                                <thead>
+                                    <tr>
+                                        <th>File Name</th>
+                                        <th>Size</th>
+                                        <th>Last Modified</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="filesTableBody"></tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Tables Tab -->
+            <div class="tab-pane fade" id="tables" role="tabpanel">
+                <div class="card">
+                    <div class="card-header d-flex justify-content-between align-items-center">
+                        <h5 class="mb-0">Database Tables</h5>
+                        <select id="tableSelector" class="form-select" style="width: auto;"></select>
+                    </div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table table-striped" id="tableData">
+                                <thead id="tableDataHeader"></thead>
+                                <tbody id="tableDataBody"></tbody>
+                            </table>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center mt-3">
+                            <div>
+                                <span id="tableInfo"></span>
+                            </div>
+                            <div>
+                                <button id="prevPage" class="btn btn-sm btn-outline-primary">Previous</button>
+                                <button id="nextPage" class="btn btn-sm btn-outline-primary">Next</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Search Tab -->
+            <div class="tab-pane fade" id="search" role="tabpanel">
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="mb-0">Search Database</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="input-group mb-3">
+                            <input type="text" id="searchInput" class="form-control" placeholder="Enter search term...">
+                            <button id="searchButton" class="btn btn-primary">Search</button>
+                        </div>
+                        <div id="searchResults"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Global variables
+        let currentTable = '';
+        let currentPage = 0;
+        let pageSize = 100;
+        let totalRecords = 0;
+        
+        // Load files on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            loadFiles();
+            loadTables();
+            
+            // Set up event listeners
+            document.getElementById('tableSelector').addEventListener('change', function() {
+                currentTable = this.value;
+                currentPage = 0;
+                loadTableData();
+            });
+            
+            document.getElementById('prevPage').addEventListener('click', function() {
+                if (currentPage > 0) {
+                    currentPage--;
+                    loadTableData();
+                }
+            });
+            
+            document.getElementById('nextPage').addEventListener('click', function() {
+                if ((currentPage + 1) * pageSize < totalRecords) {
+                    currentPage++;
+                    loadTableData();
+                }
+            });
+            
+            document.getElementById('searchButton').addEventListener('click', function() {
+                const searchTerm = document.getElementById('searchInput').value.trim();
+                if (searchTerm) {
+                    searchDatabase(searchTerm);
+                }
+            });
+            
+            document.getElementById('searchInput').addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') {
+                    const searchTerm = this.value.trim();
+                    if (searchTerm) {
+                        searchDatabase(searchTerm);
+                    }
+                }
+            });
+        });
+        
+        // Load GA4 data files
+        function loadFiles() {
+            fetch('/api/files')
+                .then(response => response.json())
+                .then(files => {
+                    const tbody = document.getElementById('filesTableBody');
+                    tbody.innerHTML = '';
+                    
+                    files.forEach(file => {
+                        const tr = document.createElement('tr');
+                        
+                        // Format file size
+                        const fileSize = formatFileSize(file.file_size);
+                        
+                        // Format last modified date
+                        const lastModified = new Date(file.last_modified * 1000).toLocaleString();
+                        
+                        tr.innerHTML = `
+                            <td>${file.file_name}</td>
+                            <td>${fileSize}</td>
+                            <td>${lastModified}</td>
+                            <td>
+                                <a href="/api/download/${file.id}" class="btn btn-sm btn-outline-primary">Download</a>
+                                ${file.file_name.endsWith('.csv') ? 
+                                    `<button class="btn btn-sm btn-outline-success import-btn" data-id="${file.id}">Import</button>` : 
+                                    ''}
+                            </td>
+                        `;
+                        
+                        tbody.appendChild(tr);
+                    });
+                    
+                    // Add event listeners to import buttons
+                    document.querySelectorAll('.import-btn').forEach(btn => {
+                        btn.addEventListener('click', function() {
+                            const fileId = this.getAttribute('data-id');
+                            importFile(fileId);
+                        });
+                    });
+                })
+                .catch(error => console.error('Error loading files:', error));
+        }
+        
+        // Import a CSV file
+        function importFile(fileId) {
+            fetch(`/api/import/${fileId}`, { method: 'POST' })
+                .then(response => response.json())
+                .then(result => {
+                    if (result.status === 'success') {
+                        alert('File imported successfully');
+                        loadTables();
+                    } else {
+                        alert('Failed to import file: ' + (result.message || 'Unknown error'));
+                    }
+                })
+                .catch(error => console.error('Error importing file:', error));
+        }
+        
+        // Load database tables
+        function loadTables() {
+            fetch('/api/tables')
+                .then(response => response.json())
+                .then(tables => {
+                    const selector = document.getElementById('tableSelector');
+                    selector.innerHTML = '<option value="">Select a table</option>';
+                    
+                    tables.forEach(table => {
+                        const option = document.createElement('option');
+                        option.value = table;
+                        option.textContent = table;
+                        selector.appendChild(option);
+                    });
+                    
+                    // If there are tables, select the first one
+                    if (tables.length > 0) {
+                        currentTable = tables[0];
+                        selector.value = currentTable;
+                        loadTableData();
+                    }
+                })
+                .catch(error => console.error('Error loading tables:', error));
+        }
+        
+        // Load table data
+        function loadTableData() {
+            if (!currentTable) return;
+            
+            fetch(`/api/table/${currentTable}?limit=${pageSize}&offset=${currentPage * pageSize}`)
+                .then(response => response.json())
+                .then(result => {
+                    const headerRow = document.getElementById('tableDataHeader');
+                    const tbody = document.getElementById('tableDataBody');
+                    const tableInfo = document.getElementById('tableInfo');
+                    
+                    headerRow.innerHTML = '';
+                    tbody.innerHTML = '';
+                    
+                    // Update total records
+                    totalRecords = result.total;
+                    
+                    // Update table info
+                    const start = currentPage * pageSize + 1;
+                    const end = Math.min((currentPage + 1) * pageSize, totalRecords);
+                    tableInfo.textContent = `Showing ${start} to ${end} of ${totalRecords} records`;
+                    
+                    // Update prev/next buttons
+                    document.getElementById('prevPage').disabled = currentPage === 0;
+                    document.getElementById('nextPage').disabled = end >= totalRecords;
+                    
+                    if (result.data.length === 0) {
+                        headerRow.innerHTML = '<tr><th>No data available</th></tr>';
+                        return;
+                    }
+                    
+                    // Create header row
+                    const tr = document.createElement('tr');
+                    Object.keys(result.data[0]).forEach(key => {
+                        const th = document.createElement('th');
+                        th.textContent = key;
+                        tr.appendChild(th);
+                    });
+                    headerRow.appendChild(tr);
+                    
+                    // Create data rows
+                    result.data.forEach(record => {
+                        const tr = document.createElement('tr');
+                        Object.values(record).forEach(value => {
+                            const td = document.createElement('td');
+                            td.textContent = value;
+                            tr.appendChild(td);
+                        });
+                        tbody.appendChild(tr);
+                    });
+                })
+                .catch(error => console.error('Error loading table data:', error));
+        }
+        
+        // Search database
+        function searchDatabase(searchTerm) {
+            fetch(`/api/search?term=${encodeURIComponent(searchTerm)}`)
+                .then(response => response.json())
+                .then(results => {
+                    const resultsDiv = document.getElementById('searchResults');
+                    resultsDiv.innerHTML = '';
+                    
+                    if (Object.keys(results).length === 0) {
+                        resultsDiv.innerHTML = '<div class="alert alert-info">No results found</div>';
+                        return;
+                    }
+                    
+                    // Create results for each table
+                    Object.entries(results).forEach(([table, records]) => {
+                        const card = document.createElement('div');
+                        card.className = 'card mb-3';
+                        
+                        const cardHeader = document.createElement('div');
+                        cardHeader.className = 'card-header';
+                        cardHeader.innerHTML = `<h5 class="mb-0">${table} (${records.length} results)</h5>`;
+                        
+                        const cardBody = document.createElement('div');
+                        cardBody.className = 'card-body';
+                        
+                        const tableEl = document.createElement('table');
+                        tableEl.className = 'table table-striped';
+                        
+                        // Create header row
+                        const thead = document.createElement('thead');
+                        const headerRow = document.createElement('tr');
+                        Object.keys(records[0]).forEach(key => {
+                            const th = document.createElement('th');
+                            th.textContent = key;
+                            headerRow.appendChild(th);
+                        });
+                        thead.appendChild(headerRow);
+                        tableEl.appendChild(thead);
+                        
+                        // Create data rows
+                        const tbody = document.createElement('tbody');
+                        records.forEach(record => {
+                            const tr = document.createElement('tr');
+                            Object.values(record).forEach(value => {
+                                const td = document.createElement('td');
+                                td.textContent = value;
+                                tr.appendChild(td);
+                            });
+                            tbody.appendChild(tr);
+                        });
+                        tableEl.appendChild(tbody);
+                        
+                        cardBody.appendChild(tableEl);
+                        card.appendChild(cardHeader);
+                        card.appendChild(cardBody);
+                        resultsDiv.appendChild(card);
+                    });
+                })
+                .catch(error => console.error('Error searching database:', error));
+        }
+        
+        // Format file size
+        function formatFileSize(bytes) {
+            if (bytes === 0) return '0 Bytes';
+            
+            const k = 1024;
+            const sizes = ['Bytes', 'KB', 'MB', 'GB', 'TB'];
+            const i = Math.floor(Math.log(bytes) / Math.log(k));
+            
+            return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
+        }
+    </script>
+</body>
+</html>

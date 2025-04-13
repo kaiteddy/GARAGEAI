@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}MOT Reminder System{% endblock %}</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <style>
+        body {
+            padding-top: 56px;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        .sidebar {
+            position: fixed;
+            top: 56px;
+            bottom: 0;
+            left: 0;
+            z-index: 100;
+            padding: 48px 0 0;
+            box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1);
+            background-color: #f8f9fa;
+        }
+        .sidebar-sticky {
+            position: relative;
+            top: 0;
+            height: calc(100vh - 56px);
+            padding-top: .5rem;
+            overflow-x: hidden;
+            overflow-y: auto;
+        }
+        .main-content {
+            margin-left: 240px;
+            padding: 20px;
+            flex: 1;
+        }
+        @media (max-width: 767.98px) {
+            .sidebar {
+                position: static;
+                padding: 0;
+            }
+            .main-content {
+                margin-left: 0;
+            }
+        }
+        .nav-link {
+            font-weight: 500;
+            color: #333;
+        }
+        .nav-link.active {
+            color: #007bff;
+        }
+        .nav-link:hover {
+            color: #0056b3;
+        }
+        .alert-reminder-30 {
+            background-color: #d1ecf1;
+            border-color: #bee5eb;
+        }
+        .alert-reminder-14 {
+            background-color: #fff3cd;
+            border-color: #ffeeba;
+        }
+        .alert-reminder-7 {
+            background-color: #ffe5d0;
+            border-color: #ffd5b5;
+        }
+        .alert-reminder-3 {
+            background-color: #f8d7da;
+            border-color: #f5c6cb;
+        }
+        .alert-reminder-1 {
+            background-color: #dc3545;
+            border-color: #bd2130;
+            color: white;
+        }
+        .footer {
+            margin-top: auto;
+            background-color: #f5f5f5;
+            padding: 1rem 0;
+        }
+    </style>
+    {% block head %}{% endblock %}
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/">MOT Reminder System</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                    <li class="nav-item">
+                        <a class="nav-link {% if request.path == '/' %}active{% endif %}" href="/">Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {% if request.path == '/vehicles' %}active{% endif %}" href="/vehicles">Vehicles</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {% if request.path == '/reminders' %}active{% endif %}" href="/reminders">Reminders</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {% if request.path == '/statistics' %}active{% endif %}" href="/statistics">Statistics</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {% if request.path == '/settings' %}active{% endif %}" href="/settings">Settings</a>
+                    </li>
+                </ul>
+                <div class="d-flex">
+                    <span class="navbar-text me-3">
+                        <i class="bi bi-clock"></i> <span id="current-time"></span>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Sidebar -->
+            <nav id="sidebar" class="col-md-3 col-lg-2 d-md-block sidebar collapse">
+                <div class="position-sticky sidebar-sticky">
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link {% if request.path == '/' %}active{% endif %}" href="/">
+                                <i class="bi bi-speedometer2 me-2"></i> Dashboard
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link {% if request.path == '/vehicles' %}active{% endif %}" href="/vehicles">
+                                <i class="bi bi-car-front me-2"></i> Vehicles Due for MOT
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link {% if request.path == '/reminders' %}active{% endif %}" href="/reminders">
+                                <i class="bi bi-bell me-2"></i> Reminders
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link {% if request.path == '/statistics' %}active{% endif %}" href="/statistics">
+                                <i class="bi bi-graph-up me-2"></i> Statistics
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link {% if request.path == '/settings' %}active{% endif %}" href="/settings">
+                                <i class="bi bi-gear me-2"></i> Settings
+                            </a>
+                        </li>
+                    </ul>
+
+                    <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+                        <span>Quick Actions</span>
+                    </h6>
+                    <ul class="nav flex-column mb-2">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" id="refresh-vehicles">
+                                <i class="bi bi-arrow-repeat me-2"></i> Refresh Vehicle Data
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" id="create-reminders">
+                                <i class="bi bi-plus-circle me-2"></i> Create Reminders
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" id="send-all-reminders">
+                                <i class="bi bi-envelope me-2"></i> Send All Reminders
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <!-- Main content -->
+            <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 main-content">
+                {% block content %}{% endblock %}
+            </main>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer mt-auto py-3 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <span class="text-muted">MOT Reminder System &copy; 2025</span>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <span class="text-muted">Connected to GA4 Database</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        // Update current time
+        function updateTime() {
+            const now = new Date();
+            document.getElementById('current-time').textContent = now.toLocaleTimeString();
+        }
+        
+        setInterval(updateTime, 1000);
+        updateTime();
+
+        // Quick action buttons
+        document.getElementById('refresh-vehicles').addEventListener('click', function(e) {
+            e.preventDefault();
+            fetch('/api/vehicles')
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        alert(`Found ${data.count} vehicles due for MOT`);
+                        if (window.location.pathname === '/vehicles') {
+                            window.location.reload();
+                        }
+                    } else {
+                        alert(`Error: ${data.message}`);
+                    }
+                });
+        });
+
+        document.getElementById('create-reminders').addEventListener('click', function(e) {
+            e.preventDefault();
+            fetch('/create_reminders', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded',
+                }
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    alert(data.message);
+                    if (window.location.pathname === '/reminders') {
+                        window.location.reload();
+                    }
+                } else {
+                    alert(`Error: ${data.message}`);
+                }
+            });
+        });
+
+        document.getElementById('send-all-reminders').addEventListener('click', function(e) {
+            e.preventDefault();
+            if (confirm('Are you sure you want to send all pending reminders?')) {
+                alert('This feature will be implemented in the next version');
+            }
+        });
+    </script>
+    {% block scripts %}{% endblock %}
+</body>
+</html>

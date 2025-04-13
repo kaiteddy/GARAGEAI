@@ -1,0 +1,143 @@
+{% extends 'base.html' %}
+
+{% block title %}Edit Vehicle: {{ vehicle.registration }}{% endblock %}
+
+{% block content %}
+<div class="container-fluid">
+    <div class="row mb-4">
+        <div class="col">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="{{ url_for('index') }}">Dashboard</a></li>
+                    <li class="breadcrumb-item"><a href="{{ url_for('vehicles') }}">Vehicles</a></li>
+                    <li class="breadcrumb-item"><a href="{{ url_for('vehicle_detail', vehicle_id=vehicle.id) }}">{{ vehicle.registration }}</a></li>
+                    <li class="breadcrumb-item active">Edit</li>
+                </ol>
+            </nav>
+            <h1 class="display-5 mb-4">
+                <i class="bi bi-pencil-square me-2"></i> Edit Vehicle
+            </h1>
+            <p class="lead">Update vehicle information for {{ vehicle.registration }}</p>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <form method="POST" action="{{ url_for('edit_vehicle', vehicle_id=vehicle.id) }}">
+                        <div class="row mb-3">
+                            <div class="col-md-6">
+                                <label for="registration" class="form-label">Registration</label>
+                                <input type="text" class="form-control" id="registration" name="registration" value="{{ vehicle.registration }}" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="customer_id" class="form-label">Owner</label>
+                                <select class="form-select" id="customer_id" name="customer_id">
+                                    <option value="">-- No Owner --</option>
+                                    {% for customer in customers %}
+                                    <option value="{{ customer.id }}" {% if customer.id == vehicle.customer_id %}selected{% endif %}>
+                                        {{ customer.name }}
+                                    </option>
+                                    {% endfor %}
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="row mb-3">
+                            <div class="col-md-4">
+                                <label for="make" class="form-label">Make</label>
+                                <input type="text" class="form-control" id="make" name="make" value="{{ vehicle.make }}">
+                            </div>
+                            <div class="col-md-4">
+                                <label for="model" class="form-label">Model</label>
+                                <input type="text" class="form-control" id="model" name="model" value="{{ vehicle.model }}">
+                            </div>
+                            <div class="col-md-4">
+                                <label for="year" class="form-label">Year</label>
+                                <input type="text" class="form-control" id="year" name="year" value="{{ vehicle.year }}">
+                            </div>
+                        </div>
+                        
+                        <div class="row mb-3">
+                            <div class="col-md-4">
+                                <label for="color" class="form-label">Color</label>
+                                <input type="text" class="form-control" id="color" name="color" value="{{ vehicle.color }}">
+                            </div>
+                            <div class="col-md-4">
+                                <label for="vin" class="form-label">VIN</label>
+                                <input type="text" class="form-control" id="vin" name="vin" value="{{ vehicle.vin }}">
+                            </div>
+                            <div class="col-md-4">
+                                <label for="engine_size" class="form-label">Engine Size</label>
+                                <input type="text" class="form-control" id="engine_size" name="engine_size" value="{{ vehicle.engine_size }}">
+                            </div>
+                        </div>
+                        
+                        <div class="row mb-3">
+                            <div class="col-md-4">
+                                <label for="fuel_type" class="form-label">Fuel Type</label>
+                                <select class="form-select" id="fuel_type" name="fuel_type">
+                                    <option value="">-- Select Fuel Type --</option>
+                                    <option value="Petrol" {% if vehicle.fuel_type == 'Petrol' %}selected{% endif %}>Petrol</option>
+                                    <option value="Diesel" {% if vehicle.fuel_type == 'Diesel' %}selected{% endif %}>Diesel</option>
+                                    <option value="Hybrid" {% if vehicle.fuel_type == 'Hybrid' %}selected{% endif %}>Hybrid</option>
+                                    <option value="Electric" {% if vehicle.fuel_type == 'Electric' %}selected{% endif %}>Electric</option>
+                                    <option value="LPG" {% if vehicle.fuel_type == 'LPG' %}selected{% endif %}>LPG</option>
+                                    <option value="Other" {% if vehicle.fuel_type and vehicle.fuel_type not in ['Petrol', 'Diesel', 'Hybrid', 'Electric', 'LPG'] %}selected{% endif %}>Other</option>
+                                </select>
+                            </div>
+                            <div class="col-md-4">
+                                <label for="transmission" class="form-label">Transmission</label>
+                                <select class="form-select" id="transmission" name="transmission">
+                                    <option value="">-- Select Transmission --</option>
+                                    <option value="Manual" {% if vehicle.transmission == 'Manual' %}selected{% endif %}>Manual</option>
+                                    <option value="Automatic" {% if vehicle.transmission == 'Automatic' %}selected{% endif %}>Automatic</option>
+                                    <option value="Semi-Automatic" {% if vehicle.transmission == 'Semi-Automatic' %}selected{% endif %}>Semi-Automatic</option>
+                                    <option value="CVT" {% if vehicle.transmission == 'CVT' %}selected{% endif %}>CVT</option>
+                                    <option value="Other" {% if vehicle.transmission and vehicle.transmission not in ['Manual', 'Automatic', 'Semi-Automatic', 'CVT'] %}selected{% endif %}>Other</option>
+                                </select>
+                            </div>
+                            <div class="col-md-4">
+                                <label for="mot_expiry" class="form-label">MOT Expiry Date</label>
+                                <input type="date" class="form-control" id="mot_expiry" name="mot_expiry" value="{{ vehicle.mot_expiry }}">
+                            </div>
+                        </div>
+                        
+                        <div class="row mb-4">
+                            <div class="col-md-4">
+                                <label for="last_service" class="form-label">Last Service Date</label>
+                                <input type="date" class="form-control" id="last_service" name="last_service" value="{{ vehicle.last_service }}">
+                            </div>
+                        </div>
+                        
+                        <div class="d-flex justify-content-between">
+                            <a href="{{ url_for('vehicle_detail', vehicle_id=vehicle.id) }}" class="btn btn-outline-secondary">
+                                <i class="bi bi-x-circle"></i> Cancel
+                            </a>
+                            <button type="submit" class="btn btn-primary">
+                                <i class="bi bi-save"></i> Save Changes
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Add any JavaScript for form validation or dynamic behavior here
+        const registrationInput = document.getElementById('registration');
+        
+        if (registrationInput) {
+            registrationInput.addEventListener('input', function() {
+                this.value = this.value.toUpperCase();
+            });
+        }
+    });
+</script>
+{% endblock %}

@@ -1,0 +1,84 @@
+<!-- Modal template for adding an MOT record -->
+<div class="modal fade" id="addMOTModal" tabindex="-1" aria-labelledby="addMOTModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header bg-success text-white">
+        <h5 class="modal-title" id="addMOTModalLabel">
+          <i class="bi bi-clipboard-check me-2"></i> Add MOT Test Record
+        </h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <form action="{{ url_for('add_mot', vehicle_id=vehicle.id) }}" method="POST">
+        <div class="modal-body">
+          <div class="row mb-3">
+            <div class="col-md-6">
+              <label for="test_date" class="form-label">Test Date</label>
+              <input type="date" class="form-control" id="test_date" name="test_date" value="{{ today_date }}" required>
+            </div>
+            <div class="col-md-6">
+              <label for="result" class="form-label">Result</label>
+              <select class="form-select" id="result" name="result" required>
+                <option value="">-- Select Result --</option>
+                <option value="Pass">Pass</option>
+                <option value="Fail">Fail</option>
+                <option value="Advisory">Advisory Only</option>
+              </select>
+            </div>
+          </div>
+          
+          <div class="row mb-3">
+            <div class="col-md-6">
+              <label for="expiry_date" class="form-label">Expiry Date</label>
+              <input type="date" class="form-control" id="expiry_date" name="expiry_date">
+              <small class="text-muted">Required for Pass results</small>
+            </div>
+            <div class="col-md-6">
+              <label for="mileage" class="form-label">Mileage</label>
+              <div class="input-group">
+                <input type="number" class="form-control" id="mileage" name="mileage" placeholder="Current mileage">
+                <span class="input-group-text">miles</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="mb-3">
+            <label for="advisory_notes" class="form-label">Advisory Notes / Failure Reasons</label>
+            <textarea class="form-control" id="advisory_notes" name="advisory_notes" rows="4" placeholder="Enter any advisory notes or reasons for failure..."></textarea>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
+            <i class="bi bi-x-circle"></i> Cancel
+          </button>
+          <button type="submit" class="btn btn-success">
+            <i class="bi bi-save"></i> Save Record
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Set default expiry date to 1 year from test date when result is "Pass"
+    const testDateInput = document.getElementById('test_date');
+    const resultSelect = document.getElementById('result');
+    const expiryDateInput = document.getElementById('expiry_date');
+    
+    function updateExpiryDate() {
+      if (resultSelect.value === 'Pass' && testDateInput.value) {
+        const testDate = new Date(testDateInput.value);
+        const expiryDate = new Date(testDate);
+        expiryDate.setFullYear(expiryDate.getFullYear() + 1);
+        
+        // Format date as YYYY-MM-DD for input
+        const expiryDateStr = expiryDate.toISOString().split('T')[0];
+        expiryDateInput.value = expiryDateStr;
+      }
+    }
+    
+    testDateInput.addEventListener('change', updateExpiryDate);
+    resultSelect.addEventListener('change', updateExpiryDate);
+  });
+</script>

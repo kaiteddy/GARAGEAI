@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Garage Management System - Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <style>
+        body {
+            padding-top: 56px;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        .footer {
+            margin-top: auto;
+            background-color: #f5f5f5;
+            padding: 1rem 0;
+        }
+        .card {
+            height: 100%;
+            transition: transform 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        .stats-card {
+            text-align: center;
+            padding: 1.5rem;
+        }
+        .stats-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #0d6efd;
+        }
+        .stats-value {
+            font-size: 2rem;
+            font-weight: bold;
+        }
+        .stats-label {
+            font-size: 1rem;
+            color: #6c757d;
+        }
+        .alert-warning {
+            border-left: 4px solid #ffc107;
+        }
+        .alert-danger {
+            border-left: 4px solid #dc3545;
+        }
+        .alert-info {
+            border-left: 4px solid #0dcaf0;
+        }
+        .table-responsive {
+            max-height: 300px;
+            overflow-y: auto;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/">Garage Management System</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/"><i class="bi bi-speedometer2"></i> Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/customers"><i class="bi bi-people"></i> Customers</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/vehicles"><i class="bi bi-car-front"></i> Vehicles</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/reminders"><i class="bi bi-bell"></i> MOT Reminders</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/invoices"><i class="bi bi-receipt"></i> Invoices</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/appointments"><i class="bi bi-calendar-check"></i> Appointments</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/reports"><i class="bi bi-bar-chart"></i> Reports</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/documents"><i class="bi bi-file-earmark-text"></i> Documents</a>
+                    </li>
+                </ul>
+                <div class="d-flex">
+                    <span class="navbar-text me-3">
+                        <i class="bi bi-clock"></i> <span id="current-time"></span>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container mt-4 mb-4">
+        <div class="row mb-4">
+            <div class="col-md-12">
+                <div class="alert alert-info d-flex justify-content-between align-items-center">
+                    <div>
+                        <h5><i class="bi bi-info-circle"></i> System Status</h5>
+                        <p class="mb-0">Connected to GA4 installation at: <strong>{{ ga4_path }}</strong></p>
+                        <p class="mb-0">Last synchronized: <strong id="last-sync-time">{{ last_sync_time }}</strong></p>
+                    </div>
+                    <div>
+                        <button id="sync-button" class="btn btn-primary">
+                            <i class="bi bi-arrow-repeat"></i> Sync Now
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Stats Cards -->
+        <div class="row mb-4">
+            <div class="col-md-2">
+                <div class="card stats-card">
+                    <div class="stats-icon">
+                        <i class="bi bi-car-front"></i>
+                    </div>
+                    <div class="stats-value">{{ vehicle_count }}</div>
+                    <div class="stats-label">Vehicles</div>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="card stats-card">
+                    <div class="stats-icon">
+                        <i class="bi bi-people"></i>
+                    </div>
+                    <div class="stats-value">{{ customer_count }}</div>
+                    <div class="stats-label">Customers</div>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="card stats-card">
+                    <div class="stats-icon">
+                        <i class="bi bi-bell"></i>
+                    </div>
+                    <div class="stats-value">{{ reminder_count }}</div>
+                    <div class="stats-label">Reminders</div>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="card stats-card">
+                    <div class="stats-icon">
+                        <i class="bi bi-receipt"></i>
+                    </div>
+                    <div class="stats-value">{{ invoice_count }}</div>
+                    <div class="stats-label">Invoices</div>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="card stats-card">
+                    <div class="stats-icon">
+                        <i class="bi bi-calendar-check"></i>
+                    </div>
+                    <div class="stats-value">{{ appointment_count }}</div>
+                    <div class="stats-label">Appointments</div>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="card stats-card">
+                    <div class="stats-icon">
+                        <i class="bi bi-wrench"></i>
+                    </div>
+                    <div class="stats-value" id="mot-due-count">{{ vehicles_due|length }}</div>
+                    <div class="stats-label">MOTs Due</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Dashboard Content -->
+        <div class="row mb-4">
+            <!-- MOTs Due -->
+            <div class="col-md-6 mb-4">
+                <div class="card h-100">
+                    <div class="card-header d-flex justify-content-between align-items-center">
+                        <h5 class="card-title mb-0"><i class="bi bi-car-front"></i> MOTs Due Soon</h5>
+                        <a href="/reminders" class="btn btn-sm btn-primary">View All</a>
+                    </div>
+                    <div class="card-body">
+                        {% if vehicles_due %}
+                            <div class="table-responsive">
+                                <table class="table table-striped table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th>Registration</th>
+                                            <th>Make/Model</th>
+                                            <th>Customer</th>
+                                            <th>MOT Expiry</th>
+                                            <th>Actions</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        {% for vehicle in vehicles_due %}
+                                            <tr>
+                                                <td>{{ vehicle.registration }}</td>
+                                                <td>{{ vehicle.make }} {{ vehicle.model }}</td>
+                                                <td>{{ vehicle.customer_name or 'Unknown' }}</td>
+                                                <td>{{ vehicle.mot_expiry }}</td>
+                                                <td>
+                                                    <a href="/reminders/create?vehicle_id={{ vehicle.id }}" class="btn btn-sm btn-primary">
+                                                        <i class="bi bi-bell"></i> Remind
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                        {% endfor %}
+                                    </tbody>
+                                </table>
+                            </div>
+                        {% else %}
+                            <p class="text-center">No MOTs due soon</p>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recent Reminders -->
+            <div class="col-md-6 mb-4">
+                <div class="card h-100">
+                    <div class="card-header d-flex justify-content-between align-items-center">
+                        <h5 class="card-title mb-0"><i class="bi bi-bell"></i> Recent Reminders</h5>
+                        <a href="/reminders" class="btn btn-sm btn-primary">View All</a>
+                    </div>
+                    <div class="card-body">
+                        {% if recent_reminders %}
+                            <div class="table-responsive">
+                                <table class="table table-striped table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th>Date</th>
+                                            <th>Registration</th>
+                                            <th>Type</th>
+                                            <th>Status</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        {% for reminder in recent_reminders %}
+                                            <tr>
+                                                <td>{{ reminder.reminder_date }}</td>
+                                                <td>{{ reminder.registration }}</td>
+                                                <td>{{ reminder.reminder_type }}</td>
+                                                <td>
+                                                    {% if reminder.reminder_status == 'sent' %}
+                                                        <span class="badge bg-success">Sent</span>
+                                                    {% elif reminder.reminder_status == 'pending' %}
+                                                        <span class="badge bg-warning">Pending</span>
+                                                    {% elif reminder.reminder_status == 'responded' %}
+                                                        <span class="badge bg-info">Responded</span>
+                                                    {% else %}
+                                                        <span class="badge bg-secondary">{{ reminder.reminder_status }}</span>
+                                                    {% endif %}
+                                                </td>
+                                            </tr>
+                                        {% endfor %}
+                                    </tbody>
+                                </table>
+                            </div>
+                        {% else %}
+                            <p class="text-center">No recent reminders</p>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mb-4">
+            <!-- Upcoming Appointments -->
+            <div class="col-md-6 mb-4">
+                <div class="card h-100">
+                    <div class="card-header d-flex justify-content-between align-items-center">
+                        <h5 class="card-title mb-0"><i class="bi bi-calendar-check"></i> Upcoming Appointments</h5>
+                        <a href="/appointments" class="btn btn-sm btn-primary">View All</a>
+                    </div>
+                    <div class="card-body">
+                        {% if upcoming_appointments %}
+                            <div class="table-responsive">
+                                <table class="table table-striped table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th>Date</th>
+                                            <th>Time</th>
+                                            <th>Customer</th>
+                                            <th>Vehicle</th>
+                                            <th>Service</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        {% for appointment in upcoming_appointments %}
+                                            <tr>
+                                                <td>{{ appointment.appointment_date }}</td>
+                                                <td>{{ appointment.appointment_time }}</td>
+                                                <td>{{ appointment.customer_name }}</td>
+                                                <td>{{ appointment.registration }}</td>
+                                                <td>{{ appointment.service_type }}</td>
+                                            </tr>
+                                        {% endfor %}
+                                    </tbody>
+                                </table>
+                            </div>
+                        {% else %}
+                            <p class="text-center">No upcoming appointments</p>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quick Actions -->
+            <div class="col-md-6 mb-4">
+                <div class="card h-100">
+                    <div class="card-header">
+                        <h5 class="card-title mb-0"><i class="bi bi-lightning"></i> Quick Actions</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <a href="/customers/add" class="btn btn-primary w-100">
+                                    <i class="bi bi-person-plus"></i> Add Customer
+                                </a>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <a href="/vehicles/add" class="btn btn-primary w-100">
+                                    <i class="bi bi-car-front"></i> Add Vehicle
+                                </a>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <a href="/reminders/create" class="btn btn-primary w-100">
+                                    <i class="bi bi-bell"></i> Create Reminder
+                                </a>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <a href="/invoices/create" class="btn btn-primary w-100">
+                                    <i class="bi bi-receipt"></i> Create Invoice
+                                </a>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <a href="/appointments/create" class="btn btn-primary w-100">
+                                    <i class="bi bi-calendar-plus"></i> Book Appointment
+                                </a>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <a href="/reports" class="btn btn-primary w-100">
+                                    <i class="bi bi-bar-chart"></i> View Reports
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer mt-auto py-3 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <span class="text-muted">Garage Management System &copy; 2025</span>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <span class="text-muted">Connected to GA4 Database</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Update current time
+        function updateTime() {
+            const now = new Date();
+            document.getElementById('current-time').textContent = now.toLocaleTimeString();
+        }
+        
+        setInterval(updateTime, 1000);
+        updateTime();
+        
+        // Sync button functionality
+        document.getElementById('sync-button').addEventListener('click', function() {
+            // Disable button and show loading state
+            const syncButton = this;
+            const originalText = syncButton.innerHTML;
+            syncButton.disabled = true;
+            syncButton.innerHTML = '<i class="bi bi-arrow-repeat"></i> Syncing...';
+            
+            // Call sync API
+            fetch('/api/sync', {
+                method: 'POST'
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    // Update last sync time
+                    document.getElementById('last-sync-time').textContent = data.sync_time;
+                    
+                    // Show success message
+                    const alertDiv = document.createElement('div');
+                    alertDiv.className = 'alert alert-success alert-dismissible fade show';
+                    alertDiv.innerHTML = `
+                        <strong>Success!</strong> ${data.message}
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    `;
+                    document.querySelector('.container').insertBefore(alertDiv, document.querySelector('.container').firstChild);
+                    
+                    // Auto-dismiss after 5 seconds
+                    setTimeout(() => {
+                        const bsAlert = new bootstrap.Alert(alertDiv);
+                        bsAlert.close();
+                    }, 5000);
+                } else {
+                    // Show error message
+                    const alertDiv = document.createElement('div');
+                    alertDiv.className = 'alert alert-danger alert-dismissible fade show';
+                    alertDiv.innerHTML = `
+                        <strong>Error!</strong> ${data.message}
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    `;
+                    document.querySelector('.container').insertBefore(alertDiv, document.querySelector('.container').firstChild);
+                }
+            })
+            .catch(error => {
+                console.error('Error syncing data:', error);
+                
+                // Show error message
+                const alertDiv = document.createElement('div');
+                alertDiv.className = 'alert alert-danger alert-dismissible fade show';
+                alertDiv.innerHTML = `
+                    <strong>Error!</strong> Failed to sync with GA4 data. Please try again.
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                `;
+                document.querySelector('.container').insertBefore(alertDiv, document.querySelector('.container').firstChild);
+            })
+            .finally(() => {
+                // Re-enable button
+                syncButton.disabled = false;
+                syncButton.innerHTML = originalText;
+            });
+        });
+    </script>
+</body>
+</html>

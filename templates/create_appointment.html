@@ -1,0 +1,111 @@
+{% extends 'base.html' %}
+
+{% block title %}Create Appointment{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+    <div class="card shadow">
+        <div class="card-header bg-primary text-white">
+            <h4 class="mb-0">
+                {% if selected_vehicle %}
+                Schedule Appointment for {{ selected_vehicle.registration }} ({{ selected_vehicle.make }} {{ selected_vehicle.model }})
+                {% else %}
+                Schedule New Appointment
+                {% endif %}
+            </h4>
+        </div>
+        <div class="card-body">
+            <form action="{{ url_for('create_appointment') }}" method="post">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group mb-3">
+                            <label for="vehicle_id" class="form-label">Vehicle</label>
+                            <select class="form-select" id="vehicle_id" name="vehicle_id" required>
+                                <option value="">-- Select Vehicle --</option>
+                                {% for vehicle in vehicles %}
+                                <option value="{{ vehicle.id }}" {% if selected_vehicle and selected_vehicle.id == vehicle.id %}selected{% endif %}>
+                                    {{ vehicle.registration }} - {{ vehicle.make }} {{ vehicle.model }}
+                                    {% if vehicle.customer_name %}({{ vehicle.customer_name }}){% endif %}
+                                </option>
+                                {% endfor %}
+                            </select>
+                        </div>
+                        
+                        <div class="form-group mb-3">
+                            <label for="appointment_date" class="form-label">Appointment Date</label>
+                            <input type="date" class="form-control" id="appointment_date" name="appointment_date" 
+                                   value="{{ tomorrow }}" min="{{ today }}" required>
+                        </div>
+                        
+                        <div class="form-group mb-3">
+                            <label for="appointment_time" class="form-label">Appointment Time</label>
+                            <input type="time" class="form-control" id="appointment_time" name="appointment_time" 
+                                   value="09:00" required>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-6">
+                        <div class="form-group mb-3">
+                            <label for="appointment_type" class="form-label">Appointment Type</label>
+                            <select class="form-select" id="appointment_type" name="appointment_type" required>
+                                <option value="">-- Select Type --</option>
+                                <option value="MOT Test">MOT Test</option>
+                                <option value="Service">Service</option>
+                                <option value="Repair">Repair</option>
+                                <option value="Diagnostic">Diagnostic</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group mb-3">
+                            <label for="duration" class="form-label">Duration (minutes)</label>
+                            <input type="number" class="form-control" id="duration" name="duration" 
+                                   value="60" min="15" step="15" required>
+                        </div>
+                        
+                        <div class="form-group mb-3">
+                            <label for="notes" class="form-label">Notes</label>
+                            <textarea class="form-control" id="notes" name="notes" rows="3"></textarea>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="d-flex justify-content-between mt-3">
+                    <a href="{{ url_for('appointments') }}" class="btn btn-secondary">Cancel</a>
+                    <button type="submit" class="btn btn-primary">Schedule Appointment</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Auto-adjust duration based on appointment type
+        const appointmentTypeSelect = document.getElementById('appointment_type');
+        const durationInput = document.getElementById('duration');
+        
+        appointmentTypeSelect.addEventListener('change', function() {
+            const type = this.value;
+            switch(type) {
+                case 'MOT Test':
+                    durationInput.value = '45';
+                    break;
+                case 'Service':
+                    durationInput.value = '120';
+                    break;
+                case 'Repair':
+                    durationInput.value = '90';
+                    break;
+                case 'Diagnostic':
+                    durationInput.value = '60';
+                    break;
+                default:
+                    durationInput.value = '60';
+            }
+        });
+    });
+</script>
+{% endblock %}

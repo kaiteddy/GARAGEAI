@@ -1,0 +1,413 @@
+{% extends 'base.html' %}
+
+{% block title %}Dashboard - MOT Reminder System{% endblock %}
+
+{% block content %}
+<div class="container-fluid">
+    <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+        <h1 class="h2">Dashboard</h1>
+        <div class="btn-toolbar mb-2 mb-md-0">
+            <div class="btn-group me-2">
+                <button type="button" class="btn btn-sm btn-outline-secondary" id="refresh-dashboard">
+                    <i class="bi bi-arrow-repeat"></i> Refresh
+                </button>
+                <button type="button" class="btn btn-sm btn-outline-primary" id="process-reminders">
+                    <i class="bi bi-gear"></i> Process Reminders
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Summary Cards -->
+    <div class="row mb-4">
+        <div class="col-md-3 mb-4">
+            <div class="card border-left-primary h-100 py-2">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                                Vehicles Due for MOT</div>
+                            <div class="h5 mb-0 font-weight-bold text-gray-800" id="vehicles-count">Loading...</div>
+                        </div>
+                        <div class="col-auto">
+                            <i class="bi bi-car-front fa-2x text-gray-300"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <a href="/vehicles" class="text-decoration-none">View Details &rarr;</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3 mb-4">
+            <div class="card border-left-success h-100 py-2">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                            <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
+                                Pending Reminders</div>
+                            <div class="h5 mb-0 font-weight-bold text-gray-800" id="pending-count">Loading...</div>
+                        </div>
+                        <div class="col-auto">
+                            <i class="bi bi-bell fa-2x text-gray-300"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <a href="/reminders" class="text-decoration-none">View Details &rarr;</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3 mb-4">
+            <div class="card border-left-info h-100 py-2">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                            <div class="text-xs font-weight-bold text-info text-uppercase mb-1">
+                                Sent Reminders</div>
+                            <div class="h5 mb-0 font-weight-bold text-gray-800" id="sent-count">Loading...</div>
+                        </div>
+                        <div class="col-auto">
+                            <i class="bi bi-envelope fa-2x text-gray-300"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <a href="/reminders" class="text-decoration-none">View Details &rarr;</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3 mb-4">
+            <div class="card border-left-warning h-100 py-2">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                            <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
+                                Response Rate</div>
+                            <div class="h5 mb-0 font-weight-bold text-gray-800" id="response-rate">Loading...</div>
+                        </div>
+                        <div class="col-auto">
+                            <i class="bi bi-graph-up fa-2x text-gray-300"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <a href="/statistics" class="text-decoration-none">View Details &rarr;</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <!-- MOT Expiry Chart -->
+        <div class="col-lg-8 mb-4">
+            <div class="card shadow mb-4">
+                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                    <h6 class="m-0 font-weight-bold text-primary">MOT Expiry Timeline</h6>
+                </div>
+                <div class="card-body">
+                    <div class="chart-area">
+                        <canvas id="motExpiryChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Upcoming MOTs -->
+        <div class="col-lg-4 mb-4">
+            <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                    <h6 class="m-0 font-weight-bold text-primary">Upcoming MOTs</h6>
+                </div>
+                <div class="card-body">
+                    <div id="upcoming-mots">
+                        <p class="text-center">Loading...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Recent Activity -->
+    <div class="row">
+        <div class="col-12">
+            <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                    <h6 class="m-0 font-weight-bold text-primary">Recent Activity</h6>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-bordered" id="activityTable" width="100%" cellspacing="0">
+                            <thead>
+                                <tr>
+                                    <th>Date</th>
+                                    <th>Registration</th>
+                                    <th>Customer</th>
+                                    <th>Action</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody id="activity-table-body">
+                                <tr>
+                                    <td colspan="5" class="text-center">Loading activity data...</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+    // Load dashboard data
+    function loadDashboardData() {
+        // Get vehicles count
+        fetch('/api/vehicles')
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    document.getElementById('vehicles-count').textContent = data.count;
+                    
+                    // Update upcoming MOTs
+                    const upcomingMotsDiv = document.getElementById('upcoming-mots');
+                    upcomingMotsDiv.innerHTML = '';
+                    
+                    if (data.vehicles.length === 0) {
+                        upcomingMotsDiv.innerHTML = '<p class="text-center">No upcoming MOTs</p>';
+                    } else {
+                        // Sort by days to expiry (ascending)
+                        data.vehicles.sort((a, b) => a.days_to_expiry - b.days_to_expiry);
+                        
+                        // Take first 5
+                        const upcomingVehicles = data.vehicles.slice(0, 5);
+                        
+                        for (const vehicle of upcomingVehicles) {
+                            let alertClass = '';
+                            if (vehicle.days_to_expiry <= 1) {
+                                alertClass = 'alert-reminder-1';
+                            } else if (vehicle.days_to_expiry <= 3) {
+                                alertClass = 'alert-reminder-3';
+                            } else if (vehicle.days_to_expiry <= 7) {
+                                alertClass = 'alert-reminder-7';
+                            } else if (vehicle.days_to_expiry <= 14) {
+                                alertClass = 'alert-reminder-14';
+                            } else {
+                                alertClass = 'alert-reminder-30';
+                            }
+                            
+                            const vehicleDiv = document.createElement('div');
+                            vehicleDiv.className = `alert ${alertClass} mb-2`;
+                            vehicleDiv.innerHTML = `
+                                <h5 class="alert-heading">${vehicle.registration}</h5>
+                                <p class="mb-0">
+                                    ${vehicle.make || ''} ${vehicle.model || ''}<br>
+                                    <strong>MOT Due:</strong> ${vehicle.mot_expiry}<br>
+                                    <strong>Days Left:</strong> ${vehicle.days_to_expiry}
+                                </p>
+                            `;
+                            upcomingMotsDiv.appendChild(vehicleDiv);
+                        }
+                    }
+                    
+                    // Update MOT expiry chart
+                    updateMotExpiryChart(data.vehicles);
+                } else {
+                    document.getElementById('vehicles-count').textContent = 'Error';
+                    console.error('Error loading vehicles:', data.message);
+                }
+            });
+        
+        // Get reminders statistics
+        fetch('/api/statistics')
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    const stats = data.statistics;
+                    document.getElementById('pending-count').textContent = stats.created || 0;
+                    document.getElementById('sent-count').textContent = stats.sent || 0;
+                    
+                    // Calculate response rate
+                    const sent = stats.sent || 0;
+                    const responded = stats.responded || 0;
+                    const responseRate = sent > 0 ? Math.round((responded / sent) * 100) : 0;
+                    document.getElementById('response-rate').textContent = `${responseRate}%`;
+                } else {
+                    console.error('Error loading statistics:', data.message);
+                }
+            });
+        
+        // Get recent activity
+        fetch('/api/reminders')
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    const reminders = data.reminders;
+                    const activityTableBody = document.getElementById('activity-table-body');
+                    
+                    if (reminders.length === 0) {
+                        activityTableBody.innerHTML = '<tr><td colspan="5" class="text-center">No recent activity</td></tr>';
+                    } else {
+                        // Sort by ID (descending) to get most recent first
+                        reminders.sort((a, b) => b.id - a.id);
+                        
+                        // Take first 10
+                        const recentReminders = reminders.slice(0, 10);
+                        
+                        activityTableBody.innerHTML = '';
+                        for (const reminder of recentReminders) {
+                            const row = document.createElement('tr');
+                            
+                            // Determine date to show
+                            let dateToShow = reminder.reminder_date;
+                            let actionText = 'Created';
+                            
+                            if (reminder.reminder_status === 'sent' && reminder.reminder_sent_date) {
+                                dateToShow = reminder.reminder_sent_date;
+                                actionText = 'Sent';
+                            } else if (reminder.reminder_status === 'responded') {
+                                actionText = 'Responded';
+                            } else if (reminder.reminder_status === 'completed') {
+                                actionText = 'Completed';
+                            } else if (reminder.reminder_status === 'failed') {
+                                actionText = 'Failed';
+                            }
+                            
+                            row.innerHTML = `
+                                <td>${dateToShow}</td>
+                                <td>${reminder.registration}</td>
+                                <td>${reminder.customer_name || 'Unknown'}</td>
+                                <td>${actionText}</td>
+                                <td>${reminder.reminder_status}</td>
+                            `;
+                            
+                            activityTableBody.appendChild(row);
+                        }
+                    }
+                } else {
+                    console.error('Error loading reminders:', data.message);
+                }
+            });
+    }
+    
+    // Update MOT expiry chart
+    function updateMotExpiryChart(vehicles) {
+        // Group vehicles by days to expiry
+        const daysCounts = {};
+        for (const vehicle of vehicles) {
+            const days = vehicle.days_to_expiry;
+            if (!daysCounts[days]) {
+                daysCounts[days] = 0;
+            }
+            daysCounts[days]++;
+        }
+        
+        // Sort days
+        const sortedDays = Object.keys(daysCounts).sort((a, b) => a - b);
+        
+        // Prepare chart data
+        const labels = sortedDays;
+        const data = sortedDays.map(day => daysCounts[day]);
+        
+        // Get colors based on days
+        const backgroundColors = sortedDays.map(day => {
+            if (day <= 1) return 'rgba(220, 53, 69, 0.8)';
+            if (day <= 3) return 'rgba(248, 215, 218, 0.8)';
+            if (day <= 7) return 'rgba(255, 229, 208, 0.8)';
+            if (day <= 14) return 'rgba(255, 243, 205, 0.8)';
+            return 'rgba(209, 236, 241, 0.8)';
+        });
+        
+        const borderColors = sortedDays.map(day => {
+            if (day <= 1) return 'rgb(189, 33, 48)';
+            if (day <= 3) return 'rgb(245, 198, 203)';
+            if (day <= 7) return 'rgb(255, 213, 181)';
+            if (day <= 14) return 'rgb(255, 238, 186)';
+            return 'rgb(190, 229, 235)';
+        });
+        
+        // Create chart
+        const ctx = document.getElementById('motExpiryChart').getContext('2d');
+        if (window.motChart) {
+            window.motChart.destroy();
+        }
+        
+        window.motChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: labels,
+                datasets: [{
+                    label: 'Vehicles',
+                    data: data,
+                    backgroundColor: backgroundColors,
+                    borderColor: borderColors,
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        ticks: {
+                            precision: 0
+                        }
+                    },
+                    x: {
+                        title: {
+                            display: true,
+                            text: 'Days to MOT Expiry'
+                        }
+                    }
+                },
+                plugins: {
+                    title: {
+                        display: true,
+                        text: 'Vehicles by Days to MOT Expiry'
+                    },
+                    tooltip: {
+                        callbacks: {
+                            title: function(tooltipItems) {
+                                const days = tooltipItems[0].label;
+                                return `${days} days to MOT expiry`;
+                            }
+                        }
+                    }
+                }
+            }
+        });
+    }
+    
+    // Load dashboard data on page load
+    document.addEventListener('DOMContentLoaded', loadDashboardData);
+    
+    // Refresh dashboard data when refresh button is clicked
+    document.getElementById('refresh-dashboard').addEventListener('click', loadDashboardData);
+    
+    // Process reminders when process button is clicked
+    document.getElementById('process-reminders').addEventListener('click', function() {
+        fetch('/create_reminders', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded',
+            }
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                alert(data.message);
+                loadDashboardData();
+            } else {
+                alert(`Error: ${data.message}`);
+            }
+        });
+    });
+</script>
+{% endblock %}

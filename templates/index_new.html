@@ -1,0 +1,313 @@
+{% extends 'base.html' %}
+
+{% block title %}Dashboard - Garage Management System{% endblock %}
+
+{% block content %}
+    <!-- Dashboard Header -->
+    <div class="row mb-4">
+        <div class="col">
+            <h1 class="display-5 mb-4">
+                <i class="bi bi-speedometer2 me-2"></i> Dashboard
+            </h1>
+            <p class="lead">
+                Welcome to the Garage Management System. Here's an overview of your garage operations.
+            </p>
+        </div>
+        <div class="col-auto">
+            <button id="syncButton" class="btn btn-primary">
+                <i class="bi bi-arrow-repeat"></i> Sync GA4 Data
+            </button>
+        </div>
+    </div>
+
+    <!-- Statistics Cards -->
+    <div class="row mb-4">
+        <div class="col-md-3">
+            <div class="card stat-card">
+                <div class="card-body">
+                    <h3>Vehicles</h3>
+                    <div class="stat-value">{{ stats.total_vehicles }}</div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card stat-card">
+                <div class="card-body">
+                    <h3>Customers</h3>
+                    <div class="stat-value">{{ stats.total_customers }}</div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card stat-card">
+                <div class="card-body">
+                    <h3>Pending Reminders</h3>
+                    <div class="stat-value">{{ stats.pending_reminders }}</div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card stat-card">
+                <div class="card-body">
+                    <h3>Upcoming Appointments</h3>
+                    <div class="stat-value">{{ stats.upcoming_appointments }}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Dashboard Content -->
+    <div class="row">
+        <!-- Vehicles Due for MOT -->
+        <div class="col-md-6 mb-4">
+            <div class="card h-100">
+                <div class="card-header">
+                    <h2>Vehicles Due for MOT</h2>
+                </div>
+                <div class="card-body">
+                    {% if vehicles_due %}
+                        <div class="table-responsive">
+                            <table class="table table-hover">
+                                <thead>
+                                    <tr>
+                                        <th>Registration</th>
+                                        <th>Make/Model</th>
+                                        <th>Customer</th>
+                                        <th>MOT Expiry</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {% for vehicle in vehicles_due %}
+                                        <tr>
+                                            <td>{{ vehicle.registration }}</td>
+                                            <td>{{ vehicle.make }} {{ vehicle.model }}</td>
+                                            <td>{{ vehicle.customer_name }}</td>
+                                            <td>{{ vehicle.mot_expiry }}</td>
+                                            <td>
+                                                <a href="{{ url_for('vehicle_detail', vehicle_id=vehicle.id) }}" class="btn btn-sm btn-primary">
+                                                    <i class="bi bi-eye"></i>
+                                                </a>
+                                                <a href="{{ url_for('create_reminder', vehicle_id=vehicle.id) }}" class="btn btn-sm btn-warning">
+                                                    <i class="bi bi-bell"></i>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                    {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
+                    {% else %}
+                        <p class="text-center">No vehicles due for MOT in the next 30 days.</p>
+                    {% endif %}
+                </div>
+                <div class="card-footer">
+                    <a href="{{ url_for('reminders') }}" class="btn btn-outline-primary">View All Reminders</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Recent Reminders -->
+        <div class="col-md-6 mb-4">
+            <div class="card h-100">
+                <div class="card-header">
+                    <h2>Recent Reminders</h2>
+                </div>
+                <div class="card-body">
+                    {% if recent_reminders %}
+                        <div class="table-responsive">
+                            <table class="table table-hover">
+                                <thead>
+                                    <tr>
+                                        <th>Vehicle</th>
+                                        <th>Customer</th>
+                                        <th>Status</th>
+                                        <th>Date</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {% for reminder in recent_reminders %}
+                                        <tr>
+                                            <td>{{ reminder.registration }}</td>
+                                            <td>{{ reminder.customer_name }}</td>
+                                            <td>
+                                                {% if reminder.status == 'Pending' %}
+                                                    <span class="badge bg-warning">Pending</span>
+                                                {% elif reminder.status == 'Sent' %}
+                                                    <span class="badge bg-success">Sent</span>
+                                                {% elif reminder.status == 'Failed' %}
+                                                    <span class="badge bg-danger">Failed</span>
+                                                {% else %}
+                                                    <span class="badge bg-secondary">{{ reminder.status }}</span>
+                                                {% endif %}
+                                            </td>
+                                            <td>{{ reminder.created_at }}</td>
+                                            <td>
+                                                <a href="{{ url_for('reminder_detail', reminder_id=reminder.id) }}" class="btn btn-sm btn-primary">
+                                                    <i class="bi bi-eye"></i>
+                                                </a>
+                                                {% if reminder.status == 'Pending' %}
+                                                    <button class="btn btn-sm btn-success send-reminder" data-reminder-id="{{ reminder.id }}">
+                                                        <i class="bi bi-envelope"></i>
+                                                    </button>
+                                                {% endif %}
+                                            </td>
+                                        </tr>
+                                    {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
+                    {% else %}
+                        <p class="text-center">No recent reminders.</p>
+                    {% endif %}
+                </div>
+                <div class="card-footer">
+                    <a href="{{ url_for('reminders') }}" class="btn btn-outline-primary">View All Reminders</a>
+                    <a href="{{ url_for('create_reminder') }}" class="btn btn-primary float-end">Create Reminder</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Upcoming Appointments -->
+    <div class="row">
+        <div class="col-12 mb-4">
+            <div class="card">
+                <div class="card-header">
+                    <h2>Upcoming Appointments</h2>
+                </div>
+                <div class="card-body">
+                    {% if upcoming_appointments %}
+                        <div class="table-responsive">
+                            <table class="table table-hover">
+                                <thead>
+                                    <tr>
+                                        <th>Date</th>
+                                        <th>Time</th>
+                                        <th>Vehicle</th>
+                                        <th>Customer</th>
+                                        <th>Type</th>
+                                        <th>Status</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {% for appointment in upcoming_appointments %}
+                                        <tr>
+                                            <td>{{ appointment.appointment_date }}</td>
+                                            <td>{{ appointment.appointment_time }}</td>
+                                            <td>{{ appointment.registration }}</td>
+                                            <td>{{ appointment.customer_name }}</td>
+                                            <td>{{ appointment.appointment_type }}</td>
+                                            <td>
+                                                {% if appointment.status == 'Scheduled' %}
+                                                    <span class="badge bg-primary">Scheduled</span>
+                                                {% elif appointment.status == 'Completed' %}
+                                                    <span class="badge bg-success">Completed</span>
+                                                {% elif appointment.status == 'Cancelled' %}
+                                                    <span class="badge bg-danger">Cancelled</span>
+                                                {% else %}
+                                                    <span class="badge bg-secondary">{{ appointment.status }}</span>
+                                                {% endif %}
+                                            </td>
+                                            <td>
+                                                <a href="{{ url_for('appointment_detail', appointment_id=appointment.id) }}" class="btn btn-sm btn-primary">
+                                                    <i class="bi bi-eye"></i>
+                                                </a>
+                                                <a href="{{ url_for('edit_appointment', appointment_id=appointment.id) }}" class="btn btn-sm btn-secondary">
+                                                    <i class="bi bi-pencil"></i>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                    {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
+                    {% else %}
+                        <p class="text-center">No upcoming appointments in the next 7 days.</p>
+                    {% endif %}
+                </div>
+                <div class="card-footer">
+                    <a href="{{ url_for('appointments') }}" class="btn btn-outline-primary">View All Appointments</a>
+                    <a href="{{ url_for('create_appointment') }}" class="btn btn-primary float-end">Schedule Appointment</a>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Sync GA4 Data button
+        const syncButton = document.getElementById('syncButton');
+        if (syncButton) {
+            syncButton.addEventListener('click', function() {
+                syncButton.disabled = true;
+                syncButton.innerHTML = '<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Syncing...';
+                
+                fetch('/api/sync', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    }
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        alert('GA4 data synchronized successfully: ' + data.message);
+                    } else {
+                        alert('Error synchronizing GA4 data: ' + data.message);
+                    }
+                    syncButton.disabled = false;
+                    syncButton.innerHTML = '<i class="bi bi-arrow-repeat"></i> Sync GA4 Data';
+                    
+                    // Reload the page to show updated data
+                    window.location.reload();
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    alert('Error synchronizing GA4 data: ' + error);
+                    syncButton.disabled = false;
+                    syncButton.innerHTML = '<i class="bi bi-arrow-repeat"></i> Sync GA4 Data';
+                });
+            });
+        }
+        
+        // Send Reminder buttons
+        const sendReminderButtons = document.querySelectorAll('.send-reminder');
+        sendReminderButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                const reminderId = this.getAttribute('data-reminder-id');
+                this.disabled = true;
+                this.innerHTML = '<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>';
+                
+                fetch(`/api/reminders/send/${reminderId}`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    }
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        alert('Reminder sent successfully');
+                    } else {
+                        alert('Error sending reminder: ' + data.message);
+                    }
+                    
+                    // Reload the page to show updated status
+                    window.location.reload();
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    alert('Error sending reminder: ' + error);
+                    this.disabled = false;
+                    this.innerHTML = '<i class="bi bi-envelope"></i>';
+                });
+            });
+        });
+    });
+</script>
+{% endblock %}

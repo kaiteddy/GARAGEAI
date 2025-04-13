@@ -1,0 +1,165 @@
+{% extends 'base.html' %}
+
+{% block title %}Customer Management{% endblock %}
+
+{% block content %}
+<div class="container-fluid">
+    <div class="row mb-4">
+        <div class="col">
+            <h1 class="display-5 mb-4">
+                <i class="bi bi-people me-2"></i> Customer Management
+            </h1>
+            <p class="lead">
+                Manage customer profiles, communication history, and vehicle ownership.
+            </p>
+        </div>
+    </div>
+
+    <!-- Statistics Cards -->
+    <div class="row mb-4">
+        <div class="col-md-4">
+            <div class="card text-white bg-primary h-100">
+                <div class="card-body">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div>
+                            <h5 class="card-title">Total Customers</h5>
+                            <h2 class="display-4">{{ stats.total_customers or 0 }}</h2>
+                        </div>
+                        <i class="bi bi-people-fill display-4"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card text-white bg-success h-100">
+                <div class="card-body">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div>
+                            <h5 class="card-title">Active Customers</h5>
+                            <h2 class="display-4">{{ stats.active_customers or 0 }}</h2>
+                        </div>
+                        <i class="bi bi-person-check-fill display-4"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card text-white bg-info h-100">
+                <div class="card-body">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div>
+                            <h5 class="card-title">Vehicles Owned</h5>
+                            <h2 class="display-4">{{ stats.total_vehicles or 0 }}</h2>
+                        </div>
+                        <i class="bi bi-car-front-fill display-4"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Customer List Section -->
+    <div class="row mb-4">
+        <div class="col-md-12">
+            <div class="card shadow-sm">
+                <div class="card-header d-flex justify-content-between align-items-center">
+                    <h5 class="mb-0">Customers ({{ customers|length }})</h5>
+                    <div>
+                        <a href="{{ url_for('new_customer') }}" class="btn btn-sm btn-success me-2">
+                            <i class="bi bi-person-plus"></i> Add Customer
+                        </a>
+                        <a href="{{ url_for('vehicles') }}" class="btn btn-sm btn-primary">
+                            <i class="bi bi-car-front"></i> Vehicle Management
+                        </a>
+                    </div>
+                </div>
+                <div class="card-body p-0">
+                    <div class="table-responsive">
+                        <table class="table table-hover mb-0">
+                            <thead class="table-light">
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Contact Information</th>
+                                    <th>Address</th>
+                                    <th>Vehicles</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% if customers %}
+                                    {% for customer in customers %}
+                                    <tr>
+                                        <td>
+                                            <div class="d-flex align-items-center">
+                                                <div class="avatar-circle bg-primary text-white me-2">
+                                                    {{ customer.name[0] if customer.name else 'C' }}
+                                                </div>
+                                                <div>
+                                                    <strong>{{ customer.name }}</strong>
+                                                    <div class="small text-muted">
+                                                        ID: {{ customer.id }}
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            {% if customer.email %}
+                                                <div><i class="bi bi-envelope me-1"></i> {{ customer.email }}</div>
+                                            {% endif %}
+                                            {% if customer.phone %}
+                                                <div><i class="bi bi-telephone me-1"></i> {{ customer.phone }}</div>
+                                            {% endif %}
+                                        </td>
+                                        <td>
+                                            {% if customer.address %}
+                                                <div>{{ customer.address }}</div>
+                                            {% else %}
+                                                <span class="text-muted">No address provided</span>
+                                            {% endif %}
+                                        </td>
+                                        <td>
+                                            <span class="badge bg-secondary">{{ customer.vehicle_count }} vehicle{% if customer.vehicle_count != 1 %}s{% endif %}</span>
+                                        </td>
+                                        <td>
+                                            <div class="btn-group btn-group-sm">
+                                                <a href="{{ url_for('vehicles') }}?customer_id={{ customer.id }}" class="btn btn-outline-primary">
+                                                    <i class="bi bi-car-front"></i> View Vehicles
+                                                </a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    {% endfor %}
+                                {% else %}
+                                    <tr>
+                                        <td colspan="5" class="text-center py-4">
+                                            <div class="d-flex flex-column align-items-center">
+                                                <i class="bi bi-people-fill fs-1 text-muted mb-3"></i>
+                                                <p class="lead mb-0">No customers found</p>
+                                                <p class="text-muted">Import vehicles to create customer records</p>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                {% endif %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block styles %}
+<style>
+    .avatar-circle {
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+    }
+</style>
+{% endblock %}

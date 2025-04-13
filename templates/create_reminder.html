@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create MOT Reminder - Garage Management System</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <style>
+        body {
+            padding-top: 56px;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        .footer {
+            margin-top: auto;
+            background-color: #f5f5f5;
+            padding: 1rem 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/">Garage Management System</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/"><i class="bi bi-speedometer2"></i> Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/customers"><i class="bi bi-people"></i> Customers</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/vehicles"><i class="bi bi-car-front"></i> Vehicles</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/reminders"><i class="bi bi-bell"></i> MOT Reminders</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/invoices"><i class="bi bi-receipt"></i> Invoices</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/appointments"><i class="bi bi-calendar-check"></i> Appointments</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/reports"><i class="bi bi-bar-chart"></i> Reports</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container mt-4 mb-4">
+        <div class="row mb-4">
+            <div class="col-md-12">
+                <h2><i class="bi bi-bell"></i> Create MOT Reminder</h2>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="/">Dashboard</a></li>
+                        <li class="breadcrumb-item"><a href="/reminders">MOT Reminders</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Create Reminder</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+
+        {% if error %}
+        <div class="alert alert-danger">
+            {{ error }}
+        </div>
+        {% endif %}
+
+        <div class="row">
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="card-title mb-0">Reminder Details</h5>
+                    </div>
+                    <div class="card-body">
+                        <form method="post" action="/reminders/create">
+                            <div class="mb-3">
+                                <label for="vehicle_id" class="form-label">Vehicle</label>
+                                <select class="form-select" id="vehicle_id" name="vehicle_id" required>
+                                    <option value="">Select a vehicle</option>
+                                    {% for vehicle_id, vehicle_display in vehicles %}
+                                        <option value="{{ vehicle_id }}">
+                                            {{ vehicle_display }}
+                                        </option>
+                                    {% endfor %}
+                                </select>
+                                <div class="form-text">Select the vehicle for which to create a reminder. Total vehicles available: {{ total_vehicles }}</div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="reminder_date" class="form-label">Reminder Date</label>
+                                <input type="date" class="form-control" id="reminder_date" name="reminder_date" required>
+                                <div class="form-text">The date on which to send the reminder.</div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="reminder_type" class="form-label">Reminder Type</label>
+                                <select class="form-select" id="reminder_type" name="reminder_type">
+                                    {% if reminder_types %}
+                                        {% for type_id, type_name in reminder_types %}
+                                            <option value="{{ type_id }}">{{ type_name }}</option>
+                                        {% endfor %}
+                                    {% else %}
+                                        <option value="email">Email</option>
+                                        <option value="sms">SMS</option>
+                                        <option value="both">Both Email & SMS</option>
+                                    {% endif %}
+                                </select>
+                                <div class="form-text">How the reminder should be sent to the customer.</div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="notes" class="form-label">Notes</label>
+                                <textarea class="form-control" id="notes" name="notes" rows="3"></textarea>
+                                <div class="form-text">Additional notes about this reminder.</div>
+                            </div>
+
+                            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                                <a href="/reminders" class="btn btn-secondary me-md-2">Cancel</a>
+                                <button type="submit" class="btn btn-primary">Create Reminder</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="card-title mb-0">Vehicle Information</h5>
+                    </div>
+                    <div class="card-body">
+                        <div id="vehicle-info">
+                            <p class="text-muted text-center">Select a vehicle to see its details</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card mt-4">
+                    <div class="card-header">
+                        <h5 class="card-title mb-0">Help</h5>
+                    </div>
+                    <div class="card-body">
+                        <p>MOT reminders are sent to customers to remind them that their MOT is due soon.</p>
+                        <p>To create a reminder:</p>
+                        <ol>
+                            <li>Select the vehicle</li>
+                            <li>Choose the date to send the reminder</li>
+                            <li>Select how to send the reminder (email, SMS, or both)</li>
+                        </ol>
+                        <p>The system will automatically send the reminder on the specified date.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer mt-auto py-3 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <span class="text-muted">Garage Management System &copy; 2025</span>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <span class="text-muted">Connected to GA4 Database</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Set default reminder date to 30 days before MOT expiry
+        document.addEventListener('DOMContentLoaded', function() {
+            // Set default date to today
+            const today = new Date();
+            const formattedDate = today.toISOString().split('T')[0];
+            document.getElementById('reminder_date').value = formattedDate;
+            
+            // Update vehicle info when vehicle is selected
+            const vehicleSelect = document.getElementById('vehicle_id');
+            vehicleSelect.addEventListener('change', function() {
+                updateVehicleInfo(this.value);
+            });
+            
+            // Initial update if a vehicle is already selected
+            if (vehicleSelect.value) {
+                updateVehicleInfo(vehicleSelect.value);
+            }
+        });
+        
+        function updateVehicleInfo(vehicleId) {
+            if (!vehicleId) {
+                document.getElementById('vehicle-info').innerHTML = '<p class="text-muted text-center">Select a vehicle to see its details</p>';
+                return;
+            }
+            
+            fetch(`/api/vehicles/${vehicleId}`)
+                .then(response => response.json())
+                .then(vehicle => {
+                    if (vehicle.error) {
+                        document.getElementById('vehicle-info').innerHTML = `<p class="text-danger">${vehicle.error}</p>`;
+                        return;
+                    }
+                    
+                    let html = `
+                        <p><strong>Registration:</strong> ${vehicle.registration}</p>
+                        <p><strong>Make/Model:</strong> ${vehicle.make} ${vehicle.model}</p>
+                    `;
+                    
+                    if (vehicle.year) {
+                        html += `<p><strong>Year:</strong> ${vehicle.year}</p>`;
+                    }
+                    
+                    if (vehicle.mot_expiry) {
+                        html += `<p><strong>MOT Expiry:</strong> ${vehicle.mot_expiry}</p>`;
+                        
+                        // Set reminder date to 30 days before MOT expiry
+                        const motDate = new Date(vehicle.mot_expiry);
+                        motDate.setDate(motDate.getDate() - 30);
+                        const reminderDate = motDate.toISOString().split('T')[0];
+                        document.getElementById('reminder_date').value = reminderDate;
+                    }
+                    
+                    if (vehicle.customer_name) {
+                        html += `<p><strong>Customer:</strong> ${vehicle.customer_name}</p>`;
+                    }
+                    
+                    document.getElementById('vehicle-info').innerHTML = html;
+                })
+                .catch(error => {
+                    console.error('Error fetching vehicle info:', error);
+                    document.getElementById('vehicle-info').innerHTML = '<p class="text-danger">Error loading vehicle information</p>';
+                });
+        }
+    </script>
+</body>
+</html>

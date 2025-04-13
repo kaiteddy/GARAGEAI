@@ -1,0 +1,373 @@
+
+{% extends 'base.html' %}
+
+{% block title %}Vehicle Management{% endblock %}
+
+{% block content %}
+<div class="container-fluid">
+    <div class="row mb-4">
+        <div class="col">
+            <h1 class="display-5 mb-4">
+                <i class="bi bi-car-front me-2"></i> Vehicle Management
+            </h1>
+            <p class="lead">
+                Manage vehicle information, service history, MOT records, and predictions.
+            </p>
+        </div>
+    </div>
+
+    <!-- Search and Filter Section -->
+    <div class="row mb-4">
+        <div class="col-md-12">
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">Search & Filter</h5>
+                    <form method="GET" action="{{ url_for('vehicles') }}" class="row g-3">
+                        <div class="col-md-3">
+                            <label for="registration" class="form-label">Registration</label>
+                            <input type="text" class="form-control" id="registration" name="registration"
+                                value="{{ request.args.get('registration', '') }}" placeholder="e.g., AB12CDE">
+                        </div>
+                        <div class="col-md-3">
+                            <label for="make" class="form-label">Make</label>
+                            <input type="text" class="form-control" id="make" name="make"
+                                value="{{ request.args.get('make', '') }}" placeholder="e.g., Ford">
+                        </div>
+                        <div class="col-md-3">
+                            <label for="model" class="form-label">Model</label>
+                            <input type="text" class="form-control" id="model" name="model"
+                                value="{{ request.args.get('model', '') }}" placeholder="e.g., Focus">
+                        </div>
+                        <div class="col-md-3">
+                            <label for="customer" class="form-label">Customer</label>
+                            <input type="text" class="form-control" id="customer" name="customer"
+                                value="{{ request.args.get('customer', '') }}" placeholder="Customer name">
+                        </div>
+                        <div class="col-md-3">
+                            <label for="mot_status" class="form-label">MOT Status</label>
+                            <select class="form-select" id="mot_status" name="mot_status">
+                                <option value="" {% if not request.args.get('mot_status') %}selected{% endif %}>All</option>
+                                <option value="valid" {% if request.args.get('mot_status') == 'valid' %}selected{% endif %}>Valid</option>
+                                <option value="expiring" {% if request.args.get('mot_status') == 'expiring' %}selected{% endif %}>Expiring Soon</option>
+                                <option value="expired" {% if request.args.get('mot_status') == 'expired' %}selected{% endif %}>Expired</option>
+                            </select>
+                        </div>
+                        <div class="col-md-3">
+                            <label for="service_due" class="form-label">Service Due</label>
+                            <select class="form-select" id="service_due" name="service_due">
+                                <option value="" {% if not request.args.get('service_due') %}selected{% endif %}>All</option>
+                                <option value="due" {% if request.args.get('service_due') == 'due' %}selected{% endif %}>Due</option>
+                                <option value="not_due" {% if request.args.get('service_due') == 'not_due' %}selected{% endif %}>Not Due</option>
+                            </select>
+                        </div>
+                        <div class="col-md-3">
+                            <label for="sort_by" class="form-label">Sort By</label>
+                            <select class="form-select" id="sort_by" name="sort_by">
+                                <option value="registration" {% if request.args.get('sort_by') == 'registration' %}selected{% endif %}>Registration</option>
+                                <option value="make" {% if request.args.get('sort_by') == 'make' %}selected{% endif %}>Make</option>
+                                <option value="model" {% if request.args.get('sort_by') == 'model' %}selected{% endif %}>Model</option>
+                                <option value="mot_expiry" {% if request.args.get('sort_by') == 'mot_expiry' %}selected{% endif %}>MOT Expiry</option>
+                                <option value="last_service" {% if request.args.get('sort_by') == 'last_service' %}selected{% endif %}>Last Service</option>
+                            </select>
+                        </div>
+                        <div class="col-md-3 d-flex align-items-end">
+                            <button type="submit" class="btn btn-primary me-2">
+                                <i class="bi bi-search"></i> Search
+                            </button>
+                            <a href="{{ url_for('vehicles') }}" class="btn btn-outline-secondary">
+                                <i class="bi bi-x-circle"></i> Clear
+                            </a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Vehicle List Section -->
+    <div class="row mb-4">
+        <div class="col-md-12">
+            <div class="card shadow-sm">
+                <div class="card-header d-flex justify-content-between align-items-center">
+                    <h5 class="mb-0">Vehicles ({{ vehicles|length }})</h5>
+                    <div>
+                        <a href="{{ url_for('batch_verify_mot_route') }}" class="btn btn-sm btn-outline-primary me-2">
+                            <i class="bi bi-check2-circle"></i> Verify MOT Status
+                        </a>
+                        <button type="button" class="btn btn-sm btn-outline-secondary me-2" data-bs-toggle="modal" data-bs-target="#importModal">
+                            <i class="bi bi-cloud-download"></i> Import
+                        </button>
+                        <a href="{{ url_for('export_vehicles') }}" class="btn btn-sm btn-outline-secondary">
+                            <i class="bi bi-cloud-upload"></i> Export
+                        </a>
+                    </div>
+                </div>
+                <div class="card-body p-0">
+                    <div class="table-responsive">
+                        <table class="table table-hover mb-0">
+                            <thead class="table-light">
+                                <tr>
+                                    <th>Registration</th>
+                                    <th>Make</th>
+                                    <th>Model</th>
+                                    <th>Year</th>
+                                    <th>Customer</th>
+                                    <th>MOT Expiry</th>
+                                    <th>Last Service</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% if vehicles %}
+                                    {% for vehicle in vehicles %}
+                                    <tr>
+                                        <td>
+                                            <a href="{{ url_for('vehicle_detail', vehicle_id=vehicle.id) }}">
+                                                {{ vehicle.registration }}
+                                            </a>
+                                        </td>
+                                        <td>{{ vehicle.make }}</td>
+                                        <td>{{ vehicle.model }}</td>
+                                        <td>{{ vehicle.year }}</td>
+                                        <td>
+                                            {% if vehicle.customer_id %}
+                                            <a href="{{ url_for('customer_detail', customer_id=vehicle.customer_id) }}">
+                                                {{ vehicle.customer_name }}
+                                            </a>
+                                            {% else %}
+                                            <span class="text-muted">No customer</span>
+                                            {% endif %}
+                                        </td>
+                                        <td>
+                                            {% if vehicle.mot_expiry %}
+                                                {% if vehicle.mot_status == 'expired' %}
+                                                <span class="badge bg-danger">Expired: {{ vehicle.mot_expiry }}</span>
+                                                {% elif vehicle.mot_status == 'expiring' %}
+                                                <span class="badge bg-warning text-dark">Expiring: {{ vehicle.mot_expiry }}</span>
+                                                {% else %}
+                                                <span class="badge bg-success">Valid: {{ vehicle.mot_expiry }}</span>
+                                                {% endif %}
+                                            {% else %}
+                                            <span class="badge bg-secondary">Unknown</span>
+                                            {% endif %}
+                                        </td>
+                                        <td>
+                                            {% if vehicle.last_service %}
+                                                {{ vehicle.last_service }}
+                                            {% else %}
+                                            <span class="text-muted">No record</span>
+                                            {% endif %}
+                                        </td>
+                                        <td>
+                                            <div class="btn-group btn-group-sm">
+                                                <a href="{{ url_for('vehicle_detail', vehicle_id=vehicle.id) }}" class="btn btn-outline-primary">
+                                                    <i class="bi bi-eye"></i>
+                                                </a>
+                                                <a href="{{ url_for('edit_vehicle', vehicle_id=vehicle.id) }}" class="btn btn-outline-secondary">
+                                                    <i class="bi bi-pencil"></i>
+                                                </a>
+                                                <a href="{{ url_for('create_reminder', vehicle_id=vehicle.id) }}" class="btn btn-outline-warning">
+                                                    <i class="bi bi-bell"></i>
+                                                </a>
+                                                <a href="{{ url_for('create_appointment', vehicle_id=vehicle.id) }}" class="btn btn-outline-success">
+                                                    <i class="bi bi-calendar-plus"></i>
+                                                </a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    {% endfor %}
+                                {% else %}
+                                    <tr>
+                                        <td colspan="8" class="text-center py-4">
+                                            <div class="d-flex flex-column align-items-center">
+                                                <i class="bi bi-car-front fs-1 text-muted mb-3"></i>
+                                                <p class="mb-1">No vehicles found matching your criteria.</p>
+                                                <p class="text-muted">Try adjusting your search filters or import vehicles from GA4.</p>
+                                                <button type="button" class="btn btn-sm btn-primary mt-2" data-bs-toggle="modal" data-bs-target="#importModal">
+                                                    <i class="bi bi-cloud-download"></i> Import Vehicles
+                                                </button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                {% endif %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <nav aria-label="Vehicle pagination">
+                        <ul class="pagination justify-content-center mb-0">
+                            <li class="page-item {% if page == 1 %}disabled{% endif %}">
+                                <a class="page-link" href="{{ url_for('vehicles', page=page-1, **request.args) }}" aria-label="Previous">
+                                    <span aria-hidden="true">&laquo;</span>
+                                </a>
+                            </li>
+                            {% for p in range(1, total_pages + 1) %}
+                            <li class="page-item {% if p == page %}active{% endif %}">
+                                <a class="page-link" href="{{ url_for('vehicles', page=p, **request.args) }}">{{ p }}</a>
+                            </li>
+                            {% endfor %}
+                            <li class="page-item {% if page == total_pages %}disabled{% endif %}">
+                                <a class="page-link" href="{{ url_for('vehicles', page=page+1, **request.args) }}" aria-label="Next">
+                                    <span aria-hidden="true">&raquo;</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Vehicle Statistics Section -->
+    <div class="row mb-4">
+        <div class="col-md-12">
+            <div class="card shadow-sm">
+                <div class="card-header">
+                    <h5 class="mb-0">Vehicle Statistics</h5>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-3 mb-3">
+                            <div class="card bg-light">
+                                <div class="card-body text-center">
+                                    <h6 class="card-title text-muted">Total Vehicles</h6>
+                                    <h2 class="mb-0">{{ total_vehicles }}</h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 mb-3">
+                            <div class="card bg-light">
+                                <div class="card-body text-center">
+                                    <h6 class="card-title text-muted">MOT Expired</h6>
+                                    <h2 class="mb-0 text-danger">{{ expired_mot_count }}</h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 mb-3">
+                            <div class="card bg-light">
+                                <div class="card-body text-center">
+                                    <h6 class="card-title text-muted">MOT Expiring Soon</h6>
+                                    <h2 class="mb-0 text-warning">{{ expiring_mot_count }}</h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 mb-3">
+                            <div class="card bg-light">
+                                <div class="card-body text-center">
+                                    <h6 class="card-title text-muted">Service Due</h6>
+                                    <h2 class="mb-0 text-primary">{{ service_due_count }}</h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Import Modal -->
+<div class="modal fade" id="importModal" tabindex="-1" aria-labelledby="importModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="importModalLabel">Import Vehicles</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>Import vehicles from GA4 or upload a CSV file.</p>
+                <div class="d-grid gap-2">
+                    <button type="button" id="importFromGA4Button" class="btn btn-primary">
+                        <i class="bi bi-database"></i> Import from GA4
+                    </button>
+                    <div class="text-center my-2">OR</div>
+                    <form id="uploadForm" enctype="multipart/form-data">
+                        <div class="mb-3">
+                            <label for="csvFile" class="form-label">Upload CSV File</label>
+                            <input class="form-control" type="file" id="csvFile" accept=".csv">
+                        </div>
+                        <button type="submit" class="btn btn-secondary w-100">
+                            <i class="bi bi-upload"></i> Upload CSV
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Import from GA4 button
+        const importFromGA4Button = document.getElementById('importFromGA4Button');
+        if (importFromGA4Button) {
+            importFromGA4Button.addEventListener('click', function() {
+                importFromGA4Button.disabled = true;
+                importFromGA4Button.innerHTML = '<i class="bi bi-database"></i> Importing...';
+
+                fetch('/api/import_vehicles', {
+                    method: 'POST'
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        alert('Vehicles imported successfully!');
+                        window.location.reload();
+                    } else {
+                        alert('Import failed: ' + data.message);
+                        importFromGA4Button.disabled = false;
+                        importFromGA4Button.innerHTML = '<i class="bi bi-database"></i> Import from GA4';
+                    }
+                })
+                .catch(error => {
+                    alert('Error: ' + error);
+                    importFromGA4Button.disabled = false;
+                    importFromGA4Button.innerHTML = '<i class="bi bi-database"></i> Import from GA4';
+                });
+            });
+        }
+
+        // CSV Upload form
+        const uploadForm = document.getElementById('uploadForm');
+        if (uploadForm) {
+            uploadForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+
+                const fileInput = document.getElementById('csvFile');
+                const file = fileInput.files[0];
+
+                if (!file) {
+                    alert('Please select a CSV file to upload.');
+                    return;
+                }
+
+                const formData = new FormData();
+                formData.append('file', file);
+
+                fetch('/api/upload_vehicles_csv', {
+                    method: 'POST',
+                    body: formData
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        alert('CSV uploaded and processed successfully!');
+                        window.location.reload();
+                    } else {
+                        alert('Upload failed: ' + data.message);
+                    }
+                })
+                .catch(error => {
+                    alert('Error: ' + error);
+                });
+            });
+        }
+    });
+</script>
+{% endblock %}

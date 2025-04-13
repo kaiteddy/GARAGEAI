@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>System Status - Garage Management System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>System Status</h1>
+        
+        <div class="card">
+            <div class="card-header">
+                <h2>GA4 Integration</h2>
+            </div>
+            <div class="card-body">
+                <p><strong>GA4 Installed:</strong> {% if ga4_installed %}Yes{% else %}No{% endif %}</p>
+                <p><strong>GA4 Path:</strong> {{ ga4_path or 'Not found' }}</p>
+                <p><strong>Last Sync Time:</strong> {{ last_sync_time.strftime('%Y-%m-%d %H:%M:%S') }}</p>
+                <p><strong>Time Since Last Sync:</strong> {{ ((now - last_sync_time).total_seconds() / 60)|round }} minutes</p>
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="card-header">
+                <h2>Database Statistics</h2>
+            </div>
+            <div class="card-body">
+                <p><strong>Vehicles:</strong> {{ db_stats.vehicle_count }}</p>
+                <p><strong>Customers:</strong> {{ db_stats.customer_count }}</p>
+                <p><strong>Reminders:</strong> {{ db_stats.reminder_count }}</p>
+                <p><strong>Appointments:</strong> {{ db_stats.appointment_count }}</p>
+                <p><strong>Invoices:</strong> {{ db_stats.invoice_count }}</p>
+                <p><strong>Documents:</strong> {{ db_stats.document_count }}</p>
+            </div>
+        </div>
+        
+        <div class="actions">
+            <a href="{{ url_for('index') }}" class="btn btn-secondary">Back to Dashboard</a>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,660 @@
+2025-04-11 09:58:02,236 - ImportGA4Customers - INFO - Starting Import GA4 Customers with Data Cleaning
+2025-04-11 09:58:02,236 - ImportGA4Customers - INFO - Importing customers to /Users/adamrutstein/Library/CloudStorage/GoogleDrive-adam@elimotors.co.uk/My Drive/GA4_Direct_Access_Tool_Package/data/garage_system.db
+2025-04-11 09:58:02,236 - ImportGA4Customers - INFO - Importing customers from /Users/adamrutstein/Library/CloudStorage/GoogleDrive-adam@elimotors.co.uk/My Drive/Data Exports/Customers.csv to /Users/adamrutstein/Library/CloudStorage/GoogleDrive-adam@elimotors.co.uk/My Drive/GA4_Direct_Access_Tool_Package/data/garage_system.db
+2025-04-11 09:58:02,237 - ImportGA4Customers - INFO - Found 45 columns in CSV file
+2025-04-11 09:58:02,237 - ImportGA4Customers - WARNING - Invalid email format: 0
+2025-04-11 09:58:02,237 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4
+2025-04-11 09:58:02,238 - ImportGA4Customers - WARNING - Invalid email format: 75948413
+2025-04-11 09:58:02,238 - ImportGA4Customers - WARNING - Invalid email format: debra
+2025-04-11 09:58:02,238 - ImportGA4Customers - WARNING - Invalid email format: 82028931
+2025-04-11 09:58:02,238 - ImportGA4Customers - WARNING - Invalid email format: ***securecarparkpressgreybuttonoutisdeongate***
+2025-04-11 09:58:02,238 - ImportGA4Customers - WARNING - Invalid UK postcode format: N120EO
+2025-04-11 09:58:02,238 - ImportGA4Customers - WARNING - Invalid email format: 07868741235david
+2025-04-11 09:58:02,239 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4
+2025-04-11 09:58:02,239 - ImportGA4Customers - WARNING - Invalid email format: fax08712311724
+2025-04-11 09:58:02,239 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW10OUX
+2025-04-11 09:58:02,239 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW118RK
+2025-04-11 09:58:02,239 - ImportGA4Customers - WARNING - Invalid email format: 07976956382carol
+2025-04-11 09:58:02,239 - ImportGA4Customers - WARNING - Invalid UK postcode format: N14
+2025-04-11 09:58:02,239 - ImportGA4Customers - WARNING - Invalid email format: michael07971006868
+2025-04-11 09:58:02,239 - ImportGA4Customers - WARNING - Invalid email format: 82020824
+2025-04-11 09:58:02,239 - ImportGA4Customers - WARNING - Invalid email format: 07823888266
+2025-04-11 09:58:02,239 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW11
+2025-04-11 09:58:02,239 - ImportGA4Customers - INFO - Imported 100 customers so far
+2025-04-11 09:58:02,240 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4
+2025-04-11 09:58:02,240 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4
+2025-04-11 09:58:02,240 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4
+2025-04-11 09:58:02,241 - ImportGA4Customers - WARNING - Invalid email format: paul07939435126g07956823003
+2025-04-11 09:58:02,241 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW11
+2025-04-11 09:58:02,241 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW42SM
+2025-04-11 09:58:02,241 - ImportGA4Customers - WARNING - Invalid email format: 07956465999
+2025-04-11 09:58:02,241 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4
+2025-04-11 09:58:02,241 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4
+2025-04-11 09:58:02,242 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4
+2025-04-11 09:58:02,242 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4
+2025-04-11 09:58:02,242 - ImportGA4Customers - WARNING - Invalid email format: work84579993
+2025-04-11 09:58:02,242 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4
+2025-04-11 09:58:02,242 - ImportGA4Customers - INFO - Imported 200 customers so far
+2025-04-11 09:58:02,243 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW43AM
+2025-04-11 09:58:02,243 - ImportGA4Customers - WARNING - Invalid email format: 07896294191?///07806205566driver
+2025-04-11 09:58:02,243 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4
+2025-04-11 09:58:02,243 - ImportGA4Customers - WARNING - Invalid email format: www.groupama.co.uk
+2025-04-11 09:58:02,243 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4
+2025-04-11 09:58:02,244 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4
+2025-04-11 09:58:02,244 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW11ODH
+2025-04-11 09:58:02,244 - ImportGA4Customers - WARNING - Invalid email format: 07976643720senior
+2025-04-11 09:58:02,244 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW42SM
+2025-04-11 09:58:02,244 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW116AV
+2025-04-11 09:58:02,244 - ImportGA4Customers - WARNING - Invalid UK postcode format: N14
+2025-04-11 09:58:02,244 - ImportGA4Customers - WARNING - Invalid email format: 07771796529mum
+2025-04-11 09:58:02,244 - ImportGA4Customers - WARNING - Invalid email format: 07890342446
+2025-04-11 09:58:02,245 - ImportGA4Customers - WARNING - Invalid email format: 83400690
+2025-04-11 09:58:02,245 - ImportGA4Customers - INFO - Imported 300 customers so far
+2025-04-11 09:58:02,245 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4
+2025-04-11 09:58:02,245 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4
+2025-04-11 09:58:02,246 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4
+2025-04-11 09:58:02,246 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW7
+2025-04-11 09:58:02,246 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4
+2025-04-11 09:58:02,246 - ImportGA4Customers - WARNING - Invalid UK postcode format: N3
+2025-04-11 09:58:02,246 - ImportGA4Customers - WARNING - Invalid email format: barrytyler
+2025-04-11 09:58:02,246 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4
+2025-04-11 09:58:02,247 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4
+2025-04-11 09:58:02,247 - ImportGA4Customers - WARNING - Invalid UK postcode format: N3
+2025-04-11 09:58:02,247 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4
+2025-04-11 09:58:02,247 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4
+2025-04-11 09:58:02,247 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4
+2025-04-11 09:58:02,247 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4
+2025-04-11 09:58:02,247 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4
+2025-04-11 09:58:02,247 - ImportGA4Customers - WARNING - Invalid email format: ken07946513002
+2025-04-11 09:58:02,247 - ImportGA4Customers - INFO - Imported 400 customers so far
+2025-04-11 09:58:02,248 - ImportGA4Customers - WARNING - Invalid email format: 07984678129
+2025-04-11 09:58:02,248 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4
+2025-04-11 09:58:02,249 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4
+2025-04-11 09:58:02,249 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4
+2025-04-11 09:58:02,249 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4
+2025-04-11 09:58:02,249 - ImportGA4Customers - WARNING - Invalid email format: 07531684163lee
+2025-04-11 09:58:02,249 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW3
+2025-04-11 09:58:02,249 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4
+2025-04-11 09:58:02,249 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4
+2025-04-11 09:58:02,250 - ImportGA4Customers - WARNING - Invalid email format: 07581488324sophi
+2025-04-11 09:58:02,250 - ImportGA4Customers - INFO - Imported 500 customers so far
+2025-04-11 09:58:02,251 - ImportGA4Customers - WARNING - Invalid email format: 07974151494
+2025-04-11 09:58:02,251 - ImportGA4Customers - WARNING - Invalid UK postcode format: N3
+2025-04-11 09:58:02,251 - ImportGA4Customers - WARNING - Invalid UK postcode format: N200OA
+2025-04-11 09:58:02,251 - ImportGA4Customers - WARNING - Invalid email format: 07468538775neville
+2025-04-11 09:58:02,251 - ImportGA4Customers - WARNING - Invalid email format: mrs07990593243
+2025-04-11 09:58:02,251 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4
+2025-04-11 09:58:02,252 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4
+2025-04-11 09:58:02,252 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4
+2025-04-11 09:58:02,252 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4
+2025-04-11 09:58:02,252 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4
+2025-04-11 09:58:02,252 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4
+2025-04-11 09:58:02,252 - ImportGA4Customers - WARNING - Invalid email format: 07775757677son
+2025-04-11 09:58:02,252 - ImportGA4Customers - INFO - Imported 600 customers so far
+2025-04-11 09:58:02,253 - ImportGA4Customers - WARNING - Invalid email format: 82033370-82091141-07479164641
+2025-04-11 09:58:02,253 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4
+2025-04-11 09:58:02,253 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW11
+2025-04-11 09:58:02,254 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW11
+2025-04-11 09:58:02,254 - ImportGA4Customers - WARNING - Invalid UK postcode format: N3
+2025-04-11 09:58:02,254 - ImportGA4Customers - WARNING - Invalid email format: 07947720168
+2025-04-11 09:58:02,254 - ImportGA4Customers - WARNING - Invalid email format: .07956474907
+2025-04-11 09:58:02,254 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4
+2025-04-11 09:58:02,254 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4
+2025-04-11 09:58:02,254 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW11
+2025-04-11 09:58:02,254 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW42OX
+2025-04-11 09:58:02,255 - ImportGA4Customers - WARNING - Invalid email format: 07932728047mrs
+2025-04-11 09:58:02,255 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW11
+2025-04-11 09:58:02,255 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4
+2025-04-11 09:58:02,255 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW7
+2025-04-11 09:58:02,255 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4
+2025-04-11 09:58:02,255 - ImportGA4Customers - WARNING - Invalid email format: 0780
+2025-04-11 09:58:02,255 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4
+2025-04-11 09:58:02,255 - ImportGA4Customers - INFO - Imported 700 customers so far
+2025-04-11 09:58:02,256 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW41KS
+2025-04-11 09:58:02,256 - ImportGA4Customers - WARNING - Invalid email format: 07956256790
+2025-04-11 09:58:02,256 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4
+2025-04-11 09:58:02,256 - ImportGA4Customers - WARNING - Invalid email format: 07824403989office
+2025-04-11 09:58:02,256 - ImportGA4Customers - WARNING - Invalid email format: 07802719138dad
+2025-04-11 09:58:02,256 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4
+2025-04-11 09:58:02,257 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4
+2025-04-11 09:58:02,257 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4
+2025-04-11 09:58:02,257 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4
+2025-04-11 09:58:02,257 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW119VT
+2025-04-11 09:58:02,257 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4
+2025-04-11 09:58:02,258 - ImportGA4Customers - INFO - Imported 800 customers so far
+2025-04-11 09:58:02,259 - ImportGA4Customers - WARNING - Invalid email format: 80901495israel
+2025-04-11 09:58:02,259 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4
+2025-04-11 09:58:02,259 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW11
+2025-04-11 09:58:02,259 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4
+2025-04-11 09:58:02,259 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4
+2025-04-11 09:58:02,259 - ImportGA4Customers - WARNING - Invalid email format: dad07796617459josh07885472569
+2025-04-11 09:58:02,260 - ImportGA4Customers - WARNING - Invalid email format: 07725215393
+2025-04-11 09:58:02,260 - ImportGA4Customers - WARNING - Invalid UK postcode format: N20
+2025-04-11 09:58:02,260 - ImportGA4Customers - WARNING - Invalid email format: 07958346777elaine
+2025-04-11 09:58:02,260 - ImportGA4Customers - WARNING - Invalid email format: option3
+2025-04-11 09:58:02,260 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW42QI
+2025-04-11 09:58:02,260 - ImportGA4Customers - INFO - Imported 900 customers so far
+2025-04-11 09:58:02,261 - ImportGA4Customers - WARNING - Invalid UK postcode format: N3
+2025-04-11 09:58:02,261 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4
+2025-04-11 09:58:02,261 - ImportGA4Customers - WARNING - Invalid UK postcode format: N3
+2025-04-11 09:58:02,261 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW9
+2025-04-11 09:58:02,261 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4
+2025-04-11 09:58:02,262 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW11
+2025-04-11 09:58:02,262 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4
+2025-04-11 09:58:02,262 - ImportGA4Customers - WARNING - Invalid UK postcode format: N3
+2025-04-11 09:58:02,262 - ImportGA4Customers - WARNING - Invalid email format: 07738588988
+2025-04-11 09:58:02,262 - ImportGA4Customers - WARNING - Invalid email format: 07811365089
+2025-04-11 09:58:02,262 - ImportGA4Customers - WARNING - Invalid UK postcode format: N3
+2025-04-11 09:58:02,262 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW11
+2025-04-11 09:58:02,262 - ImportGA4Customers - WARNING - Invalid email format: 07980300794
+2025-04-11 09:58:02,262 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4
+2025-04-11 09:58:02,262 - ImportGA4Customers - WARNING - Invalid email format: 82020324
+2025-04-11 09:58:02,262 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4
+2025-04-11 09:58:02,262 - ImportGA4Customers - WARNING - Invalid email format: daniel07989671108
+2025-04-11 09:58:02,263 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW11OJX
+2025-04-11 09:58:02,263 - ImportGA4Customers - INFO - Imported 1000 customers so far
+2025-04-11 09:58:02,263 - ImportGA4Customers - WARNING - Invalid UK postcode format: WIJ6QQ
+2025-04-11 09:58:02,263 - ImportGA4Customers - WARNING - Invalid email format: mum07710494324
+2025-04-11 09:58:02,264 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4
+2025-04-11 09:58:02,264 - ImportGA4Customers - WARNING - Invalid email format: 07711504329mrs
+2025-04-11 09:58:02,264 - ImportGA4Customers - WARNING - Invalid UK postcode format: N20
+2025-04-11 09:58:02,264 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW42QI
+2025-04-11 09:58:02,264 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4
+2025-04-11 09:58:02,264 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4
+2025-04-11 09:58:02,264 - ImportGA4Customers - WARNING - Invalid email format: 07966567263-07889466625(husband)
+2025-04-11 09:58:02,264 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4YJG
+2025-04-11 09:58:02,265 - ImportGA4Customers - WARNING - Invalid email format: 07957199103
+2025-04-11 09:58:02,265 - ImportGA4Customers - WARNING - Invalid email format: 08448730905
+2025-04-11 09:58:02,265 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4
+2025-04-11 09:58:02,265 - ImportGA4Customers - WARNING - Invalid email format: 07879401013mr
+2025-04-11 09:58:02,265 - ImportGA4Customers - INFO - Imported 1100 customers so far
+2025-04-11 09:58:02,265 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4
+2025-04-11 09:58:02,266 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4
+2025-04-11 09:58:02,266 - ImportGA4Customers - WARNING - Invalid email format: fire
+2025-04-11 09:58:02,266 - ImportGA4Customers - WARNING - Invalid email format: 07930442514
+2025-04-11 09:58:02,266 - ImportGA4Customers - WARNING - Invalid UK postcode format: KT10OLR
+2025-04-11 09:58:02,266 - ImportGA4Customers - WARNING - Invalid UK postcode format: N3
+2025-04-11 09:58:02,266 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4
+2025-04-11 09:58:02,266 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4
+2025-04-11 09:58:02,266 - ImportGA4Customers - WARNING - Invalid email format: work82022433
+2025-04-11 09:58:02,267 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW7
+2025-04-11 09:58:02,267 - ImportGA4Customers - WARNING - Invalid email format: 2032299/2968carol
+2025-04-11 09:58:02,267 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4
+2025-04-11 09:58:02,267 - ImportGA4Customers - WARNING - Invalid UK postcode format: EC1
+2025-04-11 09:58:02,267 - ImportGA4Customers - WARNING - Invalid email format: 07796694282
+2025-04-11 09:58:02,267 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4
+2025-04-11 09:58:02,267 - ImportGA4Customers - WARNING - Invalid UK postcode format: N3
+2025-04-11 09:58:02,267 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4
+2025-04-11 09:58:02,267 - ImportGA4Customers - INFO - Imported 1200 customers so far
+2025-04-11 09:58:02,268 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW7
+2025-04-11 09:58:02,268 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4
+2025-04-11 09:58:02,268 - ImportGA4Customers - WARNING - Invalid email format: 07971072261mr
+2025-04-11 09:58:02,268 - ImportGA4Customers - WARNING - Invalid email format: 70998264
+2025-04-11 09:58:02,268 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4
+2025-04-11 09:58:02,268 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4
+2025-04-11 09:58:02,268 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4
+2025-04-11 09:58:02,269 - ImportGA4Customers - WARNING - Invalid email format: 07779027661
+2025-04-11 09:58:02,269 - ImportGA4Customers - WARNING - Invalid email format: vickieyxy1228@176thecom
+2025-04-11 09:58:02,269 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW11OJN
+2025-04-11 09:58:02,269 - ImportGA4Customers - WARNING - Invalid UK postcode format: N3
+2025-04-11 09:58:02,269 - ImportGA4Customers - WARNING - Invalid email format: 83431114
+2025-04-11 09:58:02,269 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4
+2025-04-11 09:58:02,269 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4
+2025-04-11 09:58:02,269 - ImportGA4Customers - WARNING - Invalid email format: 07740305403mrs
+2025-04-11 09:58:02,270 - ImportGA4Customers - WARNING - Invalid UK postcode format: N33PO
+2025-04-11 09:58:02,270 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4
+2025-04-11 09:58:02,270 - ImportGA4Customers - WARNING - Invalid UK postcode format: N3
+2025-04-11 09:58:02,270 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW42AJH
+2025-04-11 09:58:02,270 - ImportGA4Customers - WARNING - Invalid UK postcode format: N3
+2025-04-11 09:58:02,270 - ImportGA4Customers - INFO - Imported 1300 customers so far
+2025-04-11 09:58:02,270 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4
+2025-04-11 09:58:02,270 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4
+2025-04-11 09:58:02,271 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4
+2025-04-11 09:58:02,271 - ImportGA4Customers - WARNING - Invalid email format: 07976133848adam
+2025-04-11 09:58:02,271 - ImportGA4Customers - WARNING - Invalid email format: 07944039562louie
+2025-04-11 09:58:02,271 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4
+2025-04-11 09:58:02,271 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW11
+2025-04-11 09:58:02,272 - ImportGA4Customers - WARNING - Invalid UK postcode format: N21
+2025-04-11 09:58:02,272 - ImportGA4Customers - WARNING - Invalid email format: mrsgoodman
+2025-04-11 09:58:02,272 - ImportGA4Customers - WARNING - Invalid UK postcode format: N3
+2025-04-11 09:58:02,272 - ImportGA4Customers - WARNING - Invalid email format: 07986142631
+2025-04-11 09:58:02,272 - ImportGA4Customers - WARNING - Invalid email format: 07305792771
+2025-04-11 09:58:02,272 - ImportGA4Customers - WARNING - Invalid email format: ladythatdrivescar07806205566
+2025-04-11 09:58:02,272 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4
+2025-04-11 09:58:02,272 - ImportGA4Customers - WARNING - Invalid UK postcode format: N12
+2025-04-11 09:58:02,272 - ImportGA4Customers - INFO - Imported 1400 customers so far
+2025-04-11 09:58:02,273 - ImportGA4Customers - WARNING - Invalid email format: 07796017606
+2025-04-11 09:58:02,273 - ImportGA4Customers - WARNING - Invalid email format: 07984357991
+2025-04-11 09:58:02,273 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4
+2025-04-11 09:58:02,273 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4
+2025-04-11 09:58:02,274 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4
+2025-04-11 09:58:02,274 - ImportGA4Customers - WARNING - Invalid UK postcode format: N20PAB
+2025-04-11 09:58:02,274 - ImportGA4Customers - WARNING - Invalid email format: 07974315905/07974315905
+2025-04-11 09:58:02,274 - ImportGA4Customers - WARNING - Invalid email format: daughterarit07941050173
+2025-04-11 09:58:02,274 - ImportGA4Customers - WARNING - Invalid UK postcode format: EC1
+2025-04-11 09:58:02,274 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4
+2025-04-11 09:58:02,274 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW11
+2025-04-11 09:58:02,275 - ImportGA4Customers - WARNING - Invalid UK postcode format: N3
+2025-04-11 09:58:02,275 - ImportGA4Customers - INFO - Imported 1500 customers so far
+2025-04-11 09:58:02,275 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4
+2025-04-11 09:58:02,276 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4
+2025-04-11 09:58:02,276 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4
+2025-04-11 09:58:02,276 - ImportGA4Customers - WARNING - Invalid email format: 01619152756
+2025-04-11 09:58:02,276 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4
+2025-04-11 09:58:02,276 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4
+2025-04-11 09:58:02,277 - ImportGA4Customers - WARNING - Invalid email format: 07887520872
+2025-04-11 09:58:02,277 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW41OZ
+2025-04-11 09:58:02,277 - ImportGA4Customers - INFO - Imported 1600 customers so far
+2025-04-11 09:58:02,277 - ImportGA4Customers - WARNING - Invalid UK postcode format: N20
+2025-04-11 09:58:02,277 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4
+2025-04-11 09:58:02,278 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4
+2025-04-11 09:58:02,278 - ImportGA4Customers - WARNING - Invalid UK postcode format: N20
+2025-04-11 09:58:02,278 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4
+2025-04-11 09:58:02,279 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4
+2025-04-11 09:58:02,279 - ImportGA4Customers - WARNING - Invalid email format: 07931290385james
+2025-04-11 09:58:02,279 - ImportGA4Customers - INFO - Imported 1700 customers so far
+2025-04-11 09:58:02,279 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4
+2025-04-11 09:58:02,279 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW11
+2025-04-11 09:58:02,279 - ImportGA4Customers - WARNING - Invalid email format: 02084581111
+2025-04-11 09:58:02,280 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4
+2025-04-11 09:58:02,280 - ImportGA4Customers - WARNING - Invalid email format: mr07970550050
+2025-04-11 09:58:02,280 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4
+2025-04-11 09:58:02,280 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW11
+2025-04-11 09:58:02,280 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4
+2025-04-11 09:58:02,280 - ImportGA4Customers - WARNING - Invalid UK postcode format: N13
+2025-04-11 09:58:02,280 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4
+2025-04-11 09:58:02,280 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW11
+2025-04-11 09:58:02,281 - ImportGA4Customers - WARNING - Invalid UK postcode format: N3
+2025-04-11 09:58:02,281 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4
+2025-04-11 09:58:02,281 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4
+2025-04-11 09:58:02,281 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW9
+2025-04-11 09:58:02,281 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4
+2025-04-11 09:58:02,281 - ImportGA4Customers - WARNING - Invalid email format: +
+2025-04-11 09:58:02,281 - ImportGA4Customers - INFO - Imported 1800 customers so far
+2025-04-11 09:58:02,282 - ImportGA4Customers - WARNING - Invalid email format: 07716813735
+2025-04-11 09:58:02,282 - ImportGA4Customers - WARNING - Invalid email format: mum02082521216
+2025-04-11 09:58:02,282 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4
+2025-04-11 09:58:02,282 - ImportGA4Customers - WARNING - Invalid UK postcode format: HA8
+2025-04-11 09:58:02,283 - ImportGA4Customers - WARNING - Invalid email format: kylewilliams
+2025-04-11 09:58:02,283 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4
+2025-04-11 09:58:02,283 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4
+2025-04-11 09:58:02,283 - ImportGA4Customers - INFO - Imported 1900 customers so far
+2025-04-11 09:58:02,283 - ImportGA4Customers - WARNING - Invalid email format: work
+2025-04-11 09:58:02,284 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4
+2025-04-11 09:58:02,284 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4
+2025-04-11 09:58:02,284 - ImportGA4Customers - WARNING - Invalid email format: 844477386
+2025-04-11 09:58:02,285 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4
+2025-04-11 09:58:02,285 - ImportGA4Customers - WARNING - Invalid email format: 07747695329-07929056511
+2025-04-11 09:58:02,285 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4
+2025-04-11 09:58:02,285 - ImportGA4Customers - WARNING - Invalid email format: 07904065544mrs
+2025-04-11 09:58:02,285 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4
+2025-04-11 09:58:02,285 - ImportGA4Customers - INFO - Imported 2000 customers so far
+2025-04-11 09:58:02,286 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4
+2025-04-11 09:58:02,286 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4
+2025-04-11 09:58:02,286 - ImportGA4Customers - WARNING - Invalid email format: 07530513775-daughter
+2025-04-11 09:58:02,286 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4
+2025-04-11 09:58:02,286 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4
+2025-04-11 09:58:02,286 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW6
+2025-04-11 09:58:02,287 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW44SK
+2025-04-11 09:58:02,287 - ImportGA4Customers - WARNING - Invalid UK postcode format: N33ML
+2025-04-11 09:58:02,287 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW42SM
+2025-04-11 09:58:02,287 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4
+2025-04-11 09:58:02,287 - ImportGA4Customers - WARNING - Invalid email format: 1nottif@gmail
+2025-04-11 09:58:02,287 - ImportGA4Customers - INFO - Imported 2100 customers so far
+2025-04-11 09:58:02,288 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4
+2025-04-11 09:58:02,288 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4
+2025-04-11 09:58:02,289 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW44QO
+2025-04-11 09:58:02,289 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4
+2025-04-11 09:58:02,289 - ImportGA4Customers - WARNING - Invalid email format: 07757088646mrs
+2025-04-11 09:58:02,289 - ImportGA4Customers - INFO - Imported 2200 customers so far
+2025-04-11 09:58:02,289 - ImportGA4Customers - WARNING - Invalid email format: 07970066565
+2025-04-11 09:58:02,290 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW43JHP
+2025-04-11 09:58:02,290 - ImportGA4Customers - WARNING - Invalid email format: fax08004715533serena
+2025-04-11 09:58:02,290 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4
+2025-04-11 09:58:02,290 - ImportGA4Customers - WARNING - Invalid email format: 07762411373
+2025-04-11 09:58:02,291 - ImportGA4Customers - WARNING - Invalid email format: 07970066565
+2025-04-11 09:58:02,291 - ImportGA4Customers - INFO - Imported 2300 customers so far
+2025-04-11 09:58:02,292 - ImportGA4Customers - WARNING - Invalid UK postcode format: RG61
+2025-04-11 09:58:02,292 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4
+2025-04-11 09:58:02,292 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4
+2025-04-11 09:58:02,292 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4
+2025-04-11 09:58:02,292 - ImportGA4Customers - WARNING - Invalid email format: nextsevicegetaerobladedriversside
+2025-04-11 09:58:02,293 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4
+2025-04-11 09:58:02,293 - ImportGA4Customers - WARNING - Invalid UK postcode format: N2OHU
+2025-04-11 09:58:02,293 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4
+2025-04-11 09:58:02,293 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4
+2025-04-11 09:58:02,293 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4
+2025-04-11 09:58:02,293 - ImportGA4Customers - WARNING - Invalid UK postcode format: N3
+2025-04-11 09:58:02,293 - ImportGA4Customers - INFO - Imported 2400 customers so far
+2025-04-11 09:58:02,294 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4
+2025-04-11 09:58:02,294 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4
+2025-04-11 09:58:02,295 - ImportGA4Customers - WARNING - Invalid UK postcode format: AP0AE09469
+2025-04-11 09:58:02,295 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4
+2025-04-11 09:58:02,296 - ImportGA4Customers - INFO - Imported 2500 customers so far
+2025-04-11 09:58:02,296 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4
+2025-04-11 09:58:02,297 - ImportGA4Customers - WARNING - Invalid UK postcode format: N3
+2025-04-11 09:58:02,297 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4
+2025-04-11 09:58:02,298 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4
+2025-04-11 09:58:02,298 - ImportGA4Customers - INFO - Imported 2600 customers so far
+2025-04-11 09:58:02,298 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4
+2025-04-11 09:58:02,299 - ImportGA4Customers - WARNING - Invalid email format: 07986281571
+2025-04-11 09:58:02,299 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4
+2025-04-11 09:58:02,299 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4
+2025-04-11 09:58:02,299 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4
+2025-04-11 09:58:02,300 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4
+2025-04-11 09:58:02,300 - ImportGA4Customers - WARNING - Invalid UK postcode format: HA802E
+2025-04-11 09:58:02,300 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4
+2025-04-11 09:58:02,300 - ImportGA4Customers - INFO - Imported 2700 customers so far
+2025-04-11 09:58:02,301 - ImportGA4Customers - WARNING - Invalid email format: 07754904490-freddy
+2025-04-11 09:58:02,301 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW43
+2025-04-11 09:58:02,302 - ImportGA4Customers - WARNING - Invalid email format: vat187627561
+2025-04-11 09:58:02,302 - ImportGA4Customers - INFO - Imported 2800 customers so far
+2025-04-11 09:58:02,302 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4
+2025-04-11 09:58:02,302 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4
+2025-04-11 09:58:02,302 - ImportGA4Customers - WARNING - Invalid email format: 07459781346
+2025-04-11 09:58:02,302 - ImportGA4Customers - WARNING - Invalid UK postcode format: W5
+2025-04-11 09:58:02,303 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4
+2025-04-11 09:58:02,303 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW42QI
+2025-04-11 09:58:02,303 - ImportGA4Customers - WARNING - Invalid email format: 07710057233mr
+2025-04-11 09:58:02,304 - ImportGA4Customers - INFO - Imported 2900 customers so far
+2025-04-11 09:58:02,304 - ImportGA4Customers - WARNING - Invalid UK postcode format: CM
+2025-04-11 09:58:02,305 - ImportGA4Customers - WARNING - Invalid email format: 07907148305
+2025-04-11 09:58:02,305 - ImportGA4Customers - WARNING - Invalid email format: 07970928904
+2025-04-11 09:58:02,305 - ImportGA4Customers - WARNING - Invalid email format: 07956995479mum-07973925078alan
+2025-04-11 09:58:02,305 - ImportGA4Customers - WARNING - Invalid email format: 07729832160text
+2025-04-11 09:58:02,306 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW42OB
+2025-04-11 09:58:02,306 - ImportGA4Customers - WARNING - Invalid email format: 07963582751
+2025-04-11 09:58:02,306 - ImportGA4Customers - INFO - Imported 3000 customers so far
+2025-04-11 09:58:02,306 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW42JO
+2025-04-11 09:58:02,306 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW11
+2025-04-11 09:58:02,307 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4
+2025-04-11 09:58:02,307 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW11OEB
+2025-04-11 09:58:02,307 - ImportGA4Customers - WARNING - Invalid UK postcode format: WD18OBS
+2025-04-11 09:58:02,307 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW41T
+2025-04-11 09:58:02,307 - ImportGA4Customers - WARNING - Invalid UK postcode format: EN5JZ
+2025-04-11 09:58:02,307 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4
+2025-04-11 09:58:02,307 - ImportGA4Customers - WARNING - Invalid email format: 86320349
+2025-04-11 09:58:02,308 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4
+2025-04-11 09:58:02,308 - ImportGA4Customers - INFO - Imported 3100 customers so far
+2025-04-11 09:58:02,309 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4
+2025-04-11 09:58:02,309 - ImportGA4Customers - WARNING - Invalid email format: 07821473159
+2025-04-11 09:58:02,309 - ImportGA4Customers - WARNING - Invalid email format: 07793066577
+2025-04-11 09:58:02,309 - ImportGA4Customers - WARNING - Invalid email format: 07976391498
+2025-04-11 09:58:02,309 - ImportGA4Customers - WARNING - Invalid UK postcode format: N3
+2025-04-11 09:58:02,310 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW42
+2025-04-11 09:58:02,310 - ImportGA4Customers - INFO - Imported 3200 customers so far
+2025-04-11 09:58:02,311 - ImportGA4Customers - WARNING - Invalid email format: 07541724992
+2025-04-11 09:58:02,311 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW110JK
+2025-04-11 09:58:02,311 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW22MB
+2025-04-11 09:58:02,312 - ImportGA4Customers - WARNING - Invalid email format: 07976689888
+2025-04-11 09:58:02,312 - ImportGA4Customers - INFO - Imported 3300 customers so far
+2025-04-11 09:58:02,312 - ImportGA4Customers - WARNING - Invalid email format: 07799147836
+2025-04-11 09:58:02,313 - ImportGA4Customers - WARNING - Invalid email format: 07939222414
+2025-04-11 09:58:02,314 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW11
+2025-04-11 09:58:02,314 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW11
+2025-04-11 09:58:02,314 - ImportGA4Customers - WARNING - Invalid email format: 07481793398
+2025-04-11 09:58:02,314 - ImportGA4Customers - INFO - Imported 3400 customers so far
+2025-04-11 09:58:02,315 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4
+2025-04-11 09:58:02,315 - ImportGA4Customers - WARNING - Invalid UK postcode format: E112AV
+2025-04-11 09:58:02,315 - ImportGA4Customers - WARNING - Invalid UK postcode format: BR11DPF
+2025-04-11 09:58:02,315 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4
+2025-04-11 09:58:02,315 - ImportGA4Customers - WARNING - Invalid email format: 07733334156
+2025-04-11 09:58:02,315 - ImportGA4Customers - WARNING - Invalid email format: call
+2025-04-11 09:58:02,316 - ImportGA4Customers - WARNING - Invalid email format: 07974835321son
+2025-04-11 09:58:02,316 - ImportGA4Customers - WARNING - Invalid email format: 07507782753
+2025-04-11 09:58:02,316 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4
+2025-04-11 09:58:02,316 - ImportGA4Customers - INFO - Imported 3500 customers so far
+2025-04-11 09:58:02,317 - ImportGA4Customers - WARNING - Invalid UK postcode format: HA8
+2025-04-11 09:58:02,317 - ImportGA4Customers - WARNING - Invalid email format: 07974562117tommy
+2025-04-11 09:58:02,318 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4
+2025-04-11 09:58:02,318 - ImportGA4Customers - WARNING - Invalid email format: 07956121322
+2025-04-11 09:58:02,318 - ImportGA4Customers - INFO - Imported 3600 customers so far
+2025-04-11 09:58:02,319 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4
+2025-04-11 09:58:02,319 - ImportGA4Customers - WARNING - Invalid UK postcode format: N3
+2025-04-11 09:58:02,319 - ImportGA4Customers - WARNING - Invalid email format: 07887707680
+2025-04-11 09:58:02,319 - ImportGA4Customers - WARNING - Invalid UK postcode format: N2
+2025-04-11 09:58:02,320 - ImportGA4Customers - WARNING - Invalid email format: 07415951034
+2025-04-11 09:58:02,320 - ImportGA4Customers - WARNING - Invalid email format: 07709661234
+2025-04-11 09:58:02,320 - ImportGA4Customers - INFO - Imported 3700 customers so far
+2025-04-11 09:58:02,321 - ImportGA4Customers - WARNING - Invalid UK postcode format: WD6
+2025-04-11 09:58:02,321 - ImportGA4Customers - WARNING - Invalid UK postcode format: N12
+2025-04-11 09:58:02,321 - ImportGA4Customers - WARNING - Invalid UK postcode format: SW2099JR
+2025-04-11 09:58:02,322 - ImportGA4Customers - WARNING - Invalid email format: 01923241127
+2025-04-11 09:58:02,322 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4
+2025-04-11 09:58:02,322 - ImportGA4Customers - WARNING - Invalid email format: 07938689793
+2025-04-11 09:58:02,322 - ImportGA4Customers - INFO - Imported 3800 customers so far
+2025-04-11 09:58:02,323 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW119AK
+2025-04-11 09:58:02,323 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4
+2025-04-11 09:58:02,323 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4
+2025-04-11 09:58:02,323 - ImportGA4Customers - WARNING - Invalid email format: 07946268576
+2025-04-11 09:58:02,323 - ImportGA4Customers - WARNING - Invalid UK postcode format: N33P
+2025-04-11 09:58:02,324 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4
+2025-04-11 09:58:02,324 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW11
+2025-04-11 09:58:02,325 - ImportGA4Customers - WARNING - Invalid UK postcode format: TW4LH
+2025-04-11 09:58:02,325 - ImportGA4Customers - INFO - Imported 3900 customers so far
+2025-04-11 09:58:02,325 - ImportGA4Customers - WARNING - Invalid email format: hgivon@gmail
+2025-04-11 09:58:02,325 - ImportGA4Customers - WARNING - Invalid email format: 07709798871
+2025-04-11 09:58:02,325 - ImportGA4Customers - WARNING - Invalid email format: 07969404091
+2025-04-11 09:58:02,325 - ImportGA4Customers - WARNING - Invalid UK postcode format: W12
+2025-04-11 09:58:02,326 - ImportGA4Customers - WARNING - Invalid email format: 88154119
+2025-04-11 09:58:02,326 - ImportGA4Customers - WARNING - Invalid email format: 07990887942mr
+2025-04-11 09:58:02,326 - ImportGA4Customers - WARNING - Invalid email format: 07852760861/
+2025-04-11 09:58:02,327 - ImportGA4Customers - INFO - Imported 4000 customers so far
+2025-04-11 09:58:02,327 - ImportGA4Customers - WARNING - Invalid email format: 07860592055
+2025-04-11 09:58:02,327 - ImportGA4Customers - WARNING - Invalid UK postcode format: N120U
+2025-04-11 09:58:02,327 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4
+2025-04-11 09:58:02,327 - ImportGA4Customers - WARNING - Invalid email format: 07932628316
+2025-04-11 09:58:02,328 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4
+2025-04-11 09:58:02,328 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4
+2025-04-11 09:58:02,329 - ImportGA4Customers - INFO - Imported 4100 customers so far
+2025-04-11 09:58:02,329 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4
+2025-04-11 09:58:02,329 - ImportGA4Customers - WARNING - Invalid email format: 07925793636mr
+2025-04-11 09:58:02,330 - ImportGA4Customers - WARNING - Invalid UK postcode format: N33P
+2025-04-11 09:58:02,330 - ImportGA4Customers - WARNING - Invalid UK postcode format: WD64QV
+2025-04-11 09:58:02,331 - ImportGA4Customers - INFO - Imported 4200 customers so far
+2025-04-11 09:58:02,332 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW11
+2025-04-11 09:58:02,332 - ImportGA4Customers - WARNING - Invalid email format: 07803713929
+2025-04-11 09:58:02,332 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW41OZ
+2025-04-11 09:58:02,333 - ImportGA4Customers - INFO - Imported 4300 customers so far
+2025-04-11 09:58:02,334 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4
+2025-04-11 09:58:02,334 - ImportGA4Customers - INFO - Imported 4400 customers so far
+2025-04-11 09:58:02,335 - ImportGA4Customers - WARNING - Invalid email format: 07186714119
+2025-04-11 09:58:02,335 - ImportGA4Customers - WARNING - Invalid UK postcode format: N2OJX
+2025-04-11 09:58:02,335 - ImportGA4Customers - WARNING - Invalid email format: 07771988638
+2025-04-11 09:58:02,336 - ImportGA4Customers - WARNING - Invalid email format: 07423382787*
+2025-04-11 09:58:02,336 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4
+2025-04-11 09:58:02,336 - ImportGA4Customers - WARNING - Invalid email format: 07481968034
+2025-04-11 09:58:02,336 - ImportGA4Customers - WARNING - Invalid email format: 89545428
+2025-04-11 09:58:02,336 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW42QM
+2025-04-11 09:58:02,336 - ImportGA4Customers - INFO - Imported 4500 customers so far
+2025-04-11 09:58:02,337 - ImportGA4Customers - WARNING - Invalid email format: 07985107966
+2025-04-11 09:58:02,337 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW41OB
+2025-04-11 09:58:02,337 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4
+2025-04-11 09:58:02,338 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW1
+2025-04-11 09:58:02,338 - ImportGA4Customers - WARNING - Invalid UK postcode format: WD79OL
+2025-04-11 09:58:02,338 - ImportGA4Customers - WARNING - Invalid email format: 36027261
+2025-04-11 09:58:02,339 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW42
+2025-04-11 09:58:02,339 - ImportGA4Customers - INFO - Imported 4600 customers so far
+2025-04-11 09:58:02,339 - ImportGA4Customers - WARNING - Invalid email format: w07890610301
+2025-04-11 09:58:02,340 - ImportGA4Customers - WARNING - Invalid UK postcode format: M125OZ
+2025-04-11 09:58:02,340 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4
+2025-04-11 09:58:02,340 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW11OLR
+2025-04-11 09:58:02,341 - ImportGA4Customers - INFO - Imported 4700 customers so far
+2025-04-11 09:58:02,342 - ImportGA4Customers - WARNING - Invalid email format: 07940060939
+2025-04-11 09:58:02,342 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4
+2025-04-11 09:58:02,342 - ImportGA4Customers - WARNING - Invalid UK postcode format: WD250AK
+2025-04-11 09:58:02,343 - ImportGA4Customers - WARNING - Invalid email format: .
+2025-04-11 09:58:02,343 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4
+2025-04-11 09:58:02,343 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW11
+2025-04-11 09:58:02,343 - ImportGA4Customers - INFO - Imported 4800 customers so far
+2025-04-11 09:58:02,344 - ImportGA4Customers - WARNING - Invalid email format: 07885371445mr
+2025-04-11 09:58:02,345 - ImportGA4Customers - INFO - Imported 4900 customers so far
+2025-04-11 09:58:02,347 - ImportGA4Customers - INFO - Imported 5000 customers so far
+2025-04-11 09:58:02,348 - ImportGA4Customers - WARNING - Invalid email format: 07515486504mrs
+2025-04-11 09:58:02,348 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4
+2025-04-11 09:58:02,348 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW119NO
+2025-04-11 09:58:02,348 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW42RM
+2025-04-11 09:58:02,349 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4
+2025-04-11 09:58:02,349 - ImportGA4Customers - WARNING - Invalid email format: 07966135705p/a
+2025-04-11 09:58:02,349 - ImportGA4Customers - INFO - Imported 5100 customers so far
+2025-04-11 09:58:02,350 - ImportGA4Customers - WARNING - Invalid email format: 07885088856
+2025-04-11 09:58:02,350 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4
+2025-04-11 09:58:02,350 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4
+2025-04-11 09:58:02,351 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4ITD
+2025-04-11 09:58:02,351 - ImportGA4Customers - WARNING - Invalid UK postcode format: EN1OPZ
+2025-04-11 09:58:02,351 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW42EM
+2025-04-11 09:58:02,351 - ImportGA4Customers - INFO - Imported 5200 customers so far
+2025-04-11 09:58:02,352 - ImportGA4Customers - WARNING - Invalid UK postcode format: N2ONH
+2025-04-11 09:58:02,353 - ImportGA4Customers - WARNING - Skipping row 5259: Customer E4C2E922D3CD0F498EEE640E2BBD223A has no name
+2025-04-11 09:58:02,353 - ImportGA4Customers - WARNING - Invalid UK postcode format: MK2RHU
+2025-04-11 09:58:02,353 - ImportGA4Customers - INFO - Imported 5300 customers so far
+2025-04-11 09:58:02,354 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW110AV
+2025-04-11 09:58:02,354 - ImportGA4Customers - WARNING - Invalid UK postcode format: WD79HV
+2025-04-11 09:58:02,355 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW11OEB
+2025-04-11 09:58:02,355 - ImportGA4Customers - WARNING - Skipping row 5382: Customer 897BAEE6A106DD49AAEE8937F6E5755A has no name
+2025-04-11 09:58:02,355 - ImportGA4Customers - INFO - Imported 5400 customers so far
+2025-04-11 09:58:02,355 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4
+2025-04-11 09:58:02,356 - ImportGA4Customers - WARNING - Invalid UK postcode format: AL10OPP
+2025-04-11 09:58:02,356 - ImportGA4Customers - WARNING - Invalid UK postcode format: N2ONH
+2025-04-11 09:58:02,356 - ImportGA4Customers - WARNING - Invalid email format: adam.j.schwarz
+2025-04-11 09:58:02,356 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4
+2025-04-11 09:58:02,357 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4
+2025-04-11 09:58:02,357 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4
+2025-04-11 09:58:02,357 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW11OAT
+2025-04-11 09:58:02,357 - ImportGA4Customers - INFO - Imported 5500 customers so far
+2025-04-11 09:58:02,358 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW119VJ
+2025-04-11 09:58:02,358 - ImportGA4Customers - WARNING - Invalid UK postcode format: BR2OTT
+2025-04-11 09:58:02,358 - ImportGA4Customers - WARNING - Invalid UK postcode format: S1116AN
+2025-04-11 09:58:02,358 - ImportGA4Customers - WARNING - Invalid email format: 07443502877(daughter)
+2025-04-11 09:58:02,358 - ImportGA4Customers - WARNING - Invalid email format: andrewpmoran@hotmail
+2025-04-11 09:58:02,359 - ImportGA4Customers - WARNING - Invalid UK postcode format: N2ONF
+2025-04-11 09:58:02,359 - ImportGA4Customers - WARNING - Invalid UK postcode format: N2OHP
+2025-04-11 09:58:02,359 - ImportGA4Customers - WARNING - Invalid email format: 07710081039
+2025-04-11 09:58:02,359 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW11OJR
+2025-04-11 09:58:02,359 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4
+2025-04-11 09:58:02,359 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4
+2025-04-11 09:58:02,359 - ImportGA4Customers - INFO - Imported 5600 customers so far
+2025-04-11 09:58:02,360 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4
+2025-04-11 09:58:02,360 - ImportGA4Customers - WARNING - Invalid UK postcode format: RG2OFZ
+2025-04-11 09:58:02,360 - ImportGA4Customers - WARNING - Invalid email format: 07886768530
+2025-04-11 09:58:02,360 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4
+2025-04-11 09:58:02,361 - ImportGA4Customers - WARNING - Invalid email format: mrsadela07405685611
+2025-04-11 09:58:02,361 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4
+2025-04-11 09:58:02,361 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW11OES
+2025-04-11 09:58:02,361 - ImportGA4Customers - WARNING - Invalid email format: (dave)
+2025-04-11 09:58:02,361 - ImportGA4Customers - WARNING - Invalid UK postcode format: WS11OJP
+2025-04-11 09:58:02,361 - ImportGA4Customers - WARNING - Invalid email format: 07404053385
+2025-04-11 09:58:02,361 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW11OSB
+2025-04-11 09:58:02,361 - ImportGA4Customers - WARNING - Invalid UK postcode format: N14
+2025-04-11 09:58:02,361 - ImportGA4Customers - WARNING - Invalid UK postcode format: SK11OLP
+2025-04-11 09:58:02,361 - ImportGA4Customers - INFO - Imported 5700 customers so far
+2025-04-11 09:58:02,362 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW11OLL
+2025-04-11 09:58:02,362 - ImportGA4Customers - WARNING - Invalid UK postcode format: RH2OSG
+2025-04-11 09:58:02,362 - ImportGA4Customers - WARNING - Invalid email format: 07971867214
+2025-04-11 09:58:02,362 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4
+2025-04-11 09:58:02,362 - ImportGA4Customers - WARNING - Invalid UK postcode format: MW44DUR
+2025-04-11 09:58:02,363 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW9OPY
+2025-04-11 09:58:02,363 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW41MY
+2025-04-11 09:58:02,363 - ImportGA4Customers - WARNING - Invalid UK postcode format: N16OQQ
+2025-04-11 09:58:02,363 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW11OPJ
+2025-04-11 09:58:02,363 - ImportGA4Customers - WARNING - Invalid UK postcode format: BH10HDA
+2025-04-11 09:58:02,363 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4
+2025-04-11 09:58:02,363 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW11OJT
+2025-04-11 09:58:02,363 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4INJ
+2025-04-11 09:58:02,363 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4
+2025-04-11 09:58:02,363 - ImportGA4Customers - INFO - Imported 5800 customers so far
+2025-04-11 09:58:02,364 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4
+2025-04-11 09:58:02,364 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4IPB
+2025-04-11 09:58:02,365 - ImportGA4Customers - WARNING - Invalid email format: 07946149291(dad)
+2025-04-11 09:58:02,365 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4
+2025-04-11 09:58:02,365 - ImportGA4Customers - WARNING - Invalid email format: 07484101945htocall
+2025-04-11 09:58:02,365 - ImportGA4Customers - WARNING - Invalid email format: 07483072604
+2025-04-11 09:58:02,365 - ImportGA4Customers - INFO - Imported 5900 customers so far
+2025-04-11 09:58:02,366 - ImportGA4Customers - WARNING - Invalid email format: wife07399290280
+2025-04-11 09:58:02,367 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4
+2025-04-11 09:58:02,367 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4
+2025-04-11 09:58:02,367 - ImportGA4Customers - WARNING - Invalid UK postcode format: WC1XONB
+2025-04-11 09:58:02,367 - ImportGA4Customers - INFO - Imported 6000 customers so far
+2025-04-11 09:58:02,368 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4
+2025-04-11 09:58:02,368 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW11OJD
+2025-04-11 09:58:02,368 - ImportGA4Customers - WARNING - Invalid email format: 07876735532
+2025-04-11 09:58:02,368 - ImportGA4Customers - WARNING - Invalid UK postcode format: N12OBG
+2025-04-11 09:58:02,368 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4
+2025-04-11 09:58:02,368 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4
+2025-04-11 09:58:02,368 - ImportGA4Customers - WARNING - Invalid UK postcode format: N19
+2025-04-11 09:58:02,368 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4
+2025-04-11 09:58:02,369 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4
+2025-04-11 09:58:02,369 - ImportGA4Customers - WARNING - Invalid email format: c/olibi
+2025-04-11 09:58:02,369 - ImportGA4Customers - INFO - Imported 6100 customers so far
+2025-04-11 09:58:02,370 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4
+2025-04-11 09:58:02,370 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW42HV
+2025-04-11 09:58:02,370 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW9OHV
+2025-04-11 09:58:02,370 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW41D3
+2025-04-11 09:58:02,370 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4
+2025-04-11 09:58:02,370 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW118
+2025-04-11 09:58:02,370 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW11
+2025-04-11 09:58:02,370 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4
+2025-04-11 09:58:02,371 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4
+2025-04-11 09:58:02,371 - ImportGA4Customers - INFO - Imported 6200 customers so far
+2025-04-11 09:58:02,371 - ImportGA4Customers - WARNING - Invalid UK postcode format: N3
+2025-04-11 09:58:02,372 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4
+2025-04-11 09:58:02,372 - ImportGA4Customers - WARNING - Invalid UK postcode format: N33JO
+2025-04-11 09:58:02,372 - ImportGA4Customers - WARNING - Invalid UK postcode format: KT19ODN
+2025-04-11 09:58:02,373 - ImportGA4Customers - WARNING - Invalid UK postcode format: N2ORA
+2025-04-11 09:58:02,373 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4UNT
+2025-04-11 09:58:02,373 - ImportGA4Customers - INFO - Imported 6300 customers so far
+2025-04-11 09:58:02,373 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW11OHE
+2025-04-11 09:58:02,373 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW42BO
+2025-04-11 09:58:02,373 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4
+2025-04-11 09:58:02,373 - ImportGA4Customers - WARNING - Invalid UK postcode format: HA8P
+2025-04-11 09:58:02,374 - ImportGA4Customers - WARNING - Invalid email format: 07735051190
+2025-04-11 09:58:02,374 - ImportGA4Customers - WARNING - Invalid email format: 07866494923
+2025-04-11 09:58:02,374 - ImportGA4Customers - WARNING - Invalid UK postcode format: N12OHU
+2025-04-11 09:58:02,374 - ImportGA4Customers - WARNING - Invalid UK postcode format: 9JU
+2025-04-11 09:58:02,374 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW10OUX
+2025-04-11 09:58:02,374 - ImportGA4Customers - WARNING - Invalid UK postcode format: N6
+2025-04-11 09:58:02,374 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4
+2025-04-11 09:58:02,374 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4
+2025-04-11 09:58:02,374 - ImportGA4Customers - WARNING - Invalid UK postcode format: HA8OJE
+2025-04-11 09:58:02,375 - ImportGA4Customers - WARNING - Invalid UK postcode format: N3
+2025-04-11 09:58:02,375 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW11OAG
+2025-04-11 09:58:02,375 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW43QV
+2025-04-11 09:58:02,375 - ImportGA4Customers - WARNING - Invalid UK postcode format: N2OPT
+2025-04-11 09:58:02,375 - ImportGA4Customers - INFO - Imported 6400 customers so far
+2025-04-11 09:58:02,375 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4
+2025-04-11 09:58:02,376 - ImportGA4Customers - WARNING - Invalid email format: nicolas07973468134
+2025-04-11 09:58:02,376 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4
+2025-04-11 09:58:02,376 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4
+2025-04-11 09:58:02,376 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4
+2025-04-11 09:58:02,377 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4SDL
+2025-04-11 09:58:02,377 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW41OZ
+2025-04-11 09:58:02,377 - ImportGA4Customers - WARNING - Invalid UK postcode format: N33Q
+2025-04-11 09:58:02,377 - ImportGA4Customers - INFO - Imported 6500 customers so far
+2025-04-11 09:58:02,377 - ImportGA4Customers - WARNING - Invalid UK postcode format: N20SHL
+2025-04-11 09:58:02,377 - ImportGA4Customers - WARNING - Invalid UK postcode format: SE17ITU
+2025-04-11 09:58:02,377 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4
+2025-04-11 09:58:02,378 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4
+2025-04-11 09:58:02,378 - ImportGA4Customers - WARNING - Invalid UK postcode format: HA87OEU
+2025-04-11 09:58:02,378 - ImportGA4Customers - WARNING - Invalid email format: 07973663004r
+2025-04-11 09:58:02,378 - ImportGA4Customers - WARNING - Invalid UK postcode format: AL4OPH
+2025-04-11 09:58:02,379 - ImportGA4Customers - INFO - Imported 6600 customers so far
+2025-04-11 09:58:02,379 - ImportGA4Customers - WARNING - Invalid email format: rebeccanumberabove(telephone)
+2025-04-11 09:58:02,379 - ImportGA4Customers - WARNING - Invalid UK postcode format: N2OAJ
+2025-04-11 09:58:02,380 - ImportGA4Customers - WARNING - Invalid UK postcode format: N2OGR
+2025-04-11 09:58:02,380 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4
+2025-04-11 09:58:02,381 - ImportGA4Customers - INFO - Imported 6700 customers so far
+2025-04-11 09:58:02,381 - ImportGA4Customers - WARNING - Invalid UK postcode format: N2OHB
+2025-04-11 09:58:02,382 - ImportGA4Customers - INFO - Imported 6800 customers so far
+2025-04-11 09:58:02,383 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4
+2025-04-11 09:58:02,384 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW11OJL
+2025-04-11 09:58:02,384 - ImportGA4Customers - INFO - Imported 6900 customers so far
+2025-04-11 09:58:02,385 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4
+2025-04-11 09:58:02,385 - ImportGA4Customers - WARNING - Skipping row 6929: Customer 19B699E8EFED294CAAA12C120DBAD545 has no name
+2025-04-11 09:58:02,385 - ImportGA4Customers - WARNING - Invalid UK postcode format: N3
+2025-04-11 09:58:02,386 - ImportGA4Customers - WARNING - Invalid UK postcode format: NW4
+2025-04-11 09:58:02,386 - ImportGA4Customers - INFO - Total rows processed: 6984
+2025-04-11 09:58:02,386 - ImportGA4Customers - INFO - Rows imported: 6981
+2025-04-11 09:58:02,386 - ImportGA4Customers - INFO - Rows skipped: 3
+2025-04-11 09:58:02,386 - ImportGA4Customers - INFO - Rows with errors: 0
+2025-04-11 09:58:02,386 - ImportGA4Customers - INFO - Total customers imported: 6981
+2025-04-11 09:58:02,386 - ImportGA4Customers - INFO - Import GA4 Customers completed

@@ -1,0 +1,68 @@
+<!-- Modal template for adding a service record -->
+<div class="modal fade" id="addServiceModal" tabindex="-1" aria-labelledby="addServiceModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header bg-primary text-white">
+        <h5 class="modal-title" id="addServiceModalLabel">
+          <i class="bi bi-tools me-2"></i> Add Service Record
+        </h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <form action="{{ url_for('add_service', vehicle_id=vehicle.id) }}" method="POST">
+        <div class="modal-body">
+          <div class="row mb-3">
+            <div class="col-md-6">
+              <label for="service_date" class="form-label">Service Date</label>
+              <input type="date" class="form-control" id="service_date" name="service_date" value="{{ today_date }}" required>
+            </div>
+            <div class="col-md-6">
+              <label for="service_type" class="form-label">Service Type</label>
+              <select class="form-select" id="service_type" name="service_type" required>
+                <option value="">-- Select Service Type --</option>
+                <option value="Full Service">Full Service</option>
+                <option value="Interim Service">Interim Service</option>
+                <option value="Oil Change">Oil Change</option>
+                <option value="Brake Service">Brake Service</option>
+                <option value="Tire Replacement">Tire Replacement</option>
+                <option value="Air Conditioning">Air Conditioning</option>
+                <option value="Diagnostic">Diagnostic</option>
+                <option value="Battery Replacement">Battery Replacement</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+          </div>
+          
+          <div class="row mb-3">
+            <div class="col-md-6">
+              <label for="mileage" class="form-label">Mileage</label>
+              <div class="input-group">
+                <input type="number" class="form-control" id="mileage" name="mileage" placeholder="Current mileage">
+                <span class="input-group-text">miles</span>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <label for="cost" class="form-label">Cost</label>
+              <div class="input-group">
+                <span class="input-group-text">£</span>
+                <input type="number" class="form-control" id="cost" name="cost" step="0.01" placeholder="Service cost">
+              </div>
+            </div>
+          </div>
+          
+          <div class="mb-3">
+            <label for="description" class="form-label">Description / Work Done</label>
+            <textarea class="form-control" id="description" name="description" rows="4" placeholder="Enter details of the service work performed..."></textarea>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
+            <i class="bi bi-x-circle"></i> Cancel
+          </button>
+          <button type="submit" class="btn btn-primary">
+            <i class="bi bi-save"></i> Save Record
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

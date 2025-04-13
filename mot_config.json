@@ -1,0 +1,50 @@
+{
+    "ga4_path": "C:\\Program Files (x86)\\Garage Assistant GA4",
+    "sqlite_db_path": "G:\\My Drive\\GA4_Direct_Access_Tool\\ga4_direct.db",
+    "reminder_days": [
+        30,
+        14,
+        7,
+        3,
+        1
+    ],
+    "reminder_templates": {
+        "email": {
+            "subject": "MOT Reminder for {registration}",
+            "body": "Dear {customer_name},\n\nThis is a reminder that the MOT for your {make} {model} ({registration}) is due on {mot_expiry}.\n\nPlease contact us to schedule an appointment.\n\nRegards,\n{garage_name}"
+        },
+        "sms": {
+            "body": "MOT Reminder: Your {make} {model} ({registration}) is due for MOT on {mot_expiry}. Please contact us to schedule an appointment."
+        },
+        "letter": {
+            "body": "Dear {customer_name},\n\nThis is a reminder that the MOT for your {make} {model} ({registration}) is due on {mot_expiry}.\n\nPlease contact us to schedule an appointment.\n\nRegards,\n{garage_name}"
+        }
+    },
+    "garage_details": {
+        "name": "Your Garage",
+        "address": "123 Main Street, Anytown, AN1 1AA",
+        "phone": "01234 567890",
+        "email": "info@yourgarage.com",
+        "website": "www.yourgarage.com"
+    },
+    "email": {
+        "enabled": false,
+        "smtp_server": "smtp.gmail.com",
+        "smtp_port": 587,
+        "smtp_username": "",
+        "smtp_password": "",
+        "from_email": "",
+        "from_name": "Your Garage"
+    },
+    "sms": {
+        "enabled": false,
+        "provider": "twilio",
+        "account_sid": "",
+        "auth_token": "",
+        "from_number": ""
+    },
+    "letter": {
+        "enabled": false,
+        "output_directory": "letters"
+    }
+}
